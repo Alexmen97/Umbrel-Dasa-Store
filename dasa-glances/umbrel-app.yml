@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: denny-glances
+id: dasa-glances
 name: Glances
 tagline: An eye on your system
 icon: https://i.imgur.com/4T0Ff9S.png
@@ -25,7 +25,7 @@ description: >-
   Overall, Glances is an excellent tool for anyone looking for a quick, reliable, and cross-platform solution to monitor the health of their systems, whether for personal use or as part of a larger infrastructure management strategy. Its simplicity, extensibility, and low resource usage make it a popular choice for both novice and experienced users alike.
 developer: Nicolas Hennion
 website: https://nicolargo.github.io/glances/
-submitter: dennysubke
+submitter: dasa
 submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/nicolargo/glances
 support: https://github.com/nicolargo/glances/issues
