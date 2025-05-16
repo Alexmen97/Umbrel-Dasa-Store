@@ -1,0 +1,41 @@
+manifestVersion: 1
+id: denny-glances
+name: Glances
+tagline: An eye on your system
+icon: https://i.imgur.com/4T0Ff9S.png
+category: networking
+version: "4.3.0.8"
+port: 61208
+description: >-
+  Glances is a versatile, open-source system monitoring tool designed to provide real-time insights into various aspects of your system's performance. Written in Python, it works across multiple platforms, including Linux, macOS, and Windows. The main purpose of Glances is to offer a quick, comprehensive overview of critical system metrics such as CPU, memory, disk, network, and process usage.
+
+
+  One of Glances' standout features is its ability to display all relevant system information in a single, continuously updated screen. This enables users to track system performance without needing to open multiple tools or interfaces. The tool's user-friendly design offers both a command-line interface and a web-based interface, making it accessible and convenient for different types of users.
+
+
+  While Glances is mainly used for monitoring system health in real time, it also provides the ability to set up alerts and thresholds to notify users when certain system parameters exceed predefined limits. This feature makes it particularly useful for system administrators who need to maintain server stability and prevent potential issues from escalating unnoticed.
+
+
+  Another key strength of Glances is its lightweight nature. It does not consume significant system resources, which means it can run efficiently on low-power systems, such as Raspberry Pi, without causing performance degradation. Moreover, Glances can be integrated with more advanced monitoring setups, such as Prometheus, for even more detailed analytics and historical data.
+
+
+  In addition to its core monitoring features, Glances supports the monitoring of various system components through plugins. These plugins allow users to extend the tool's functionality to suit specific needs, like tracking additional system parameters or integrating with external services.
+
+
+  Overall, Glances is an excellent tool for anyone looking for a quick, reliable, and cross-platform solution to monitor the health of their systems, whether for personal use or as part of a larger infrastructure management strategy. Its simplicity, extensibility, and low resource usage make it a popular choice for both novice and experienced users alike.
+developer: Nicolas Hennion
+website: https://nicolargo.github.io/glances/
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/nicolargo/glances
+support: https://github.com/nicolargo/glances/issues
+gallery:
+  - https://i.imgur.com/7hQrGLo.png
+  - https://i.imgur.com/M6tjOio.png
+  - https://i.imgur.com/i45yzoe.png
+releaseNotes: >-
+  The WebUI display has been improved for low screen resolutions, the IP plugin issue with Netifaces2 has been fixed, and a message has been added to verify Netifaces2.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
