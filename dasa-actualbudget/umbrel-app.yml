@@ -1,0 +1,72 @@
+manifestVersion: 1
+id: dasa-actualbudget
+name: Actual Budget
+tagline: A super fast privacy-focused app for managing your finances
+icon: https://i.imgur.com/19fnndW.png
+category: finance
+version: "24.10.1"
+port: 5006
+description: >-
+  Actual Budget is a privacy-first personal finance tool designed for users to self-host their data and manage their budgets with complete control. It offers real-time budgeting, detailed tracking of expenses, and advanced reporting, empowering users to make informed financial decisions. The app supports encrypted syncing across multiple devices and features mobile apps for both iOS and Android, making financial management accessible on the go. With its clean and intuitive interface, Actual Budget simplifies complex finances while ensuring data remains secure and private.
+
+
+  Here are some key features of Actual Budget:
+
+
+  🗃️ Everything in one place: Add all of your accounts and track everything in one place. Get valuable information like net worth from all your accounts together.
+
+
+  💰 Payees: Manage payees quickly. Merge them, set up custom rules for how they are matched, and use default categories to automatically categorize transactions.
+
+
+  💵 Budgeting: Track your spending with budgets. You can only budget cash you have on hand, which means your budget stays realistic and you don't make numbers up.
+
+
+  📥 Importing Transactions: Import transactions from the most popular financial files: QIF, OFX, QFX, and CSV.
+
+
+  📂 Migrate your data: Actual Budget provides a builtin YNAB4 importer that keeps all of your history.
+
+
+  🔄 Syncing across devices: Actual Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
+
+
+  📱 Mobile app: A proper mobile app is critical to stay engaged with your finances.
+
+
+  ➗ Split transactions: Use split transactions to separate a single expense into multiple categories. An inline editor makes this seamless.
+
+
+  ➡️ Transfers: Manage transfers easily by creating transfer transactions. Actual will link the transactions on both sides and update them together.
+
+
+  🔁 Undo & redo: A robust undo system allows you to rollback any changes you make, and redo them if desired. Never worry about making mistakes.
+
+
+  🔌 API: Use the fully-featured API to write custom importers or build your own features. This API simply runs on your local data.
+
+
+  🛡️ End-to-end encryption: Actaul Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
+
+   
+  🔑 Initial Setup of Actual Budget:
+
+   During the initial setup of Actual Budget, you will need a password, which is set to "password." Please note that the HTTPS warning can be ignored.
+
+developer: Shift Reset LLC
+website: https://actualbudget.com/
+submitter: dasa
+submission: https://github.com/dennysubke/dennys-umbrel-app-store
+repo: https://github.com/actualbudget/actual-server
+support: https://github.com/actualbudget/actual-server/issues
+gallery:
+  - https://i.imgur.com/V1go5VU.png
+  - https://i.imgur.com/wFj2hWw.png
+  - https://i.imgur.com/3EzrHQy.png
+  - https://i.imgur.com/KJvykqI.png
+releaseNotes: >-
+  The latest update for Actual Budget (version 24.10.0) includes enhancements like aligning the mobile budget table's column names and bug fixes that improve performance and user experience. Notable fixes address issues with syncing preferences, empty blocks in reports, and auto-selection of budget files on mobile.
+dependencies:
+path: ""
+defaultUsername: "none"
+defaultPassword: "password"

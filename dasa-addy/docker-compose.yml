@@ -1,0 +1,50 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-addy_web_1
+      APP_PORT: 8000
+
+  db:
+    image: mariadb:10@sha256:3958f2df725a9ebdabd0ae6a0c0a841da8e45194b36a33d8bd83abb7dd6c034a
+    command:
+      - "mysqld"
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+    volumes:
+      - "${APP_DATA_DIR}/db:/var/lib/mysql"
+    environment:
+      - "MARIADB_RANDOM_ROOT_PASSWORD=yes"
+      - "MYSQL_DATABASE=addy_db"
+      - "MYSQL_USER=addy_user"
+      - "MYSQL_PASSWORD=addy_password123"
+    restart: on-failure
+
+  redis:
+    image: redis:4.0-alpine@sha256:d1e4f6885d3c6db31f6f944b322174a9086b4eead150f2d38a8ba22ba3f0f2a2
+    restart: on-failure
+
+  web:
+    image: anonaddy/anonaddy:1.3.1@sha256:a6e555b3bfc08d588b5ff68c8530ae47f0516d19bc0e172e48777a12f7bde29d
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - "${APP_DATA_DIR}/data:/data"
+    environment:
+      - "DB_HOST=db"
+      - "DB_DATABASE=addy_db"
+      - "DB_USERNAME=addy_user"
+      - "DB_PASSWORD=addy_password123"
+      - "REDIS_HOST=redis"
+      - "APP_KEY=base64:RZJNTNcNY56yzhc3y6ChHR8DJfIhIFsWUgxxxqwYOMA="
+      - "ANONADDY_ADMIN_USERNAME=addy"
+      - "ANONADDY_SECRET=umbrel"
+      - "APP_DEBUG=false"
+      - "APP_URL=http://umbrel.local:8727"
+      - "ANONADDY_DOMAIN=umbrel.local"
+      - "TZ=Europe/Berlin"
+      - "PUID=1000"
+      - "PGID=1000"
+    restart: on-failure

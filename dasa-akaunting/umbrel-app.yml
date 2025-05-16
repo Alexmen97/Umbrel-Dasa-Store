@@ -1,0 +1,35 @@
+manifestVersion: 1
+id: dasa-akaunting
+name: Akaunting
+tagline: An intuitive accounting solution for small businesses and freelancers
+icon: https://i.imgur.com/UIeVQGZ.png
+category: In Progress
+version: "3.1.17"
+port: 8773
+description: >-
+  📊 Akaunting is a free, open-source accounting software designed to meet the needs of small businesses, freelancers, and self-employed individuals. It runs entirely in the browser and offers a modern, user-friendly interface, making financial management accessible even to those without a background in accounting. Built with technologies like Laravel and Vue.js, Akaunting is known for its flexibility, scalability, and ease of customization. Users can manage invoices, track expenses, monitor cash flow, and generate various financial reports, all from a centralized dashboard.
+
+
+  One of the key advantages of Akaunting is its open-source nature, which allows users to host it on their own servers, giving them full control over their data and privacy. This makes it particularly attractive to those who prefer self-hosted solutions over cloud-based subscription models. Although Akaunting offers a cloud-hosted version for convenience, the self-hosted variant remains completely free and open to modifications.
+
+
+  The platform supports multiple currencies, tax rates, and languages, making it suitable for international use. It also includes user role management, allowing businesses to assign different levels of access to employees or accountants. Additional features can be added through a wide range of extensions available in the Akaunting app store, some of which are free, while others require a paid subscription. These extensions cover areas such as inventory management, payroll, recurring billing, and integrations with third-party services like PayPal, Stripe, and various banks.
+
+
+  Overall, Akaunting is a robust and cost-effective solution for those looking to handle their finances independently without relying on proprietary software. Whether hosted on a personal server or used through the official cloud offering, it provides all the essential tools for managing business finances in a secure and intuitive environment.
+developer: Akaunting Inc.
+website: https://akaunting.com/
+submitter: dasa
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/akaunting/akaunting
+support: https://github.com/akaunting/akaunting/issues
+gallery:
+  - https://i.imgur.com/TCusMq2.png
+  - https://i.imgur.com/TCusMq2.png
+  - https://i.imgur.com/TCusMq2.png
+releaseNotes: >-
+  The latest release of Akaunting 3.1.17 includes new features such as supporting CSV as an allowed file type in the mediable config, adding MariaDB to the README.md, and introducing an OpenLiteSpeed rewrite rule for protected files. It also fixed issues like the required decimal mark in currency requests.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
