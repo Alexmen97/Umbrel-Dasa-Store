@@ -3,7 +3,7 @@ id: dasa-duplicati
 name: Duplicati
 tagline: Store securely encrypted backups in the cloud
 icon: https://i.imgur.com/p4yY0FC.png
-category: files
+category: files & productivity
 version: "v2.1.0.5_stable_2025-03-04"
 port: 38476
 description: >-
