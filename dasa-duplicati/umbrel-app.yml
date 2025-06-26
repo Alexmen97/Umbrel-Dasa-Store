@@ -2,7 +2,7 @@ manifestVersion: 1
 id: dasa-duplicati
 name: Duplicati
 tagline: Store securely encrypted backups in the cloud
-icon: https://imgur.com/a/ZtPoEpf
+icon: https://imgur.com/p4yY0FC
 category: files
 version: "v2.1.0.5_stable_2025-03-04"
 port: 38476
@@ -35,9 +35,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/1179
 repo: https://github.com/duplicati/duplicati
 support: https://forum.duplicati.com/
 gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
+  - https://imgur.com/LCw0nR3
+  - https://imgur.com/6f9zyRD
+  - https://imgur.com/5usxk3K
 releaseNotes: >-
   This update fixes critical issues reported in previous versions. It is highly recommended to upgrade as soon as possible if you are running version 2.1.0.4 or earlier.
 
