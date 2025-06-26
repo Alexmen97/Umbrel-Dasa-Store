@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-cloudreve_web_1
+      APP_PORT: 5212
+
+  web:
+    image: cloudreve/cloudreve:4.0.0-beta.9@sha256:9ffa1bf93a856a9bf59ac71e77b4cc229c1b699d3a6f7d56d770ffcec2dd875d
+    restart: on-failure
+    environment:
+      CR_CONF_Database.Type: postgres
+      CR_CONF_Database.Host: db
+      CR_CONF_Database.User: cloudreve
+      POSTGRES_HOST_AUTH_METHOD: trust
+      CR_CONF_Database.Name: cloudreve
+      CR_CONF_Database.Port: 5432
+      CR_CONF_Redis.Server: redis:6379
+      CR_CONF_HTTP.Port: 5212
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 5212 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    volumes:
+      - ${APP_DATA_DIR}/data/cloudreve_data:/cloudreve/data:rw
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  db:
+    image: postgres:17@sha256:864831322bf2520e7d03d899b01b542de6de9ece6fe29c89f19dc5e1d5568ccf
+    restart: on-failure
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "cloudreve", "-U", "cloudreve"]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data:rw
+    environment:
+      POSTGRES_DB: cloudreve
+      POSTGRES_USER: cloudreve
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+  redis:
+    image: redis:8.0.0@sha256:a4b90e7079b67c41bdf4ca6f9d87197079e4c1c3273b7f489a74f2687d85a05e
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
+    volumes:
+      - ${APP_DATA_DIR}/data/redis_data:/data:rw
+    environment:
+      TZ: Europe/Rome

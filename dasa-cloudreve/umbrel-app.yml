@@ -1,0 +1,38 @@
+manifestVersion: 1
+id: denny-cloudreve
+name: Cloudreve
+tagline: A self-hosted file management system with multi-cloud support
+icon: https://i.imgur.com/2PTDRPQ.png
+category: files & productivity
+version: "5.4.0"
+port: 5212
+description: >-
+  ☁️ Cloudreve is an open-source cloud storage solution designed to provide users with a self-hosted alternative to traditional cloud services. It enables users to create a personalized storage system with extensive file management capabilities, allowing for secure file storage, sharing, and collaboration. The platform includes a modern web interface that supports file previews for images, videos, PDFs, and office documents, making it easy to access content without downloading it.
+
+
+  One of the core features of Cloudreve is its robust sharing functionality, which allows users to generate both public and private links with adjustable permissions, expiration dates, and password protection. This provides a secure way to distribute files while maintaining control over access rights. Additionally, Cloudreve incorporates WebDAV support, enabling users to access their files as though they were on a network drive, facilitating seamless integration with other applications.
+
+
+  Cloudreve also includes comprehensive user and group management tools. Administrators can define user roles, assign storage quotas, and monitor system activity, creating a controlled environment for multiple users. With the ability to manage various storage backends and define storage strategies, Cloudreve offers a flexible approach to organizing and distributing files based on specific needs.
+
+
+  Overall, Cloudreve is a highly customizable cloud storage solution that prioritizes data privacy and control, making it a compelling choice for individuals and teams seeking a self-hosted alternative to mainstream cloud services.
+developer: Cloudreve
+website: https://cloudreve.org/
+submitter: dasa
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/cloudreve/Cloudreve
+support: https://github.com/cloudreve/Cloudreve/issues
+gallery:
+  - https://i.imgur.com/3Z1XiCr.png
+  - https://i.imgur.com/eZJPu4m.png
+  - https://i.imgur.com/lb04Zi5.png
+  - https://i.imgur.com/S9EhzIq.png
+  - https://i.imgur.com/ygi88kd.png
+  - https://i.imgur.com/XDdSjXJ.png
+releaseNotes: >-
+  Cloudreve version 4.0.0-beta.9 addresses several issues, including incorrect handling of negative quantities for credit increase, OneDrive OAuth callback errors, and missing marker icons on maps. It also improves language settings in receipt emails and corrects the handling of # in file names. Additionally, the order of group storage policy options is now preserved.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
