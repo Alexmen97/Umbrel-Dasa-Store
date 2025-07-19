@@ -4,7 +4,7 @@ name: Cloudreve
 tagline: A self-hosted file management system with multi-cloud support
 icon: https://i.imgur.com/2PTDRPQ.png
 category: files & productivity
-version: "5.4.0"
+version: "4.3.0"
 port: 5212
 description: >-
   ☁️ Cloudreve is an open-source cloud storage solution designed to provide users with a self-hosted alternative to traditional cloud services. It enables users to create a personalized storage system with extensive file management capabilities, allowing for secure file storage, sharing, and collaboration. The platform includes a modern web interface that supports file previews for images, videos, PDFs, and office documents, making it easy to access content without downloading it.
