@@ -2,6 +2,7 @@ manifestVersion: 1
 id: dasa-openwebui
 name: Open WebUI
 tagline: Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key
+icon: https://i.imgur.com/rNa00fP.png
 category: ai
 version: "0.6.16"
 port: 2876
@@ -29,9 +30,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/1977
 repo: https://github.com/open-webui/open-webui
 support: https://github.com/open-webui/open-webui/issues
 gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
+  - https://i.imgur.com/xFjUwre.png
+  - https://i.imgur.com/Ms2tunh.png
+  - https://i.imgur.com/tnoQkzK.png
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
