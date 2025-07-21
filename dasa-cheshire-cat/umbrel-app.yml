@@ -4,7 +4,7 @@ name: Cheshire Cat AI
 tagline: A framework to build custom AIs on top of any language model
 icon: https://i.imgur.com/aNPTeWt.png
 category: ai
-version: "1.7.1"
+version: "1.9.2"
 port: 1865
 description: >-
   Cheshire Cat AI is an advanced AI agent framework built for developers to create highly customizable, intelligent systems. It simplifies the development of AI agents by supporting the training of models from various document formats, such as PDFs, JSON, and Markdown. The platform integrates seamlessly with external APIs, offering an extensible plugin architecture that enables adding functionality through community-driven plugins, hooks, and tools.
