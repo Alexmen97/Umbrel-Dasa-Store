@@ -52,7 +52,7 @@ gallery:
   - https://i.imgur.com/SR7D6kY.png
   - https://i.imgur.com/bkkQXCN.png
 releaseNotes: >-
-  Version 1.7.1 of Cheshire Cat AI introduces a user and permission system, JWT support for authentication, and custom authorization options. It also adds features like White Rabbit and the new StrayCat.classify function for enhanced AI capabilities.
+  Version 1.9.2 of Cheshire Cat AI introduces a user and permission system, JWT support for authentication, and custom authorization options. It also adds features like White Rabbit and the new StrayCat.classify function for enhanced AI capabilities.
 dependencies:
 path: "/admin"
 defaultUsername: ""
