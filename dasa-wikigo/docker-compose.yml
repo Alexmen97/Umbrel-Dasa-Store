@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-wikigo_web_1
+      APP_PORT: 8080
+
+  web:
+    image: leomoonstudios/wiki-go:1.3@sha256:2b6e08da1f76bad6d79b570fbdd834143896eb876f23565edf805adf2b9d501b
+    security_opt:
+      - no-new-privileges:true
+    user: 1000:1000
+    restart: on-failure
+    healthcheck:
+      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/8080' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    volumes:
+      - ${APP_DATA_DIR}/data:/wiki/data:rw
+    environment:
+       PUID: 1000
+       PGID: 1000
