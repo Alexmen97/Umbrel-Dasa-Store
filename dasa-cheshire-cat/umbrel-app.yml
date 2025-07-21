@@ -1,0 +1,59 @@
+manifestVersion: 1
+id: dasa-cheshire-cat
+name: Cheshire Cat AI
+tagline: A framework to build custom AIs on top of any language model
+icon: https://i.imgur.com/aNPTeWt.png
+category: AI
+version: "1.7.1"
+port: 1865
+description: >-
+  Cheshire Cat AI is an advanced AI agent framework built for developers to create highly customizable, intelligent systems. It simplifies the development of AI agents by supporting the training of models from various document formats, such as PDFs, JSON, and Markdown. The platform integrates seamlessly with external APIs, offering an extensible plugin architecture that enables adding functionality through community-driven plugins, hooks, and tools.
+
+
+  Cheshire Cat AI emphasizes ease of use with a robust admin panel, making management straightforward. It supports both open-source and commercial large language models (LLMs).
+
+
+  Key Features:
+
+
+  📄 Document Training: Easily train your AI agents using multiple document formats like PDF, Markdown, and JSON. The system allows for the training of agents with diverse information sources.
+  
+  
+  🔗 API Integrations: You can integrate external APIs, allowing for intelligent responses or interactions based on third-party services or data sources.
+  
+  
+  🎨 Customization: The framework supports extensive customization. Developers can use plugins, hooks, and forms to tailor AI behavior according to their needs.
+  
+  
+  🖥️ Admin Interface: A user-friendly admin panel is provided, allowing easy management of agents, settings, and configurations without deep technical knowledge.
+  
+  
+  🔌 Extensibility: Cheshire Cat AI supports a wide variety of community plugins, allowing you to extend the platform’s functionality beyond its core offering.
+  
+  
+  🤖 Large Language Models: Cheshire Cat AI works with both commercial and open-source LLMs, offering flexibility in choosing the underlying AI model.
+  
+  
+  🏗️ Microservice Architecture: The platform uses a microservice-first design, allowing scalability, modularity, and maintainability across different environments.
+
+  
+  This framework is ideal for developers looking to implement conversational agents, intelligent assistants, or any AI-driven application that requires handling natural language, data processing, or external interactions. It provides the flexibility to adapt to various use cases, from simple chatbot applications to more complex, enterprise-level AI systems.
+
+developer: Cheshire Cat AI
+website: https://cheshirecat.ai/
+submitter: dasa
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/cheshire-cat-ai/core
+support: https://github.com/cheshire-cat-ai/core/issues
+gallery:
+  - https://i.imgur.com/AlwSBao.png
+  - https://i.imgur.com/PmU88Z7.png
+  - https://i.imgur.com/b6VyHcL.png
+  - https://i.imgur.com/SR7D6kY.png
+  - https://i.imgur.com/bkkQXCN.png
+releaseNotes: >-
+  Version 1.7.1 of Cheshire Cat AI introduces a user and permission system, JWT support for authentication, and custom authorization options. It also adds features like White Rabbit and the new StrayCat.classify function for enhanced AI capabilities.
+dependencies:
+path: "/admin"
+defaultUsername: ""
+defaultPassword: ""
