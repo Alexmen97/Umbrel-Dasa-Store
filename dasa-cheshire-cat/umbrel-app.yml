@@ -3,7 +3,7 @@ id: dasa-cheshire-cat
 name: Cheshire Cat AI
 tagline: A framework to build custom AIs on top of any language model
 icon: https://i.imgur.com/aNPTeWt.png
-category: AI
+category: ai
 version: "1.7.1"
 port: 1865
 description: >-
