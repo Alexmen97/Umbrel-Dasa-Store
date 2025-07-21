@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-evershop_web_1
+      APP_PORT: 3000
+
+  web:
+    image: evershop/evershop:1.2.2@sha256:63b98c7f7ddd6aa100a630571c2275081622cbf03bfc27627961f1189de2c4b4
+    restart: on-failure
+    environment:
+      DB_HOST: database
+      DB_PASSWORD: postgres
+      DB_USER: postgres
+      DB_NAME: postgres
+    depends_on:
+      - database
+
+  database:
+    image: postgres:14.18@sha256:c0aab7962b283cf24a0defa5d0d59777f5045a7be59905f21ba81a20b1a110c9
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres

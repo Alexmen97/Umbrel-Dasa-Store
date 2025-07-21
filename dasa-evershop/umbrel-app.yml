@@ -1,0 +1,38 @@
+manifestVersion: 1
+id: denny-evershop
+name: Evershop
+tagline: An All-in-One Open Source E-commerce Solution
+icon: https://i.imgur.com/syabiX7.png
+category: files & productivity
+version: "1.2.2"
+port: 3385
+description: >-
+  🛒 Evershop is a powerful and versatile e-commerce platform designed to provide extensive functionality for managing and operating online stores. It offers a comprehensive administrative dashboard that gives store owners complete control over their business operations. Within this dashboard, users can efficiently manage a wide range of aspects including product catalogs, inventory levels, pricing, promotions, customer information, and order fulfillment processes. The platform streamlines these tasks to ensure smooth day-to-day store management.
+
+
+  On the customer-facing side, Evershop delivers a highly customizable storefront experience. Store owners can modify the appearance and layout using adaptable themes and a variety of widgets, enabling the creation of a unique and engaging shopping environment that reflects their brand identity. This flexibility extends to user experience features such as navigation, product display, and checkout flows, all designed to optimize customer satisfaction and conversion rates.
+
+
+  Evershop also supports integration with multiple popular payment gateways, enabling secure and convenient payment options for customers. This includes support for major providers like Stripe, PayPal, and Klarna, among others, which helps cater to diverse customer preferences and regional payment standards. Beyond payments, the platform is built around a modular architecture, allowing developers and store owners to extend its core capabilities by adding custom extensions and modules. This modularity ensures that the platform can adapt to evolving business needs, whether that involves adding new features, integrating third-party services, or tailoring specific workflows.
+
+
+  Overall, Evershop is engineered to combine robust functionality with flexibility, empowering businesses to build and maintain online stores that meet complex requirements while providing a seamless shopping experience. Its focus on extensibility and customization makes it suitable for a wide range of e-commerce use cases, from small boutique shops to larger enterprises seeking tailored solutions.
+developer: EverShop
+website: https://evershop.io/
+submitter: dasa
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/evershopcommerce/evershop
+support: https://github.com/evershopcommerce/evershop/issues
+gallery:
+  - https://i.imgur.com/N3IDeX8.png
+  - https://i.imgur.com/SJvpogj.png
+  - https://i.imgur.com/PbEihZ2.png
+  - https://i.imgur.com/5EokfHh.png
+  - https://i.imgur.com/QRucdZl.png
+  - https://i.imgur.com/QKpVdls.png
+releaseNotes: >-
+  Version 1.2.2 of EverShop introduces improvements to order status management and allows order cancellations directly from the admin panel. It adds scheduled jobs, customizable admin page footer and logo options, and enhances payment integrations with Stripe and PayPal, including refund and capture support. The update also improves cart and address book functions, fixes multiple bugs, and addresses security vulnerabilities for better stability.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
