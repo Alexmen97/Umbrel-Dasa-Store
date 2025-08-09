@@ -1,0 +1,69 @@
+version: '3.7'
+services:
+
+  app_proxy:
+    depends_on:
+      - traefik
+    environment:
+      APP_HOST: dasa-headscale_traefik_1
+      APP_PORT: 80
+      PROXY_AUTH_ADD: 'false'
+
+  headscale:
+    # https://github.com/juanfont/headscale/pkgs/container/headscale/versions
+    image: >-
+      ghcr.io/juanfont/headscale:0.26.1@sha256:ea9b5ee06274d757a4d52103de56cd11a9c393acb19d9a35f4b9fe52ada410de
+    volumes:
+      - '${APP_DATA_DIR}/config:/etc/headscale'
+      - '${APP_DATA_DIR}/lib:/var/lib/headscale'
+      - '${APP_DATA_DIR}/run:/var/run/headscale'
+    command: serve
+    restart: on-failure
+    labels:
+      - traefik.enable=true
+      - >-
+        traefik.http.routers.headscale-rtr.rule=Host(`${UMBREL_HOST}`) &&
+        PathPrefix(`/`)
+      - traefik.http.services.headscale-svc.loadbalancer.server.port=8080
+
+  headscale_ui:
+    depends_on:
+      - headscale
+    # https://github.com/gurucomputing/headscale-ui/pkgs/container/headscale-ui/versions
+    image: >-
+      ghcr.io/gurucomputing/headscale-ui:2025.05.22@sha256:d5c7d1522e08c04fde00108100602500cc7ed0b52d4adc3a0ef7cea4ffad3e55
+    restart: on-failure
+    labels:
+      - traefik.enable=true
+      - >-
+        traefik.http.routers.headscale-ui-rtr.rule=Host(`${UMBREL_HOST}`) &&
+        PathPrefix(`/web`)
+      - traefik.http.services.headscale-ui-svc.loadbalancer.server.port=8080
+
+  headscale_admin:
+    depends_on:
+      - headscale
+    # https://hub.docker.com/r/goodieshq/headscale-admin/tags
+    image: >-
+      goodieshq/headscale-admin:0.25.6@sha256:d57c1d0e160f5a8aa3082e819050a43c0cd81b572e71da9b1e0cd499d18b48c1
+    restart: on-failure
+    labels:
+      - traefik.enable=true
+      - >-
+        traefik.http.routers.headscale-admin-rtr.rule=Host(`${UMBREL_HOST}`) &&
+        PathPrefix(`/admin`)
+      - traefik.http.services.headscale-admin-svc.loadbalancer.server.port=80
+
+  traefik:
+    # https://hub.docker.com/_/traefik/tags
+    image: >-
+      traefik:v3.4.1@sha256:cd40ab7bc1f047731d5b22595203812343efcb6538014c4e93221cfc3a77217a
+    restart: on-failure
+    command:
+      - '--api.insecure=true'
+      - '--providers.docker'
+      - '--entrypoints.web.address=:80'
+      - '--entrypoints.websecure.address=:443'
+      - '--global.sendAnonymousUsage=false'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
