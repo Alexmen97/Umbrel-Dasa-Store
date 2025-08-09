@@ -14,5 +14,5 @@ services:
     environment:
       # Exported from ollama app, which is currently a required dependency.
       # This will need to change once optional dependencies are supported.
-      OLLAMA_BASE_URL: https://ollama.proserver.cc
+      OLLAMA_BASE_URL: http://example.com:11434
     restart: on-failure
