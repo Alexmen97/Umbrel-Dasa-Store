@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-peppermint_web_1
+      APP_PORT: 3000
+
+  db:
+    image: postgres:17.5@sha256:3962158596daaef3682838cc8eb0e719ad1ce520f88e34596ce8d5de1b6330a1
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: peppermint
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: peppermint
+
+  web:
+    image: pepperlabs/peppermint:latest@sha256:d13932713561c8d69baea49820ba2d42ea145b28193b6a7e33950a05812406fd
+    restart: on-failure
+    depends_on:
+      - db
+    environment:
+      DB_USERNAME: "peppermint"
+      DB_PASSWORD: "1234"
+      DB_HOST: "db"
+      SECRET: 'peppermint4life'
