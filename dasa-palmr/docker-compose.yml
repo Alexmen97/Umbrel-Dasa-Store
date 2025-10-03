@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-palmr_web_1
+      APP_PORT: 5487
+
+  web:
+    image: kyantech/palmr:v3.2.3-beta@sha256:d3efa1d7afd671684ed7f79fbbfbd257a0504e982d553e1599656b3e253727a6
+    restart: on-failure
+    #ports:
+      # 3333:3333 - API port (ONLY EXPOSE IF DIRECT API ACCESS IS NEEDED)
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 5487 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/server:rw
+    environment:
+       ENABLE_S3: false
+       ENCRYPTION_KEY: 0Mrn40/JtXVM8BSKx9HNILH0wFSuMYz4iPm5uazaBANXokJz3hdiTAs1vDLm/vqw
