@@ -4,7 +4,7 @@ name: Glances
 tagline: An eye on your system
 icon: https://i.imgur.com/4T0Ff9S.png
 category: networking
-version: "4.3.1"
+version: "4.3.3"
 port: 61208
 description: >-
   Glances is a versatile, open-source system monitoring tool designed to provide real-time insights into various aspects of your system's performance. Written in Python, it works across multiple platforms, including Linux, macOS, and Windows. The main purpose of Glances is to offer a quick, comprehensive overview of critical system metrics such as CPU, memory, disk, network, and process usage.
