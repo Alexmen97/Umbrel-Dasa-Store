@@ -4,7 +4,7 @@ name: Open WebUI
 tagline: Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key
 icon: https://i.imgur.com/rNa00fP.png
 category: ai
-version: "0.6.22"
+version: "0.6.32"
 port: 2876
 description: >-
   Open WebUI lets you chat with advanced AI models running locally on your own device or connect to online models using an API key.
@@ -37,25 +37,16 @@ defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
   Key highlights in this release include:
-    - Folders as Projects for organizing workflows with folder-level system prompts and custom knowledge
-    - Instant Folder-Based Chat Creation for quick context-aware conversations
-    - Prompt Variables with Automatic Input Modal for easier value entry
-    - Variable Input Typing in Prompts for more precise prompt-building
-    - Base Model List Caching to speed up model selection
-    - Reference Notes as Knowledge or in Chats for better integration of documentation
-    - Collaborative Notes with Multi-User Editing for real-time cooperation
-    - Task List Support in Notes for project planning and to-do tracking
-    - AI-Generated Note Titles for effortless organization
-    - Full Undo/Redo Support in Notes
-    - Rich Text Prompt Insertion for more intuitive editing
-    - Configurable Database URL for flexible deployment
-    - Frontend-Handled File Upload in Temporary Chats for enhanced privacy
-    - Mobile Experience Polished for better usability on phones and tablets
-    - OpenDocument Text (.odt) Support for wider document compatibility
-    - Enhanced Markdown Document Splitting for improved knowledge retrieval
-    - Configurable OAuth Timeout for better login reliability
-    - Accessibility & High-Contrast Theme Enhancements for improved readability
-    - Granular Update Check Control for environments with restricted internet access
+    - 🗝️ Added permission toggle for public sharing of notes
+    - ⚠️ Added warning for conflicting group permissions in user edit modal
+    - 🧬 Improved MCP tool result handling
+    - 🧩 Overhauled user edit modal for better usability
+    - 🛠️ Fixed issues with External Tool servers and OAuth 2.1 integrations
+    - 🐛 Resolved UI bugs in model and filter selection menus
+    - 🛠️ Improved embed UI functionality for tool embedding
+
+
+  ⚠️ Channel permissions now require write access for message posting, editing, and deletion. Existing user groups default to read-only access, requiring manual admin migration for full participation.
 
 
   Full release notes can be found at https://github.com/open-webui/open-webui/releases
