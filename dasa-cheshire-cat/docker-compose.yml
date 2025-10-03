@@ -7,7 +7,7 @@ services:
       APP_PORT: 80
       PROXY_AUTH_ADD: "false"
   web:
-    image: ghcr.io/cheshire-cat-ai/core:1.9.2
+    image: ghcr.io/cheshire-cat-ai/core:1.9.2@sha256:79e27004db1ce034f62e4697ef198e0dcb7d6c61443e23c9783e24d384a03f80
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/static:/app/cat/static:rw
