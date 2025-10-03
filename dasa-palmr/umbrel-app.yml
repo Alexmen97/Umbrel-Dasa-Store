@@ -1,0 +1,36 @@
+manifestVersion: 1
+id: dasa-palmr
+name: Palmr
+tagline: A private alternative to WeTransfer
+icon: https://i.imgur.com/dpOBOQJ.png
+category: files & productivity
+version: "3.2.3-beta"
+port: 5487
+description: >-
+  🌴 Palmr is an open source file sharing platform that gives you full control over your uploads and downloads. It is designed for secure and private transfers without relying on third party services.
+
+
+  With a clean and modern interface, Palmr makes it easy to send and receive files of any size, limited only by your available storage. The app is lightweight, fast, and easy to use, built with technologies like Fastify, Next.js, and SQLite for optimal performance.
+
+
+  It supports features like password protection, user authentication, customizable branding, and optional single sign on through OpenID Connect. Palmr is ideal for anyone who wants a simple yet powerful file sharing tool that runs directly on their Umbrel server.
+developer: Kyantech Solutions
+website: https://palmr.kyantech.com.br/
+submitter: dasa
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/kyantech/Palmr
+support: https://github.com/kyantech/Palmr/issues
+gallery:
+  - https://i.imgur.com/J5xM2k0.png
+  - https://i.imgur.com/1gHHvro.png
+  - https://i.imgur.com/csHgBwp.png
+  - https://i.imgur.com/3nRaQnn.png
+releaseNotes: >-
+  The latest v3.2.3-beta release of Palmr focuses on a complete overhaul of the translation system by removing automatic translations and enforcing manual human reviews. It also introduces a new SMTP connection test feature for administrators, along with multi-language updates and bulk file actions in reverse shares for better user experience. 
+  
+  
+  Additionally, this version includes various UI improvements, code refactoring, and the removal of outdated translation scripts to streamline the workflow.
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
