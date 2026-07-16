@@ -4,9 +4,12 @@ name: Akaunting
 tagline: An intuitive accounting solution for small businesses and freelancers
 icon: https://i.imgur.com/UIeVQGZ.png
 category: In Progress
-version: "3.1.17"
+version: "3.1.21"
 port: 8773
 description: >-
+  ✨ Novità in v3.1.21: corretta la gestione della versione del modulo cache, per aggiornamenti e funzionalità più affidabili.
+
+
   📊 Akaunting is a free, open-source accounting software designed to meet the needs of small businesses, freelancers, and self-employed individuals. It runs entirely in the browser and offers a modern, user-friendly interface, making financial management accessible even to those without a background in accounting. Built with technologies like Laravel and Vue.js, Akaunting is known for its flexibility, scalability, and ease of customization. Users can manage invoices, track expenses, monitor cash flow, and generate various financial reports, all from a centralized dashboard.
 
 
@@ -28,7 +31,9 @@ gallery:
   - https://i.imgur.com/TCusMq2.png
   - https://i.imgur.com/TCusMq2.png
 releaseNotes: >-
-  The latest release of Akaunting 3.1.17 includes new features such as supporting CSV as an allowed file type in the mediable config, adding MariaDB to the README.md, and introducing an OpenLiteSpeed rewrite rule for protected files. It also fixed issues like the required decimal mark in currency requests.
+  Novità v3.1.21:
+    - Corretta la gestione della versione del modulo cache.
+    - L'aggiornamento rende più affidabili il caricamento e gli aggiornamenti dei moduli che dipendono dalla cache.
 dependencies:
 path: ""
 defaultUsername: ""

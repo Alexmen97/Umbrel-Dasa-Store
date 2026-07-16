@@ -7,7 +7,7 @@ services:
       APP_PORT: 5487
 
   web:
-    image: kyantech/palmr:v3.2.3-beta@sha256:d3efa1d7afd671684ed7f79fbbfbd257a0504e982d553e1599656b3e253727a6
+    image: kyantech/palmr:v3.3.2-beta@sha256:043dd6cdbb4d9985b376915020fb26c2037b19876674273eac310ab04cdf16f4
     restart: on-failure
     #ports:
       # 3333:3333 - API port (ONLY EXPOSE IF DIRECT API ACCESS IS NEEDED)

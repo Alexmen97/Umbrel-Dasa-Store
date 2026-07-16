@@ -2,10 +2,13 @@ manifestVersion: 1.1
 id: dasa-immich
 category: files & productivity
 name: Immich
-version: "v2.0.1"
+version: "v3.0.3"
 tagline: High-performance photo and video backup solution
 icon: https://i.imgur.com/wqT5bDn.png
 description: >-
+  ✨ Novità in v3: editor mobile non distruttivo, workflow sperimentali, backup in background più affidabile, controlli d’integrità e streaming video HLS in anteprima.
+
+
   An open-source and high-performance self-hosted backup solution for the videos and photos on your mobile device
 
 
@@ -46,23 +49,12 @@ description: >-
 
   - User-defined storage structure
 releaseNotes: >-
-  ⚠️ As usual, please check that your mobile app is compatible with this release of Immich.
-
-
-  🎉 Immich v2.0.1 - Stable Release!
-
-
-  This marks the first stable version of Immich. This release includes:
-    - Official stable release with long-term support commitment
-    - New homepage at https://immich.app/
-    - New API documentation at https://api.immich.app/
-    - New community metrics at https://data.immich.app/
-    - Bug fixes for un-hashed remainder assets display
-    - Improved email button styling
-    - Server stability improvements
-
-
-  Full release notes are found at https://github.com/immich-app/immich/releases
+  Novità v3.0.3:
+    - Editing mobile non distruttivo, workflow sperimentali, pagina "Aggiunti di recente" e controlli d'integrità della libreria.
+    - Backup in background più affidabile, slideshow mobile, OCR mobile, upload diretto negli album e scelta della dimensione durante la condivisione.
+    - Anteprima di transcoding video HLS in tempo reale e nuovo lettore video web.
+    - Corrette ulteriori anomalie di upload delle Live Photo, visibilità e stabilità.
+    - ⚠️ È una major release: verifica la compatibilità delle app mobili e degli strumenti di terze parti che usano l'API.
 developer: Alex Tran
 website: https://www.immich.app
 dependencies: []

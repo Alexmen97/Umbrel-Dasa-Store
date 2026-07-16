@@ -4,9 +4,12 @@ name: Actual Budget
 tagline: A super fast privacy-focused app for managing your finances
 icon: https://i.imgur.com/19fnndW.png
 category: finance
-version: "24.10.1"
+version: "26.7.0"
 port: 5006
 description: >-
+  ✨ Novità in v26.7.0: CLI stabile, gestione avanzata dei tag, report con medie e trend, oltre al supporto sperimentale per Akahu e il calcolatore mobile.
+
+
   Actual Budget is a privacy-first personal finance tool designed for users to self-host their data and manage their budgets with complete control. It offers real-time budgeting, detailed tracking of expenses, and advanced reporting, empowering users to make informed financial decisions. The app supports encrypted syncing across multiple devices and features mobile apps for both iOS and Android, making financial management accessible on the go. With its clean and intuitive interface, Actual Budget simplifies complex finances while ensuring data remains secure and private.
 
 
@@ -65,7 +68,11 @@ gallery:
   - https://i.imgur.com/3EzrHQy.png
   - https://i.imgur.com/KJvykqI.png
 releaseNotes: >-
-  The latest update for Actual Budget (version 24.10.0) includes enhancements like aligning the mobile budget table's column names and bug fixes that improve performance and user experience. Notable fixes address issues with syncing preferences, empty blocks in reports, and auto-selection of budget files on mobile.
+  Novità v26.7.0:
+    - Il CLI di Actual è ora stabile.
+    - Gestione tag più completa, con visibilità, azioni massive e nuovi filtri.
+    - Medie configurabili e linee di tendenza nei report, con prestazioni migliori per budget di lunga durata.
+    - In anteprima: sincronizzazione bancaria Akahu, automazioni ottimizzate per mobile e calcolatore per gli importi.
 dependencies:
 path: ""
 defaultUsername: "none"

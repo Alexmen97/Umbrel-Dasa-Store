@@ -4,9 +4,12 @@ name: Palmr
 tagline: A private alternative to WeTransfer
 icon: https://i.imgur.com/dpOBOQJ.png
 category: files & productivity
-version: "3.2.3-beta"
+version: "3.3.2-beta"
 port: 5487
 description: >-
+  ✨ Novità in v3.3.2-beta: upload S3 di file molto grandi e download Firefox più affidabili, anteprime dietro proxy corrette e aggiornamento di sicurezza di Next.js.
+
+
   🌴 Palmr is an open source file sharing platform that gives you full control over your uploads and downloads. It is designed for secure and private transfers without relying on third party services.
 
 
@@ -26,10 +29,11 @@ gallery:
   - https://i.imgur.com/csHgBwp.png
   - https://i.imgur.com/3nRaQnn.png
 releaseNotes: >-
-  The latest v3.2.3-beta release of Palmr focuses on a complete overhaul of the translation system by removing automatic translations and enforcing manual human reviews. It also introduces a new SMTP connection test feature for administrators, along with multi-language updates and bulk file actions in reverse shares for better user experience. 
-  
-  
-  Additionally, this version includes various UI improvements, code refactoring, and the removal of outdated translation scripts to streamline the workflow.
+  Novità v3.3.2-beta:
+    - Corretti upload S3 compatibili di file oltre 10 GB e download di file grandi su Firefox.
+    - Aggiornamento immediato del file manager dopo creazione o rinomina di cartelle e correzioni delle condivisioni inverse con file oltre 100 MB.
+    - Anteprime audio/video più affidabili dietro reverse proxy.
+    - Next.js aggiornato per correggere la vulnerabilità CVE-2025-51605.
 dependencies:
 path: ""
 defaultUsername: ""

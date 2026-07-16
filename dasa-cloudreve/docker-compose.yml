@@ -7,7 +7,7 @@ services:
       APP_PORT: 5212
 
   web:
-    image: cloudreve/cloudreve:4.8.0@sha256:a553e5138ffc039388a0b45124189d0dec08f0c9b90d57469dc6240df9bfa452
+    image: cloudreve/cloudreve:4.18.0@sha256:f7a464100bf6325e9ba58cb2b0ee60f9a24c58fc2eb90647720bc4b8f3cddd9a
     restart: on-failure
     environment:
       CR_CONF_Database.Type: postgres
@@ -33,7 +33,7 @@ services:
         condition: service_healthy
 
   db:
-    image: postgres:17@sha256:864831322bf2520e7d03d899b01b542de6de9ece6fe29c89f19dc5e1d5568ccf
+    image: postgres:17.10@sha256:39fb82e41109483c81ac15422a302500b4a753777b47f8431038703536bc6c52
     restart: on-failure
     security_opt:
       - no-new-privileges:true
@@ -50,7 +50,7 @@ services:
       POSTGRES_HOST_AUTH_METHOD: trust
 
   redis:
-    image: redis:8.0.0@sha256:a4b90e7079b67c41bdf4ca6f9d87197079e4c1c3273b7f489a74f2687d85a05e
+    image: redis:8.6.4@sha256:a051e4f48a5d0ceda6554974f3ad0f5369f4479197f36829332c1325cecad2b7
     restart: on-failure
     healthcheck:
       test: ["CMD-SHELL", "redis-cli ping || exit 1"]

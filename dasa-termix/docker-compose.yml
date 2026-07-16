@@ -7,7 +7,15 @@ services:
       APP_PORT: 8080
 
   web:
-    image: ghcr.io/lukegus/termix:release-1.7.1@sha256:abe2623b16b1d2de6aec65a1e1bc2e94de354cab9d5646b5155ab48909bd0ee5
+    image: ghcr.io/lukegus/termix:release-2.5.0@sha256:4d3371311087d6757aa9d1c94117e854d749b1c5e8fd07bd36e7a99e0686d26c
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/app/data
+    environment:
+      GUACD_HOST: guacd
+    depends_on:
+      - guacd
+
+  guacd:
+    image: guacamole/guacd:1.6.0@sha256:8974eaa9ba32f713daf311e7cc8cd7e4cdfba1edea39eed75524e78ef4b08f4f
+    restart: on-failure

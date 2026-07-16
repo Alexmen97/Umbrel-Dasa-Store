@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   db:
-    image: postgres:17.5@sha256:3962158596daaef3682838cc8eb0e719ad1ce520f88e34596ce8d5de1b6330a1
+    image: postgres:17.10@sha256:39fb82e41109483c81ac15422a302500b4a753777b47f8431038703536bc6c52
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/postgres_data:/var/lib/postgresql/data

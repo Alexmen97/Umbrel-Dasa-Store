@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: nicolargo/glances:4.3.3@sha256:fae2cee5c9497b46a72e52261b2e825fe6c0e5de2f295829411e3d5ccf24ee5c
+    image: nicolargo/glances:4.5.5@sha256:9ac5de7debffb1e5746654585daaf1d23179ea91fbdfd4c25a7a17945d9c74bf
     environment:
       - TZ=Europe/Rome
       - GLANCES_OPT=-w

@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   web:
-    image: evershop/evershop:1.2.2@sha256:63b98c7f7ddd6aa100a630571c2275081622cbf03bfc27627961f1189de2c4b4
+    image: evershop/evershop:2.1.2@sha256:32c5e93ad5b725c27a55d4cdd4c34400b79cc8e82ffb9d9d75edd339eda6eb94
     restart: on-failure
     environment:
       DB_HOST: database
@@ -18,7 +18,7 @@ services:
       - database
 
   database:
-    image: postgres:14.18@sha256:c0aab7962b283cf24a0defa5d0d59777f5045a7be59905f21ba81a20b1a110c9
+    image: postgres:14.23@sha256:a698d240380a51147281b62c2ad9daff51ae29c781d6d783c0adfd8e48ef4b1e
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data

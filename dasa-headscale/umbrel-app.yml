@@ -4,9 +4,12 @@ name: Headscale
 tagline: An open-source, self-hosted VPN solution built with WireGuard
 icon: https://i.imgur.com/OVtGI7Y.png
 category: networking
-version: "0.26.1"
+version: "0.29.2"
 port: 37070
 description: >-
+  ✨ Novità in v0.29.2: riconnessioni di massa più fluide con policy avanzate, compatibilità WebSocket TS2021 e gestione sicura dei nodi con FQDN non valido.
+
+
   Headscale is an open-source, self-hosted VPN solution that empowers users to take full control over their private networks. Designed as a modern alternative to commercial VPN services, Headscale is built on the reliable and high-performance WireGuard protocol, which ensures fast, secure, and efficient connections between devices. Unlike traditional VPN services that rely on third-party infrastructure, Headscale allows you to host your own VPN server, giving you complete autonomy over your network’s privacy, security, and scalability.
 
 
@@ -40,7 +43,11 @@ gallery:
   - https://i.imgur.com/yfNzG2A.png
   - https://i.imgur.com/mwdjJsv.png
 releaseNotes: >-
-  Version 0.26.1 includes a security fix that ensures nodes match both node key and machine key when connecting.
+  Novità v0.29.2:
+    - Le riconnessioni di massa con policy autogroup, via o relay non bloccano più la generazione delle mappe.
+    - Corretto l'upgrade WebSocket GET su /ts2021 per i client Tailscale JS/WASM.
+    - I nodi con FQDN non valido non impediscono più la distribuzione delle mappe agli altri client.
+    - Aggiornata anche l'interfaccia web per le modifiche API di Headscale.
 dependencies:
 path: "/web"
 defaultUsername: ""

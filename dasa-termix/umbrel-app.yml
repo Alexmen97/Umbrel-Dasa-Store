@@ -4,9 +4,12 @@ name: Termix
 tagline: A server management platform with SSH terminal
 icon: https://i.imgur.com/JbXeJrb.png
 category: networking
-version: "1.7.1"
+version: "2.5.0"
 port: 6444
 description: >-
+  ✨ Novità in v2.5.0: connessioni seriali, integrazione Tailscale/WireGuard, autenticazione Vault/Bitwarden/WebAuthn, supporto Podman e nuova dashboard con cronologia metriche e avvisi.
+
+
   💻 Termix is designed to simplify server administration by bringing powerful management tools into a single, unified interface. At its core, it provides direct access to SSH terminals inside the browser, eliminating the need for external clients. Sessions can be opened in tabs or arranged in split screens, allowing administrators to multitask and manage different systems simultaneously with ease. The terminal experience is responsive and reliable, ensuring that routine tasks such as configuration, updates, and troubleshooting can be performed quickly.
 
 
@@ -36,7 +39,11 @@ gallery:
   - https://i.imgur.com/kFRVg2m.png
   - https://i.imgur.com/VRAQ5Ad.png
 releaseNotes: >-
-  This release introduces a redesigned and unified frontend, combining everything into a single server browser panel for easier management. It adds full file manager functionality with create, upload, rename, and delete operations, as well as real-time server statistics via SSH. The admin page was simplified, SSH tools improved with key recording, and a registration bug was fixed.
+  Novità v2.5.0:
+    - Connessioni seriali, integrazione Tailscale/WireGuard e supporto Podman.
+    - Autenticazione SSH con HashiCorp Vault, agente Bitwarden e passkey WebAuthn.
+    - Nuova dashboard a griglia, cronologia delle metriche host, avvisi ntfy/webhook e scheda temperatura.
+    - Miglioramenti a terminale, file manager, tunnel, condivisione host e compatibilità Guacamole.
 dependencies: []
 path: ""
 defaultUsername: ""

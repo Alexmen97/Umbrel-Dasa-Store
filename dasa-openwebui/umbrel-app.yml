@@ -4,9 +4,12 @@ name: Open WebUI
 tagline: Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key
 icon: https://i.imgur.com/rNa00fP.png
 category: ai
-version: "0.6.32"
+version: "0.10.2"
 port: 2876
 description: >-
+  ✨ Novità in v0.10.2: ragionamento in streaming, upload di cartelle nelle knowledge base, controlli memoria più flessibili, configurazione provider via variabili d’ambiente e correzioni di sicurezza.
+
+
   Open WebUI lets you chat with advanced AI models running locally on your own device or connect to online models using an API key.
 
 
@@ -36,18 +39,9 @@ gallery:
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Key highlights in this release include:
-    - 🗝️ Added permission toggle for public sharing of notes
-    - ⚠️ Added warning for conflicting group permissions in user edit modal
-    - 🧬 Improved MCP tool result handling
-    - 🧩 Overhauled user edit modal for better usability
-    - 🛠️ Fixed issues with External Tool servers and OAuth 2.1 integrations
-    - 🐛 Resolved UI bugs in model and filter selection menus
-    - 🛠️ Improved embed UI functionality for tool embedding
-
-
-  ⚠️ Channel permissions now require write access for message posting, editing, and deletion. Existing user groups default to read-only access, requiring manual admin migration for full participation.
-
-
-  Full release notes can be found at https://github.com/open-webui/open-webui/releases
+  Novità v0.10.2:
+    - Visualizzazione in streaming del ragionamento dei modelli e upload di cartelle nelle knowledge base mantenendo la gerarchia.
+    - Controllo amministrativo del contesto delle memorie, memorie automatiche più selettive e configurazioni API Ollama/OpenAI via variabili d'ambiente.
+    - Nuovo formato per speech-to-text e eventi strutturati per gli errori dei provider.
+    - Correzioni di sicurezza, privacy dei prompt, migrazioni SQLite, sessioni, ricerca, strumenti e impostazioni utente.
 path: ""

@@ -7,7 +7,7 @@ services:
       APP_PORT: 8000
 
   db:
-    image: mariadb:10@sha256:3958f2df725a9ebdabd0ae6a0c0a841da8e45194b36a33d8bd83abb7dd6c034a
+    image: mariadb:10@sha256:be981e4113326ada8d6004174dd09eeaefc03094037f811182a52d4f2e737350
     command:
       - "mysqld"
       - "--character-set-server=utf8mb4"
@@ -26,7 +26,7 @@ services:
     restart: on-failure
 
   web:
-    image: anonaddy/anonaddy:latest
+    image: anonaddy/anonaddy:1.6.4@sha256:7d68543d4d50fd4f0133f039a861d793923716750a31248bc23f9cb540683fe3
     depends_on:
       - db
       - redis

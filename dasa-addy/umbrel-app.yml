@@ -4,9 +4,12 @@ name: AnonAddy
 tagline: An undercover inbox for your secret agent needs
 icon: https://i.imgur.com/liI2R2e.png
 category: networking
-version: "1.3.1"
+version: "1.6.4"
 port: 8727
 description: >-
+  ✨ Novità in v1.6.4: correzioni per la cifratura PGP e il consumo di banda nella dashboard, con validazione dei nomi delle chiavi API. Per usare PGP ora è necessario configurare ANONADDY_GNUPGHOME.
+
+
   🕶️ AnonAddy is an open-source email forwarding service that allows users to protect their privacy by creating anonymous email aliases. It helps users manage their online presence while avoiding spam, data breaches, and unwanted tracking. Instead of using a personal email address, users can generate unique aliases for different websites and services. Emails sent to these aliases are automatically forwarded to the user’s real inbox without revealing their actual email address.
 
 
@@ -33,7 +36,10 @@ gallery:
   - https://imgur.com/mUZrMD4.png
   - https://imgur.com/pHLcxV0.png
 releaseNotes: >-
-  Version 1.3.1 of AnonAddy introduces new environment variables for shared domains, Rspamd, Postfix relay host SSL, and DKIM selector. It also removes the sorbs.net blacklist filter due to its upcoming shutdown.
+  Novità v1.6.4:
+    - Corretti un errore nella visualizzazione del traffico in dashboard e un problema con la cifratura PGP.
+    - Aggiunta la validazione lato client del nome delle chiavi API.
+    - Aggiunta la variabile ANONADDY_GNUPGHOME. Se usi PGP, impostala su una directory GnuPG assoluta accessibile al processo della coda.
 dependencies:
 path: ""
 defaultUsername: ""

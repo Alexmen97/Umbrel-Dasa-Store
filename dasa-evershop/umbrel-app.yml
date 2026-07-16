@@ -4,9 +4,12 @@ name: Evershop
 tagline: An All-in-One Open Source E-commerce Solution
 icon: https://i.imgur.com/syabiX7.png
 category: files & productivity
-version: "1.2.2"
+version: "2.1.2"
 port: 3385
 description: >-
+  ✨ Novità in v2.1.2: editor CMS corretto, area di debug, checkout più affidabile e integrazioni Stripe/PayPal aggiornate. ⚠️ Gli stati di pagamento Stripe e PayPal sono stati rinominati: verifica le integrazioni esterne.
+
+
   🛒 Evershop is a powerful and versatile e-commerce platform designed to provide extensive functionality for managing and operating online stores. It offers a comprehensive administrative dashboard that gives store owners complete control over their business operations. Within this dashboard, users can efficiently manage a wide range of aspects including product catalogs, inventory levels, pricing, promotions, customer information, and order fulfillment processes. The platform streamlines these tasks to ensure smooth day-to-day store management.
 
 
@@ -31,7 +34,11 @@ gallery:
   - https://i.imgur.com/QRucdZl.png
   - https://i.imgur.com/QKpVdls.png
 releaseNotes: >-
-  Version 1.2.2 of EverShop introduces improvements to order status management and allows order cancellations directly from the admin panel. It adds scheduled jobs, customizable admin page footer and logo options, and enhances payment integrations with Stripe and PayPal, including refund and capture support. The update also improves cart and address book functions, fixes multiple bugs, and addresses security vulnerabilities for better stability.
+  Novità v2.1.2:
+    - Correzioni per editor CMS, area di checkout, gestione eventi e categorie prodotto.
+    - Aggiunta area di debug e miglioramenti alla tipizzazione PostgreSQL e TypeScript.
+    - Aggiornate le integrazioni Stripe e PayPal e risolti vari problemi del checkout.
+    - ⚠️ Gli stati di pagamento Stripe e PayPal usano nuovi nomi: aggiorna eventuali integrazioni esterne che li interpretano.
 dependencies:
 path: ""
 defaultUsername: ""

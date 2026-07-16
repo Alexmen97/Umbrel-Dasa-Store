@@ -4,9 +4,12 @@ name: Glances
 tagline: An eye on your system
 icon: https://i.imgur.com/4T0Ff9S.png
 category: networking
-version: "4.3.3"
+version: "4.5.5"
 port: 61208
 description: >-
+  ✨ Novità in v4.5.5: monitoraggio GPU più completo, limiti CPU per container, supporto ARM/Raspberry Pi e importanti correzioni di sicurezza e stabilità.
+
+
   Glances is a versatile, open-source system monitoring tool designed to provide real-time insights into various aspects of your system's performance. Written in Python, it works across multiple platforms, including Linux, macOS, and Windows. The main purpose of Glances is to offer a quick, comprehensive overview of critical system metrics such as CPU, memory, disk, network, and process usage.
 
 
@@ -34,7 +37,11 @@ gallery:
   - https://i.imgur.com/M6tjOio.png
   - https://i.imgur.com/i45yzoe.png
 releaseNotes: >-
-  The WebUI display has been improved for low screen resolutions, the IP plugin issue with Netifaces2 has been fixed, and a message has been added to verify Netifaces2.
+  Novità v4.5.5:
+    - Nuovi indicatori CPU e memoria GPU nel plugin Quicklook, monitoraggio GPU per ARM/Raspberry Pi e metriche NVIDIA Jetson.
+    - Visualizzazione dei limiti CPU per container Docker, Podman e LXD.
+    - Corrette regressioni nel monitoraggio di container, dischi, VM e filesystem.
+    - Incluse correzioni di sicurezza per scrittura file arbitraria, command injection e configurazioni XML-RPC.
 dependencies:
 path: ""
 defaultUsername: ""

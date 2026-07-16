@@ -12,7 +12,7 @@ services:
   headscale:
     # https://github.com/juanfont/headscale/pkgs/container/headscale/versions
     image: >-
-      ghcr.io/juanfont/headscale:0.26.1@sha256:ea9b5ee06274d757a4d52103de56cd11a9c393acb19d9a35f4b9fe52ada410de
+      ghcr.io/juanfont/headscale:0.29.2@sha256:d337f1be4a9155b330aa9077bf6c82d24ff0581b8e69390ebc6d7c623bb339ce
     volumes:
       - '${APP_DATA_DIR}/config:/etc/headscale'
       - '${APP_DATA_DIR}/lib:/var/lib/headscale'
@@ -31,7 +31,7 @@ services:
       - headscale
     # https://github.com/gurucomputing/headscale-ui/pkgs/container/headscale-ui/versions
     image: >-
-      ghcr.io/gurucomputing/headscale-ui:2025.05.22@sha256:d5c7d1522e08c04fde00108100602500cc7ed0b52d4adc3a0ef7cea4ffad3e55
+      ghcr.io/gurucomputing/headscale-ui:2026.03.17@sha256:015f5ba04bcbd5ee03178540a1dbbfc97b6896d7411032e3bf33c2f3e08f8b6f
     restart: on-failure
     labels:
       - traefik.enable=true
@@ -45,7 +45,7 @@ services:
       - headscale
     # https://hub.docker.com/r/goodieshq/headscale-admin/tags
     image: >-
-      goodieshq/headscale-admin:0.25.6@sha256:d57c1d0e160f5a8aa3082e819050a43c0cd81b572e71da9b1e0cd499d18b48c1
+      goodieshq/headscale-admin:v0.27.0@sha256:e579fce717aa9b52d8a4a17e7624ef8e2f0352b90da333615ffd1eccd9e34bf5
     restart: on-failure
     labels:
       - traefik.enable=true
@@ -57,7 +57,7 @@ services:
   traefik:
     # https://hub.docker.com/_/traefik/tags
     image: >-
-      traefik:v3.4.1@sha256:cd40ab7bc1f047731d5b22595203812343efcb6538014c4e93221cfc3a77217a
+      traefik:v3.7.8@sha256:5cb000ad823bfcfff911e22a4c4fa09cee74c7a2d960c012a1a46a8d0a159fcf
     restart: on-failure
     command:
       - '--api.insecure=true'
