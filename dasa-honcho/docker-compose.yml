@@ -1,0 +1,63 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-honcho_api_1
+      APP_PORT: 8000
+      PROXY_AUTH_ADD: 'false'
+
+  api:
+    image: ghcr.io/plastic-labs/honcho:v2.0.3@sha256:93a1456b5b7823906ab29546921a408369730ff51b05c2488400a2e9036aea5b
+    restart: on-failure
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DB_CONNECTION_URI=postgresql+psycopg://honcho:honchopassword@postgres:5432/honcho
+      - CACHE_URL=redis://redis:6379/0?suppress=true
+      - CACHE_ENABLED=true
+      - AUTH_USE_AUTH=false
+      - VECTOR_STORE_TYPE=pgvector
+      - LLM_OPENAI_BASE_URL=https://cliproxyapi.proserver.cc/v1
+      - LLM_OPENAI_API_KEY=sk-proxy
+      - EMBEDDING_MODEL_CONFIG__TRANSPORT=openai
+      - EMBEDDING_MODEL_CONFIG__MODEL=text-embedding-3-small
+      - DERIVER_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+    volumes:
+      - ${APP_DATA_DIR}/data/honcho:/app/data
+
+  deriver:
+    image: ghcr.io/plastic-labs/honcho:v2.0.3@sha256:93a1456b5b7823906ab29546921a408369730ff51b05c2488400a2e9036aea5b
+    entrypoint: ["/app/.venv/bin/python", "-m", "src.deriver"]
+    restart: on-failure
+    depends_on:
+      - api
+      - postgres
+      - redis
+    environment:
+      - DB_CONNECTION_URI=postgresql+psycopg://honcho:honchopassword@postgres:5432/honcho
+      - CACHE_URL=redis://redis:6379/0?suppress=true
+      - CACHE_ENABLED=true
+      - LLM_OPENAI_BASE_URL=https://cliproxyapi.proserver.cc/v1
+      - LLM_OPENAI_API_KEY=sk-proxy
+      - DERIVER_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+    volumes:
+      - ${APP_DATA_DIR}/data/honcho:/app/data
+
+  postgres:
+    image: pgvector/pgvector:pg15
+    restart: on-failure
+    environment:
+      POSTGRES_DB: honcho
+      POSTGRES_USER: honcho
+      POSTGRES_PASSWORD: honchopassword
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+
+  redis:
+    image: redis:8.2-alpine
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/redis:/data

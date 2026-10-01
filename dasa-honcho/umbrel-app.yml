@@ -1,0 +1,49 @@
+manifestVersion: 1
+id: dasa-honcho
+name: Honcho
+tagline: AI-native user modeling, conclusion extraction, and cross-session memory
+icon: https://raw.githubusercontent.com/plastic-labs/honcho/main/assets/honcho-owl.png
+category: ai
+version: "2.0.3"
+port: 8000
+description: >-
+  Honcho is an open-source, AI-native memory server designed specifically for stateful AI agents.
+
+
+  Unlike traditional vector databases or static memory files, Honcho continually learns about users over time by observing multi-turn conversations, deriving deep behavioral insights, extracting conclusions, and building evolving profiles for both the user and the agent.
+
+
+  Key Features:
+
+
+  🧠 Cross-Session State & Continuity: Maintains conversations and context indefinitely across session resets and channel switches.
+
+
+  👤 Continual User Modeling: Automatically analyzes interactions to build structured profiles (preferences, communication styles, domain knowledge, and behavioral patterns).
+
+
+  💡 Automated Conclusion Extraction: Asynchronously distills raw conversations into high-level declarative conclusions and facts via background deriver workers.
+
+
+  🔍 Semantic & Relational Search: Built on top of PostgreSQL with pgvector for efficient hybrid retrieval over observations, conclusions, and messages.
+
+
+  ⚡ Native Integration: Seamlessly integrates with OpenClaw via the official `@honcho-ai/openclaw-honcho` plugin or any OpenAI-compatible agent framework.
+developer: Plastic Labs
+website: https://honcho.dev
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
+repo: https://github.com/plastic-labs/honcho
+support: https://github.com/plastic-labs/honcho/issues
+gallery:
+  - https://raw.githubusercontent.com/plastic-labs/honcho/main/assets/honcho-banner.png
+dependencies: []
+path: "/docs"
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: >-
+  v2.0.3 release:
+    - AI-native memory server with FastAPI and PostgreSQL pgvector.
+    - Asynchronous deriver worker for autonomous conclusion synthesis.
+    - Redis-backed caching and session reconciliation.
+    - Native compatibility with OpenClaw Honcho memory plugin.
