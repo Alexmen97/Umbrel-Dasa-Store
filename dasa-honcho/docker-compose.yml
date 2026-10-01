@@ -19,11 +19,9 @@ services:
       - CACHE_ENABLED=true
       - AUTH_USE_AUTH=false
       - VECTOR_STORE_TYPE=pgvector
-      - LLM_OPENAI_BASE_URL=https://cliproxyapi.proserver.cc/v1
-      - LLM_OPENAI_API_KEY=sk-proxy
-      - EMBEDDING_MODEL_CONFIG__TRANSPORT=openai
-      - EMBEDDING_MODEL_CONFIG__MODEL=text-embedding-3-small
-      - DERIVER_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      # Configure your LLM & Embedding provider (e.g. OpenAI, Ollama, OpenRouter, Gemini)
+      # - LLM_OPENAI_API_KEY=
+      # - LLM_OPENAI_BASE_URL=
     volumes:
       - ${APP_DATA_DIR}/data/honcho:/app/data
 
@@ -39,9 +37,9 @@ services:
       - DB_CONNECTION_URI=postgresql+psycopg://honcho:honchopassword@postgres:5432/honcho
       - CACHE_URL=redis://redis:6379/0?suppress=true
       - CACHE_ENABLED=true
-      - LLM_OPENAI_BASE_URL=https://cliproxyapi.proserver.cc/v1
-      - LLM_OPENAI_API_KEY=sk-proxy
-      - DERIVER_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      # Configure your LLM & Embedding provider (e.g. OpenAI, Ollama, OpenRouter, Gemini)
+      # - LLM_OPENAI_API_KEY=
+      # - LLM_OPENAI_BASE_URL=
     volumes:
       - ${APP_DATA_DIR}/data/honcho:/app/data
 
