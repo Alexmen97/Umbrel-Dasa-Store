@@ -32,6 +32,27 @@ description: >-
 
 
   ⚡ Native Integration: Seamlessly integrates with OpenClaw via the official `@honcho-ai/openclaw-honcho` plugin or any OpenAI-compatible agent framework.
+
+
+  📖 Tutorial — configurazione dei provider su Umbrel:
+
+
+  1. Dalla home di Umbrel, fai clic destro su Honcho e apri Impostazioni → Avanzate → Variabili d'ambiente → Aggiungi variabile personalizzata.
+
+
+  2. Per la configurazione predefinita OpenAI, seleziona il servizio api, inserisci LLM_OPENAI_API_KEY nel campo Nome e la tua chiave API nel campo Valore. Aggiungi la variabile, poi ripeti con lo stesso nome e la stessa chiave per il servizio deriver. Non inserirla nel servizio openconcho.
+
+
+  3. Applica le modifiche e attendi che l'app torni pronta; se Umbrel non riavvia automaticamente Honcho, usa Riavvia dal menu dell'app. I modelli predefiniti di Honcho 3.2.2 sono gpt-5.4-mini per il testo e text-embedding-3-small per gli embedding. La chiave deve poter utilizzare entrambi, con credito o fatturazione API disponibili.
+
+
+  4. Apri Honcho su http://umbrel.local:8000/, crea o seleziona un workspace e prova una richiesta di chat su un peer. Per verificare anche la memoria, aggiungi una conversazione a una sessione e controlla successivamente le conclusioni. Lo stato Connected conferma la connessione al server, ma non verifica le credenziali del provider.
+
+
+  5. Per Anthropic o Gemini usa rispettivamente LLM_ANTHROPIC_API_KEY o LLM_GEMINI_API_KEY in api e deriver, configurando anche transport e model per ciascuna funzione. La sola chiave non sostituisce OpenAI. Gli embedding richiedono un provider dedicato compatibile; il tutorial completo, con i nomi delle variabili per modelli ed endpoint personalizzati, è in https://github.com/Alexmen97/Umbrel-Dasa-Store/blob/master/dasa-honcho/README.md.
+
+
+  Il token nelle impostazioni di OpenConcho serve per l'autenticazione di Honcho, non per le chiavi dei provider. Questo pacchetto ha l'autenticazione Honcho disabilitata, quindi lascia quel token vuoto. Conserva le chiavi nelle impostazioni locali di Umbrel e non pubblicarle nel repository.
 developer: Plastic Labs
 website: https://honcho.dev
 submitter: dasa
