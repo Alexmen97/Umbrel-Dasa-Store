@@ -1,0 +1,82 @@
+# Adapted from OpenConcho v0.16.2 (MIT):
+# https://github.com/offendingcommit/openconcho/blob/v0.16.2/docker/nginx.conf.template
+# OpenConcho — nginx site config.
+# Serves the React SPA and header-driven same-origin /api proxy to Honcho.
+# The browser sends X-Honcho-Upstream per request; nginx forwards server-side (no browser CORS).
+
+server {
+    listen       8080;
+    listen       [::]:8080;
+    server_name  _;
+    root         /usr/share/nginx/html;
+    index        index.html;
+
+    # Don't leak the nginx version.
+    server_tokens off;
+
+    # The resolver (required for per-request DNS with a runtime-variable proxy_pass)
+    # is rendered by the entrypoint into conf.d from the container's own DNS, so it
+    # works on both user-defined networks (127.0.0.11) and the default bridge.
+
+    # Header-driven same-origin proxy: the browser names the Honcho upstream per
+    # request via X-Honcho-Upstream, so the browser never makes a cross-origin call.
+    # $allow_upstream is provided by the allowlist map in conf.d (entrypoint-rendered).
+    location ^~ /api/ {
+        set $upstream $http_x_honcho_upstream;
+        if ($upstream = "") {
+            add_header X-Honcho-Proxy-Reject "no-upstream" always;
+            return 421;
+        }
+        if ($allow_upstream = 0) {
+            add_header X-Honcho-Proxy-Reject "allowlist" always;
+            return 403;
+        }
+        rewrite ^/api/(.*)$ /$1 break;
+        proxy_pass               $upstream;
+        proxy_ssl_server_name    on;
+        proxy_read_timeout       300s;
+        proxy_buffering          off;
+        proxy_set_header Host    $proxy_host;
+        proxy_set_header X-Honcho-Upstream "";
+    }
+
+    # Preserve the existing Honcho API and Swagger URLs on Umbrel port 8000.
+    # This regex precedes static assets so /openapi.json reaches Honcho.
+    location ~ ^/(v3(?:/|$)|docs(?:/|$)|redoc(?:/|$)|openapi\.json$|health$|deriver/metrics$) {
+        proxy_pass http://api:8000;
+        proxy_set_header Host $host;
+        proxy_read_timeout 300s;
+        proxy_buffering off;
+    }
+
+    # Runtime config — regenerated per container start, must never be cached.
+    location = /config.js {
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        alias /tmp/openconcho-config.js;
+    }
+
+    # Long-cache static assets — Vite hashes filenames so they're immutable.
+    location ~* \.(?:js|mjs|css|woff2?|ttf|otf|eot|svg|png|jpg|jpeg|gif|ico|webp|avif|wasm)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+        try_files $uri =404;
+    }
+
+    # Container healthcheck (local; distinct from Honcho's /health).
+    location = /healthz {
+        access_log off;
+        default_type text/plain;
+        return 200 "ok\n";
+    }
+
+    # SPA fallback: unknown paths return index.html so the router resolves them.
+    location / {
+        try_files $uri $uri/ /index.html;
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+    }
+
+    gzip on;
+    gzip_types text/plain text/css application/javascript application/json image/svg+xml;
+    gzip_min_length 1024;
+}

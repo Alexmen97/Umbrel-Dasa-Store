@@ -4,10 +4,13 @@ name: Honcho
 tagline: AI-native user modeling, conclusion extraction, and cross-session memory
 icon: https://i.imgur.com/NuSmtA7.png
 category: ai
-version: "3.2.2"
+version: "3.2.2-1"
 port: 8000
 description: >-
   Honcho is an open-source, AI-native memory server designed specifically for stateful AI agents.
+
+
+  Includes OpenConcho, a web dashboard for browsing workspaces, peers, sessions, conclusions, and memory-aware chat. The dashboard is connected to the bundled Honcho API automatically. API clients can continue using the same address on port 8000; API documentation remains available at /docs.
 
 
   Unlike traditional vector databases or static memory files, Honcho continually learns about users over time by observing multi-turn conversations, deriving deep behavioral insights, extracting conclusions, and building evolving profiles for both the user and the agent.
@@ -42,14 +45,14 @@ gallery:
   - https://i.imgur.com/YPm9daL.png
   - https://i.imgur.com/kAh8hQJ.png
 dependencies: []
-path: "/docs"
+path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Updated to the official Honcho Docker image v3.2.2 for both the API and deriver.
+  Honcho v3.2.2 with OpenConcho v0.16.2 dashboard (store package revision 1).
 
 
-  Database provisioning and migrations now run before the API starts. Health checks ensure PostgreSQL, Redis, and the API are ready before dependent services start.
+  Opening the app now shows the OpenConcho dashboard, preconfigured for the bundled Honcho instance. The existing /v3 API endpoints, /health, and /docs remain available on port 8000. The dashboard proxy is restricted to the bundled API.
 
 
-  This is a major upgrade from v2.0.3. Back up your Honcho PostgreSQL data before updating, and verify compatibility with your clients and integrations. Configure your own LLM and embedding provider credentials using the Honcho v3 configuration reference; no private endpoints or API keys are included.
+  Dashboard preferences are stored in your browser; Honcho data remains in the existing PostgreSQL volume. Back up the database before upgrading from Honcho v2.0.3 and configure your own LLM and embedding provider credentials for AI features.
