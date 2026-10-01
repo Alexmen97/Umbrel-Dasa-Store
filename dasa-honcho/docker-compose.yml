@@ -8,11 +8,20 @@ services:
       PROXY_AUTH_ADD: 'false'
 
   api:
-    image: ghcr.io/plastic-labs/honcho:v2.0.3@sha256:93a1456b5b7823906ab29546921a408369730ff51b05c2488400a2e9036aea5b
+    entrypoint: ["sh", "/app/docker/entrypoint.sh"]
+    image: ghcr.io/plastic-labs/honcho:v3.2.2@sha256:c74955d6dbea6dda42c2dd9dd13dea726fcba36ba5c0b6bae4867f7ed762896d
     restart: on-failure
+    healthcheck:
+      test: ["CMD", "/app/.venv/bin/python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2).read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 120s
     depends_on:
-      - postgres
-      - redis
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     environment:
       - DB_CONNECTION_URI=postgresql+psycopg://honcho:honchopassword@postgres:5432/honcho
       - CACHE_URL=redis://redis:6379/0?suppress=true
@@ -22,17 +31,24 @@ services:
       # Configure your LLM & Embedding provider (e.g. OpenAI, Ollama, OpenRouter, Gemini)
       # - LLM_OPENAI_API_KEY=
       # - LLM_OPENAI_BASE_URL=
+      # - LLM_ANTHROPIC_API_KEY=
+      # - LLM_GEMINI_API_KEY=
+      # Set model transports/models using the Honcho v3 configuration reference:
+      # https://github.com/plastic-labs/honcho/blob/v3.2.2/config.toml.example
     volumes:
       - ${APP_DATA_DIR}/data/honcho:/app/data
 
   deriver:
-    image: ghcr.io/plastic-labs/honcho:v2.0.3@sha256:93a1456b5b7823906ab29546921a408369730ff51b05c2488400a2e9036aea5b
+    image: ghcr.io/plastic-labs/honcho:v3.2.2@sha256:c74955d6dbea6dda42c2dd9dd13dea726fcba36ba5c0b6bae4867f7ed762896d
     entrypoint: ["/app/.venv/bin/python", "-m", "src.deriver"]
     restart: on-failure
     depends_on:
-      - api
-      - postgres
-      - redis
+      api:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     environment:
       - DB_CONNECTION_URI=postgresql+psycopg://honcho:honchopassword@postgres:5432/honcho
       - CACHE_URL=redis://redis:6379/0?suppress=true
@@ -40,12 +56,21 @@ services:
       # Configure your LLM & Embedding provider (e.g. OpenAI, Ollama, OpenRouter, Gemini)
       # - LLM_OPENAI_API_KEY=
       # - LLM_OPENAI_BASE_URL=
+      # - LLM_ANTHROPIC_API_KEY=
+      # - LLM_GEMINI_API_KEY=
+      # Set model transports/models using the Honcho v3 configuration reference:
+      # https://github.com/plastic-labs/honcho/blob/v3.2.2/config.toml.example
     volumes:
       - ${APP_DATA_DIR}/data/honcho:/app/data
 
   postgres:
     image: pgvector/pgvector:pg15
     restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U honcho -d honcho"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     environment:
       POSTGRES_DB: honcho
       POSTGRES_USER: honcho
@@ -57,5 +82,10 @@ services:
   redis:
     image: redis:8.2-alpine
     restart: on-failure
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     volumes:
       - ${APP_DATA_DIR}/data/redis:/data

@@ -4,7 +4,7 @@ name: Honcho
 tagline: AI-native user modeling, conclusion extraction, and cross-session memory
 icon: https://i.imgur.com/NuSmtA7.png
 category: ai
-version: "2.0.3"
+version: "3.2.2"
 port: 8000
 description: >-
   Honcho is an open-source, AI-native memory server designed specifically for stateful AI agents.
@@ -46,8 +46,10 @@ path: "/docs"
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  v2.0.3 release:
-    - AI-native memory server with FastAPI and PostgreSQL pgvector.
-    - Asynchronous deriver worker for autonomous conclusion synthesis.
-    - Redis-backed caching and session reconciliation.
-    - Native compatibility with OpenClaw Honcho memory plugin.
+  Updated to the official Honcho Docker image v3.2.2 for both the API and deriver.
+
+
+  Database provisioning and migrations now run before the API starts. Health checks ensure PostgreSQL, Redis, and the API are ready before dependent services start.
+
+
+  This is a major upgrade from v2.0.3. Back up your Honcho PostgreSQL data before updating, and verify compatibility with your clients and integrations. Configure your own LLM and embedding provider credentials using the Honcho v3 configuration reference; no private endpoints or API keys are included.
