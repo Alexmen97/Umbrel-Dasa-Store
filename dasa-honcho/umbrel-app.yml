@@ -2,7 +2,7 @@ manifestVersion: 1
 id: dasa-honcho
 name: Honcho
 tagline: AI-native user modeling, conclusion extraction, and cross-session memory
-icon: https://raw.githubusercontent.com/plastic-labs/honcho/main/assets/honcho-owl.png
+icon: https://i.imgur.com/NuSmtA7.png
 category: ai
 version: "2.0.3"
 port: 8000
@@ -36,7 +36,11 @@ submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
 repo: https://github.com/plastic-labs/honcho
 support: https://github.com/plastic-labs/honcho/issues
 gallery:
-  - https://raw.githubusercontent.com/plastic-labs/honcho/main/assets/honcho-banner.png
+  - https://i.imgur.com/FJVqbZ7.png
+  - https://i.imgur.com/xOVkdaO.png
+  - https://i.imgur.com/YE8Oa33.png
+  - https://i.imgur.com/YPm9daL.png
+  - https://i.imgur.com/kAh8hQJ.png
 dependencies: []
 path: "/docs"
 defaultUsername: ""
