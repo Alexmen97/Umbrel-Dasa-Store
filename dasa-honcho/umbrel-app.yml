@@ -1,43 +1,55 @@
 manifestVersion: 1
 id: dasa-honcho
 name: Honcho
-tagline: AI-native user modeling, conclusion extraction, and cross-session memory
+tagline: Server di memoria cognitiva AI con dashboard web interattiva, user modeling e inferenza dialettica
 icon: https://i.imgur.com/xezpkIp.png
 category: ai
-version: "3.2.2-4"
+version: "3.2.2-5"
 port: 8000
 description: >-
-  🧠 Honcho è un server di memoria avanzato e nativo per l'Intelligenza Artificiale, progettato specificamente per agenti conversazionali e assistenti complessi.
+  🧠 Honcho è un server di memoria cognitiva nativo per l'Intelligenza Artificiale, progettato per agenti autonomi, assistenti intelligenti e architetture multi-agente.
 
 
-  A differenza dei tradizionali database vettoriali o dei semplici file di memoria statica, Honcho osserva le conversazioni multi-turno, modella continuamente la psicologia e le preferenze dell'utente, ed estrae conclusioni dichiarative e fatti ad alto livello attraverso processi di background asincroni (deriver workers).
+  A differenza dei comuni database vettoriali o delle memorie statiche a file, Honcho va oltre il semplice recupero: analizza le conversazioni su più sessioni, modella continuamente la psicologia e le preferenze dell'utente ed estrae fatti stabili e deduzioni logiche tramite processi di background asincroni (deriver workers).
 
 
-  Caratteristiche principali:
+  🖥️ Nuova Dashboard Web Integrata:
 
 
-  👤 Continual User Modeling: Analizza le interazioni nel tempo per costruire un profilo cognitivo e comportamentale evoluto sia dell'utente che dell'assistente.
+  Questo pacchetto include l'interfaccia grafica completa, moderna e dark-first, accessibile direttamente cliccando sull'app:
 
 
-  💡 Automated Conclusion Extraction: Distilla automaticamente la cronologia della chat in fatti, credenze e preferenze stabili.
+  • 🗂️ Workspace & Session Explorer: visualizzazione in tempo reale di sessioni, metadati e timeline dei messaggi con conteggio token.
 
 
-  🔍 Ricerca Ibrida Semantica e Relazionale: Basato su PostgreSQL 15 con pgvector e cache Redis ad alte prestazioni.
+  • 👤 Cognitive Peer Cards: profili cognitivi sintetizzati, tratti comportamentali e preferenze operative dell'utente.
 
 
-  🖥️ Honcho Studio Integrato: Include la dashboard web moderna, reattiva e dark-first con esplorazione workspace, timeline sessioni, profili peer, visualizzatore conclusioni e Dialectic Chat Playground con streaming SSE. Documentazione Swagger sempre disponibile su /docs.
+  • 🔍 Memoria & Ricerca Vettoriale: consultazione strutturata dei fatti dedotti con filtri per livello cognitivo (explicit, deductive, inductive) e query semantica vettoriale Cosine.
 
 
-  📖 Guida Rapida alla Configurazione:
+  • 💬 Dialectic Chat Playground: console interattiva di inferenza con regolazione del livello di reasoning (minimal, low, medium, high, max), streaming SSE in tempo reale e tracciamento trasparente delle evidenze consultate dall'LLM prima di rispondere.
 
 
-  1. Da Umbrel, fai clic destro su Honcho → Impostazioni → Avanzate → Variabili d'ambiente → Aggiungi variabile personalizzata.
+  • 📚 Documentazione API Swagger: sempre a disposizione all'indirizzo /docs.
 
 
-  2. Per OpenAI, inserisci LLM_OPENAI_API_KEY nel servizio api e poi nello stesso modo nel servizio deriver.
+  ⚡ Stack Tecnologico Unificato:
 
 
-  3. Per provider come Anthropic, Gemini o endpoint locali OpenAI-compatibili (Ollama, vLLM), consulta la guida completa e dettagliata nel README del repository.
+  Include FastAPI v3.2.2, PostgreSQL 15 con estensione vettoriale pgvector HNSW, cache Redis, Deriver asincrono e Gateway Node.js Same-Origin.
+
+
+  📖 Configurazione Rapida LLM ed Embedding:
+
+
+  1. Da Umbrel, fai clic con il tasto destro su Honcho → Impostazioni → Avanzate → Variabili d'ambiente.
+
+
+  2. Per gli LLM (OpenAI o CliproxyAPI): imposta LLM_OPENAI_API_KEY e LLM_OPENAI_BASE_URL nei servizi api e deriver.
+
+
+  3. Per gli Embedding locali: configura Ollama locale (es. nomic-embed-text a 768 dimensioni) per generare vettori ad alta velocità sulla tua rete LAN.
 developer: Plastic Labs
 website: https://honcho.dev
 submitter: dasa
@@ -55,4 +67,4 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Release 3.2.2-4: Include la dashboard ufficiale Honcho Studio integrata direttamente nello stack (interfaccia utente alla radice e documentazione interattiva Swagger su /docs).
+  Release 3.2.2-5: Descrizione aggiornata dell'applicazione, documentazione dettagliata della dashboard web integrata e guida alla configurazione avanzata.
