@@ -4,13 +4,10 @@ name: Honcho
 tagline: AI-native user modeling, conclusion extraction, and cross-session memory
 icon: https://i.imgur.com/NuSmtA7.png
 category: ai
-version: "3.2.2-1"
+version: "3.2.2-2"
 port: 8000
 description: >-
   Honcho is an open-source, AI-native memory server designed specifically for stateful AI agents.
-
-
-  Includes OpenConcho, a web dashboard for browsing workspaces, peers, sessions, conclusions, and memory-aware chat. The dashboard is connected to the bundled Honcho API automatically. API clients can continue using the same address on port 8000; API documentation remains available at /docs.
 
 
   Unlike traditional vector databases or static memory files, Honcho continually learns about users over time by observing multi-turn conversations, deriving deep behavioral insights, extracting conclusions, and building evolving profiles for both the user and the agent.
@@ -40,19 +37,16 @@ description: >-
   1. Dalla home di Umbrel, fai clic destro su Honcho e apri Impostazioni → Avanzate → Variabili d'ambiente → Aggiungi variabile personalizzata.
 
 
-  2. Per la configurazione predefinita OpenAI, seleziona il servizio api, inserisci LLM_OPENAI_API_KEY nel campo Nome e la tua chiave API nel campo Valore. Aggiungi la variabile, poi ripeti con lo stesso nome e la stessa chiave per il servizio deriver. Non inserirla nel servizio openconcho.
+  2. Per la configurazione predefinita OpenAI, seleziona il servizio api, inserisci LLM_OPENAI_API_KEY nel campo Nome e la tua chiave API nel campo Valore. Aggiungi la variabile, poi ripeti con lo stesso nome e la stessa chiave per il servizio deriver.
 
 
   3. Applica le modifiche e attendi che l'app torni pronta; se Umbrel non riavvia automaticamente Honcho, usa Riavvia dal menu dell'app. I modelli predefiniti di Honcho 3.2.2 sono gpt-5.4-mini per il testo e text-embedding-3-small per gli embedding. La chiave deve poter utilizzare entrambi, con credito o fatturazione API disponibili.
 
 
-  4. Apri Honcho su http://umbrel.local:8000/, crea o seleziona un workspace e prova una richiesta di chat su un peer. Per verificare anche la memoria, aggiungi una conversazione a una sessione e controlla successivamente le conclusioni. Lo stato Connected conferma la connessione al server, ma non verifica le credenziali del provider.
+  4. Accedi alle API e alla documentazione interattiva su http://umbrel.local:8000/docs. Per verificare la memoria, crea un workspace e aggiungi messaggi a una sessione per consentire al deriver di estrarre conclusioni.
 
 
   5. Per Anthropic o Gemini usa rispettivamente LLM_ANTHROPIC_API_KEY o LLM_GEMINI_API_KEY in api e deriver, configurando anche transport e model per ciascuna funzione. La sola chiave non sostituisce OpenAI. Gli embedding richiedono un provider dedicato compatibile; il tutorial completo, con i nomi delle variabili per modelli ed endpoint personalizzati, è in https://github.com/Alexmen97/Umbrel-Dasa-Store/blob/master/dasa-honcho/README.md.
-
-
-  Il token nelle impostazioni di OpenConcho serve per l'autenticazione di Honcho, non per le chiavi dei provider. Questo pacchetto ha l'autenticazione Honcho disabilitata, quindi lascia quel token vuoto. Conserva le chiavi nelle impostazioni locali di Umbrel e non pubblicarle nel repository.
 developer: Plastic Labs
 website: https://honcho.dev
 submitter: dasa
@@ -66,14 +60,8 @@ gallery:
   - https://i.imgur.com/YPm9daL.png
   - https://i.imgur.com/kAh8hQJ.png
 dependencies: []
-path: ""
+path: "/docs"
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Honcho v3.2.2 with OpenConcho v0.16.2 dashboard (store package revision 1).
-
-
-  Opening the app now shows the OpenConcho dashboard, preconfigured for the bundled Honcho instance. The existing /v3 API endpoints, /health, and /docs remain available on port 8000. The dashboard proxy is restricted to the bundled API.
-
-
-  Dashboard preferences are stored in your browser; Honcho data remains in the existing PostgreSQL volume. Back up the database before upgrading from Honcho v2.0.3 and configure your own LLM and embedding provider credentials for AI features.
+  Updated to Honcho v3.2.2 backend with interactive API documentation (/docs). OpenConcho dashboard removed for a clean, lightweight native API server.

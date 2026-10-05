@@ -3,27 +3,9 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: dasa-honcho_openconcho_1
-      APP_PORT: 8080
+      APP_HOST: dasa-honcho_api_1
+      APP_PORT: 8000
       PROXY_AUTH_ADD: 'false'
-
-  openconcho:
-    image: ghcr.io/offendingcommit/openconcho-web:0.16.2@sha256:9d131061a4d45a6b9a850d85cffe74b56e5135f4710c00c5485ccd7e8f8c6120
-    restart: on-failure
-    depends_on:
-      api:
-        condition: service_healthy
-    environment:
-      OPENCONCHO_DEFAULT_HONCHO_URL: http://api:8000
-      OPENCONCHO_UPSTREAM_ALLOWLIST: api
-    volumes:
-      - ${APP_DATA_DIR}/config/openconcho.conf.template:/etc/nginx/templates/default.conf.template:ro
-    healthcheck:
-      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8080/healthz || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
 
   api:
     entrypoint: ["sh", "/app/docker/entrypoint.sh"]
