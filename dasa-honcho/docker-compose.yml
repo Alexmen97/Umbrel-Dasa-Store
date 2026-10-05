@@ -28,13 +28,34 @@ services:
       - CACHE_ENABLED=true
       - AUTH_USE_AUTH=false
       - VECTOR_STORE_TYPE=pgvector
-      # Configure your LLM & Embedding provider (e.g. OpenAI, Ollama, OpenRouter, Gemini)
-      # - LLM_OPENAI_API_KEY=
-      # - LLM_OPENAI_BASE_URL=
-      # - LLM_ANTHROPIC_API_KEY=
-      # - LLM_GEMINI_API_KEY=
-      # Set model transports/models using the Honcho v3 configuration reference:
-      # https://github.com/plastic-labs/honcho/blob/v3.2.2/config.toml.example
+      # LLM via CliproxyAPI
+      - LLM_OPENAI_BASE_URL=https://cliproxyapi.proserver.cc/v1
+      # Model mapping
+      - DERIVER_MODEL_CONFIG__TRANSPORT=openai
+      - DERIVER_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - SUMMARY_MODEL_CONFIG__TRANSPORT=openai
+      - SUMMARY_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__MINIMAL__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__MINIMAL__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__LOW__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__LOW__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__MEDIUM__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__MEDIUM__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__HIGH__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__HIGH__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__MAX__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__MAX__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DREAM_DEDUCTION_MODEL_CONFIG__TRANSPORT=openai
+      - DREAM_DEDUCTION_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DREAM_INDUCTION_MODEL_CONFIG__TRANSPORT=openai
+      - DREAM_INDUCTION_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      # Embedding via local Ollama
+      - EMBEDDING_VECTOR_DIMENSIONS=4096
+      - EMBEDDING_MODEL_CONFIG__TRANSPORT=openai
+      - EMBEDDING_MODEL_CONFIG__MODEL=qwen3-embedding:8b
+      - EMBEDDING_MODEL_CONFIG__OVERRIDES__BASE_URL=http://192.168.4.108:11434/v1
+      - EMBEDDING_MODEL_CONFIG__OVERRIDES__API_KEY=ollama
+      - EMBEDDING_MODEL_CONFIG__DIMENSIONS_MODE=never
     volumes:
       - ${APP_DATA_DIR}/data/honcho:/app/data
 
@@ -53,13 +74,34 @@ services:
       - DB_CONNECTION_URI=postgresql+psycopg://honcho:honchopassword@postgres:5432/honcho
       - CACHE_URL=redis://redis:6379/0?suppress=true
       - CACHE_ENABLED=true
-      # Configure your LLM & Embedding provider (e.g. OpenAI, Ollama, OpenRouter, Gemini)
-      # - LLM_OPENAI_API_KEY=
-      # - LLM_OPENAI_BASE_URL=
-      # - LLM_ANTHROPIC_API_KEY=
-      # - LLM_GEMINI_API_KEY=
-      # Set model transports/models using the Honcho v3 configuration reference:
-      # https://github.com/plastic-labs/honcho/blob/v3.2.2/config.toml.example
+      # LLM via CliproxyAPI
+      - LLM_OPENAI_BASE_URL=https://cliproxyapi.proserver.cc/v1
+      # Model mapping
+      - DERIVER_MODEL_CONFIG__TRANSPORT=openai
+      - DERIVER_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - SUMMARY_MODEL_CONFIG__TRANSPORT=openai
+      - SUMMARY_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__MINIMAL__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__MINIMAL__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__LOW__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__LOW__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__MEDIUM__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__MEDIUM__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__HIGH__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__HIGH__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DIALECTIC_LEVELS__MAX__MODEL_CONFIG__TRANSPORT=openai
+      - DIALECTIC_LEVELS__MAX__MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DREAM_DEDUCTION_MODEL_CONFIG__TRANSPORT=openai
+      - DREAM_DEDUCTION_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      - DREAM_INDUCTION_MODEL_CONFIG__TRANSPORT=openai
+      - DREAM_INDUCTION_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
+      # Embedding via local Ollama
+      - EMBEDDING_VECTOR_DIMENSIONS=4096
+      - EMBEDDING_MODEL_CONFIG__TRANSPORT=openai
+      - EMBEDDING_MODEL_CONFIG__MODEL=qwen3-embedding:8b
+      - EMBEDDING_MODEL_CONFIG__OVERRIDES__BASE_URL=http://192.168.4.108:11434/v1
+      - EMBEDDING_MODEL_CONFIG__OVERRIDES__API_KEY=ollama
+      - EMBEDDING_MODEL_CONFIG__DIMENSIONS_MODE=never
     volumes:
       - ${APP_DATA_DIR}/data/honcho:/app/data
 
