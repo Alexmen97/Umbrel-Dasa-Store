@@ -2,51 +2,42 @@ manifestVersion: 1
 id: dasa-honcho
 name: Honcho
 tagline: AI-native user modeling, conclusion extraction, and cross-session memory
-icon: https://i.imgur.com/NuSmtA7.png
+icon: https://i.imgur.com/xezpkIp.png
 category: ai
-version: "3.2.2-2"
+version: "3.2.2"
 port: 8000
 description: >-
-  Honcho is an open-source, AI-native memory server designed specifically for stateful AI agents.
+  🧠 Honcho è un server di memoria avanzato e nativo per l'Intelligenza Artificiale, progettato specificamente per agenti conversazionali e assistenti complessi.
 
 
-  Unlike traditional vector databases or static memory files, Honcho continually learns about users over time by observing multi-turn conversations, deriving deep behavioral insights, extracting conclusions, and building evolving profiles for both the user and the agent.
+  A differenza dei tradizionali database vettoriali o dei semplici file di memoria statica, Honcho osserva le conversazioni multi-turno, modella continuamente la psicologia e le preferenze dell'utente, ed estrae conclusioni dichiarative e fatti ad alto livello attraverso processi di background asincroni (deriver workers).
 
 
-  Key Features:
+  Caratteristiche principali:
 
 
-  🧠 Cross-Session State & Continuity: Maintains conversations and context indefinitely across session resets and channel switches.
+  👤 Continual User Modeling: Analizza le interazioni nel tempo per costruire un profilo cognitivo e comportamentale evoluto sia dell'utente che dell'assistente.
 
 
-  👤 Continual User Modeling: Automatically analyzes interactions to build structured profiles (preferences, communication styles, domain knowledge, and behavioral patterns).
+  💡 Automated Conclusion Extraction: Distilla automaticamente la cronologia della chat in fatti, credenze e preferenze stabili.
 
 
-  💡 Automated Conclusion Extraction: Asynchronously distills raw conversations into high-level declarative conclusions and facts via background deriver workers.
+  🔍 Ricerca Ibrida Semantica e Relazionale: Basato su PostgreSQL 15 con pgvector e cache Redis ad alte prestazioni.
 
 
-  🔍 Semantic & Relational Search: Built on top of PostgreSQL with pgvector for efficient hybrid retrieval over observations, conclusions, and messages.
+  ⚡ Stack Diretto e Leggero: Senza dashboard esterne superflue; espone direttamente le API FastAPI native con documentazione interattiva Swagger UI accessibile su /docs.
 
 
-  ⚡ Native Integration: Seamlessly integrates with OpenClaw via the official `@honcho-ai/openclaw-honcho` plugin or any OpenAI-compatible agent framework.
+  📖 Guida Rapida alla Configurazione:
 
 
-  📖 Tutorial — configurazione dei provider su Umbrel:
+  1. Da Umbrel, fai clic destro su Honcho → Impostazioni → Avanzate → Variabili d'ambiente → Aggiungi variabile personalizzata.
 
 
-  1. Dalla home di Umbrel, fai clic destro su Honcho e apri Impostazioni → Avanzate → Variabili d'ambiente → Aggiungi variabile personalizzata.
+  2. Per OpenAI, inserisci LLM_OPENAI_API_KEY nel servizio api e poi nello stesso modo nel servizio deriver.
 
 
-  2. Per la configurazione predefinita OpenAI, seleziona il servizio api, inserisci LLM_OPENAI_API_KEY nel campo Nome e la tua chiave API nel campo Valore. Aggiungi la variabile, poi ripeti con lo stesso nome e la stessa chiave per il servizio deriver.
-
-
-  3. Applica le modifiche e attendi che l'app torni pronta; se Umbrel non riavvia automaticamente Honcho, usa Riavvia dal menu dell'app. I modelli predefiniti di Honcho 3.2.2 sono gpt-5.4-mini per il testo e text-embedding-3-small per gli embedding. La chiave deve poter utilizzare entrambi, con credito o fatturazione API disponibili.
-
-
-  4. Accedi alle API e alla documentazione interattiva su http://umbrel.local:8000/docs. Per verificare la memoria, crea un workspace e aggiungi messaggi a una sessione per consentire al deriver di estrarre conclusioni.
-
-
-  5. Per Anthropic o Gemini usa rispettivamente LLM_ANTHROPIC_API_KEY o LLM_GEMINI_API_KEY in api e deriver, configurando anche transport e model per ciascuna funzione. La sola chiave non sostituisce OpenAI. Gli embedding richiedono un provider dedicato compatibile; il tutorial completo, con i nomi delle variabili per modelli ed endpoint personalizzati, è in https://github.com/Alexmen97/Umbrel-Dasa-Store/blob/master/dasa-honcho/README.md.
+  3. Per provider come Anthropic, Gemini o endpoint locali OpenAI-compatibili (Ollama, vLLM), consulta la guida completa e dettagliata nel README del repository.
 developer: Plastic Labs
 website: https://honcho.dev
 submitter: dasa
@@ -64,4 +55,4 @@ path: "/docs"
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Updated to Honcho v3.2.2 backend with interactive API documentation (/docs). OpenConcho dashboard removed for a clean, lightweight native API server.
+  Release 3.2.2 nativa: stack snello e performante (API FastAPI, Deriver, PostgreSQL con pgvector e Redis). Include la nuova icona ufficiale e documentazione interattiva su /docs.
