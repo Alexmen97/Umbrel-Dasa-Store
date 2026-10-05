@@ -46,7 +46,7 @@ description: >-
   1. Da Umbrel, fai clic con il tasto destro su Honcho → Impostazioni → Avanzate → Variabili d'ambiente.
 
 
-  2. Per gli LLM (OpenAI o CliproxyAPI): imposta LLM_OPENAI_API_KEY e LLM_OPENAI_BASE_URL nei servizi api e deriver.
+  2. Per gli LLM (OpenAI o provider compatibile): imposta LLM_OPENAI_API_KEY (tua_api) e LLM_OPENAI_BASE_URL (tuo_endpoint) nei servizi api e deriver.
 
 
   3. Per gli Embedding locali: configura Ollama locale (es. nomic-embed-text a 768 dimensioni) per generare vettori ad alta velocità sulla tua rete LAN.

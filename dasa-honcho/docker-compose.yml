@@ -42,8 +42,8 @@ services:
       - CACHE_ENABLED=true
       - AUTH_USE_AUTH=false
       - VECTOR_STORE_TYPE=pgvector
-      # LLM via CliproxyAPI
-      - LLM_OPENAI_BASE_URL=https://cliproxyapi.proserver.cc/v1
+      # LLM endpoint
+      - LLM_OPENAI_BASE_URL=https://tuo_endpoint/v1
       # Model mapping
       - DERIVER_MODEL_CONFIG__TRANSPORT=openai
       - DERIVER_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
@@ -88,8 +88,8 @@ services:
       - DB_CONNECTION_URI=postgresql+psycopg://honcho:honchopassword@postgres:5432/honcho
       - CACHE_URL=redis://redis:6379/0?suppress=true
       - CACHE_ENABLED=true
-      # LLM via CliproxyAPI
-      - LLM_OPENAI_BASE_URL=https://cliproxyapi.proserver.cc/v1
+      # LLM endpoint
+      - LLM_OPENAI_BASE_URL=https://tuo_endpoint/v1
       # Model mapping
       - DERIVER_MODEL_CONFIG__TRANSPORT=openai
       - DERIVER_MODEL_CONFIG__MODEL=Gemini-3.8-Flash
