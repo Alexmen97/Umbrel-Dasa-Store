@@ -4,7 +4,7 @@ name: Honcho
 tagline: Server di memoria cognitiva AI con dashboard web interattiva, user modeling e inferenza dialettica
 icon: https://i.imgur.com/xezpkIp.png
 category: ai
-version: "3.2.2-5"
+version: "3.2.2-6"
 port: 8000
 description: >-
   🧠 Honcho è un server di memoria cognitiva nativo per l'Intelligenza Artificiale, progettato per agenti autonomi, assistenti intelligenti e architetture multi-agente.
