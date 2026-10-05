@@ -4,7 +4,7 @@ name: Honcho
 tagline: AI-native user modeling, conclusion extraction, and cross-session memory
 icon: https://i.imgur.com/xezpkIp.png
 category: ai
-version: "3.2.2"
+version: "3.2.2-3"
 port: 8000
 description: >-
   🧠 Honcho è un server di memoria avanzato e nativo per l'Intelligenza Artificiale, progettato specificamente per agenti conversazionali e assistenti complessi.
