@@ -1,0 +1,46 @@
+manifestVersion: 1
+id: dasa-honcho-dashboard
+name: Honcho Studio
+tagline: Dashboard interattiva e cognition studio per Honcho
+icon: https://i.imgur.com/xezpkIp.png
+category: ai
+version: "1.0.0"
+port: 8001
+description: >-
+  ⚡ Honcho Studio è la dashboard web moderna, reattiva e dark-first progettata per interagire con l'ambiente Honcho (dasa-honcho v3.2.2).
+
+
+  Offre una suite completa per la gestione della social cognition, della memoria e dell'inferenza dialettica:
+
+
+  🗂️ Workspace Manager & Overview: Esplora i workspace, visualizza metriche e KPI su sessioni attive, peer monitorati e conclusioni estratte.
+
+
+  💬 Session Explorer & Token Tracker: Naviga le sessioni, consulta la cronologia conversazionale con avatar, ruoli e consumo esatto di token per messaggio.
+
+
+  👤 Peer Cognitive Cards: Ispeziona l'identità cognitiva e i tratti psicologico-comportamentali distillati per ciascun utente (Alex).
+
+
+  🔍 Conclusion Memory & Semantic Search: Tabella completa dei fatti estratti con filtri per livello cognitivo (explicit, deductive, inductive) e ricerca semantica con soglia di similarità vettoriale Cosine.
+
+
+  🧠 Dialectic Chat Playground: Ambiente interattivo di test dialettico con controllo del reasoning level (minimal, low, medium, high, max), streaming SSE in tempo reale e Audit Trace delle evidenze consultate dall'LLM prima di rispondere.
+
+
+  Sviluppata in React, TypeScript, Tailwind CSS con gateway BFF same-origin per la massima sicurezza.
+developer: Plastic Labs & Alexmen97
+website: https://github.com/Alexmen97/honcho-studio
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
+repo: https://github.com/Alexmen97/honcho-studio
+support: https://github.com/Alexmen97/honcho-studio/issues
+gallery:
+  - https://i.imgur.com/xezpkIp.png
+dependencies:
+  - dasa-honcho
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: >-
+  Prima release ufficiale di Honcho Studio v1.0.0 per umbrelOS. Interfaccia grafica completa, dark-first, integrata direttamente con Honcho v3.2.2.
