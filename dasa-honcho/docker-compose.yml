@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: 'false'
 
   api:
-    entrypoint: ["sh", "/app/docker/entrypoint.sh"]
+    entrypoint: ["sh", "-c", "/app/.venv/bin/python scripts/provision_db.py && /app/.venv/bin/python scripts/configure_embeddings.py --yes && exec /app/.venv/bin/fastapi run --host 0.0.0.0 --workers $${API_WORKERS:-1} src/main.py"]
     image: ghcr.io/plastic-labs/honcho:v3.2.2@sha256:c74955d6dbea6dda42c2dd9dd13dea726fcba36ba5c0b6bae4867f7ed762896d
     restart: on-failure
     healthcheck:
