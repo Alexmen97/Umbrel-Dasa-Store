@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: 'false'
 
   dashboard:
-    image: ghcr.io/alexmen97/honcho-studio:1.0.0
+    image: ghcr.io/alexmen97/honcho-dashboard:1.0.0
     restart: on-failure
     environment:
       - PORT=3000
