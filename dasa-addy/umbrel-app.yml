@@ -4,10 +4,10 @@ name: AnonAddy
 tagline: An undercover inbox for your secret agent needs
 icon: https://i.imgur.com/liI2R2e.png
 category: networking
-version: "1.6.4"
+version: "1.7.2"
 port: 8727
 description: >-
-  ✨ Novità in v1.6.4: correzioni per la cifratura PGP e il consumo di banda nella dashboard, con validazione dei nomi delle chiavi API. Per usare PGP ora è necessario configurare ANONADDY_GNUPGHOME.
+  ✨ Novità in 1.7.2: Aggiornamento addy.io 1.7.2 con configurazione del numero di worker Nginx.
 
 
   🕶️ AnonAddy is an open-source email forwarding service that allows users to protect their privacy by creating anonymous email aliases. It helps users manage their online presence while avoiding spam, data breaches, and unwanted tracking. Instead of using a personal email address, users can generate unique aliases for different websites and services. Emails sent to these aliases are automatically forwarded to the user’s real inbox without revealing their actual email address.
@@ -36,10 +36,11 @@ gallery:
   - https://imgur.com/mUZrMD4.png
   - https://imgur.com/pHLcxV0.png
 releaseNotes: >-
-  Novità v1.6.4:
-    - Corretti un errore nella visualizzazione del traffico in dashboard e un problema con la cifratura PGP.
-    - Aggiunta la validazione lato client del nome delle chiavi API.
-    - Aggiunta la variabile ANONADDY_GNUPGHOME. Se usi PGP, impostala su una directory GnuPG assoluta accessibile al processo della coda.
+  Novità 1.7.2:
+    - Aggiornata l’immagine ufficiale alla release Docker 1.7.2-r0 di addy.io.
+    - Aggiunta a monte la possibilità di configurare il numero di worker Nginx.
+    - Eseguire un backup del database e della directory dati prima di aggiornare.
+    - Note upstream: https://github.com/anonaddy/docker/releases/tag/1.7.2-r0
 dependencies:
 path: ""
 defaultUsername: ""

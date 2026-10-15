@@ -4,10 +4,10 @@ name: Duplicati
 tagline: Store securely encrypted backups in the cloud
 icon: https://i.imgur.com/p4yY0FC.png
 category: files & productivity
-version: "v2.3.0.4_stable_2026-07-09"
+version: "v2.4.0.1_stable_2026-10-07"
 port: 38476
 description: >-
-  ✨ Novità in v2.3.0.4: filtri e log più rispettosi della privacy, maggiore stabilità dei backup e nuovi miglioramenti per autenticazione, S3 e sorgenti remote.
+  ✨ Novità in v2.4.0.1_stable_2026-10-07: Release stabile 2.4.0.1: ripristini più affidabili, correzioni alla sincronizzazione e sicurezza rafforzata.
 
 
   Pick your own backend and store encrypted backups of your umbrel files anywhere!
@@ -42,11 +42,12 @@ gallery:
   - https://i.imgur.com/6f9zyRD.png
   - https://i.imgur.com/5usxk3K.png
 releaseNotes: >-
-  Novità v2.3.0.4:
-    - Filtri applicati lato server: i percorsi esclusi non vengono più letti e i log non espongono percorsi sensibili.
-    - Maggiore stabilità: corretti un leak di memoria per Foto di macOS, una race condition dell'Agent e crash causati da errori di metadati.
-    - Nuovo timeout di autenticazione del backend, retry HTTP più affidabile e miglioramenti per MSSQL, S3 lock mode e provider di segreti.
-    - Aggiornato rclone nell'immagine Docker.
+  Novità v2.4.0.1_stable_2026-10-07:
+    - Corrette le operazioni di ripristino, la gestione degli annullamenti e la modalità di sincronizzazione.
+    - Rafforzati autenticazione, controllo remoto e protezione dei dati nei log e nei report.
+    - Correzioni per Google Drive, S3 e altri backend; migliorato l’utilizzo della memoria.
+    - Eseguire un backup della configurazione e del database locale prima di aggiornare.
+    - Note upstream: https://github.com/duplicati/duplicati/releases/tag/v2.4.0.1_stable_2026-10-07
 dependencies: []
 permissions:
   - STORAGE_DOWNLOADS

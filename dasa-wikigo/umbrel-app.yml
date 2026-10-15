@@ -4,10 +4,10 @@ name: Wiki-Go
 tagline: A modern flat-file wiki built with Go
 icon: https://i.imgur.com/Bkl5Kv5.png
 category: files & productivity
-version: "1.8.12"
+version: "1.9.2"
 port: 8833
 description: >-
-  ✨ Novità in v1.8.12: aggiornamento a Go 1.26.5 per risolvere un problema di sicurezza del pacchetto crittografico.
+  ✨ Novità in 1.9.2: Release di sicurezza: corretti accessi non autorizzati, path traversal e richieste SSRF.
 
 
   Wiki-Go is a lightweight, self-hosted wiki application written in the Go programming language. Designed for simplicity and speed, it allows users to create and edit pages through a clean, web-based interface. Instead of relying on a traditional database, Wiki-Go stores all its content as Markdown files, making it easy to back up, version control, or edit with any standard text editor. The application compiles into a single executable binary, which means it can run on virtually any platform without the need for complex installations or external dependencies.
@@ -32,8 +32,12 @@ gallery:
   - https://i.imgur.com/q94eWV8.png
   - https://i.imgur.com/5u1UiFg.png
 releaseNotes: >-
-  Novità v1.8.12:
-    - Aggiornato Go alla versione 1.26.5 per correggere un problema di sicurezza nel pacchetto crittografico.
+  Novità 1.9.2:
+    - Corretti path traversal su documenti, allegati, commenti e operazioni di versionamento.
+    - Rafforzati i controlli di autorizzazione sulle API dei documenti.
+    - Bloccate destinazioni private, loopback e metadata cloud nel recupero dei metadati; corretta l’iniezione nei log di login.
+    - La release upstream raccomanda l’aggiornamento delle versioni 1.9.1 e precedenti.
+    - Note upstream: https://github.com/leomoon-studios/wiki-go/releases/tag/v1.9.2
 dependencies:
 path: ""
 defaultUsername: "admin"

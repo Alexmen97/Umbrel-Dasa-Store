@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   web:
-    image: evershop/evershop:2.1.2@sha256:32c5e93ad5b725c27a55d4cdd4c34400b79cc8e82ffb9d9d75edd339eda6eb94
+    image: evershop/evershop:2.3.0@sha256:2acdcd7ed59f45eaf1f36b529665ea38f556406571af0a287cf83d54f23f96ed
     restart: on-failure
     environment:
       DB_HOST: database

@@ -4,10 +4,10 @@ name: Evershop
 tagline: An All-in-One Open Source E-commerce Solution
 icon: https://i.imgur.com/syabiX7.png
 category: files & productivity
-version: "2.1.2"
+version: "2.3.0"
 port: 3385
 description: >-
-  ✨ Novità in v2.1.2: editor CMS corretto, area di debug, checkout più affidabile e integrazioni Stripe/PayPal aggiornate. ⚠️ Gli stati di pagamento Stripe e PayPal sono stati rinominati: verifica le integrazioni esterne.
+  ✨ Novità in 2.3.0: Webhooks, gestione indirizzi per paese e nuovo flusso pagamenti; aggiornamento con migrazioni del database.
 
 
   🛒 Evershop is a powerful and versatile e-commerce platform designed to provide extensive functionality for managing and operating online stores. It offers a comprehensive administrative dashboard that gives store owners complete control over their business operations. Within this dashboard, users can efficiently manage a wide range of aspects including product catalogs, inventory levels, pricing, promotions, customer information, and order fulfillment processes. The platform streamlines these tasks to ensure smooth day-to-day store management.
@@ -34,11 +34,13 @@ gallery:
   - https://i.imgur.com/QRucdZl.png
   - https://i.imgur.com/QKpVdls.png
 releaseNotes: >-
-  Novità v2.1.2:
-    - Correzioni per editor CMS, area di checkout, gestione eventi e categorie prodotto.
-    - Aggiunta area di debug e miglioramenti alla tipizzazione PostgreSQL e TypeScript.
-    - Aggiornate le integrazioni Stripe e PayPal e risolti vari problemi del checkout.
-    - ⚠️ Gli stati di pagamento Stripe e PayPal usano nuovi nomi: aggiorna eventuali integrazioni esterne che li interpretano.
+  Novità 2.3.0:
+    - Nuovi webhooks, libreria multimediale ed email transazionali; pagamenti capture/refund unificati.
+    - ATTENZIONE: vengono eseguite automaticamente 6 migrazioni al primo avvio, con rinomina delle colonne indirizzo. Eseguire un backup completo del database prima dell’aggiornamento; per tornare alla versione precedente ripristinare il backup.
+    - Riconfigurare i webhook Stripe e PayPal secondo le istruzioni upstream; controllare zone di spedizione e paesi di vendita.
+    - Temi, estensioni e integrazioni che usano colonne indirizzo o API pagamento precedenti devono essere adattati.
+    - Le nuove installazioni non includono più il catalogo di esempio.
+    - Note upstream: https://github.com/evershopcommerce/evershop/releases/tag/v2.3.0
 dependencies:
 path: ""
 defaultUsername: ""

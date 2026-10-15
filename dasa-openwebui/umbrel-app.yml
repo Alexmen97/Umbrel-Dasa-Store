@@ -4,10 +4,10 @@ name: Open WebUI
 tagline: Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key
 icon: https://i.imgur.com/rNa00fP.png
 category: ai
-version: "0.10.2"
+version: "0.12.2"
 port: 2876
 description: >-
-  ✨ Novità in v0.10.2: ragionamento in streaming, upload di cartelle nelle knowledge base, controlli memoria più flessibili, configurazione provider via variabili d’ambiente e correzioni di sicurezza.
+  ✨ Novità in 0.12.2: Supporto MinerU 4.x, miglioramenti agli strumenti e correzioni di sicurezza e accessibilità.
 
 
   Open WebUI lets you chat with advanced AI models running locally on your own device or connect to online models using an API key.
@@ -39,9 +39,10 @@ gallery:
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Novità v0.10.2:
-    - Visualizzazione in streaming del ragionamento dei modelli e upload di cartelle nelle knowledge base mantenendo la gerarchia.
-    - Controllo amministrativo del contesto delle memorie, memorie automatiche più selettive e configurazioni API Ollama/OpenAI via variabili d'ambiente.
-    - Nuovo formato per speech-to-text e eventi strutturati per gli errori dei provider.
-    - Correzioni di sicurezza, privacy dei prompt, migrazioni SQLite, sessioni, ricerca, strumenti e impostazioni utente.
+  Novità 0.12.2:
+    - Aggiunto il supporto ai server MinerU 4.x e migliorata la gestione delle revisioni e delle raccolte knowledge.
+    - Migliorati Tool Search e instradamento con MODEL_ID; corrette le chiamate vocali su Android Chrome.
+    - Corrette autorizzazioni delle raccolte, metadati dei messaggi di canale e cancellazione degli amministratori tramite SCIM.
+    - Eseguire un backup di database e dati prima di aggiornare: sono presenti migrazioni di schema. In configurazioni multi-istanza aggiornare tutte le istanze insieme, senza rolling update.
+    - Note upstream: https://github.com/open-webui/open-webui/releases/tag/v0.12.2
 path: ""

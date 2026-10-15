@@ -2,11 +2,11 @@ manifestVersion: 1.1
 id: dasa-immich
 category: files & productivity
 name: Immich
-version: "v3.0.3"
+version: "v3.3.3"
 tagline: High-performance photo and video backup solution
 icon: https://i.imgur.com/wqT5bDn.png
 description: >-
-  ✨ Novità in v3: editor mobile non distruttivo, workflow sperimentali, backup in background più affidabile, controlli d’integrità e streaming video HLS in anteprima.
+  ✨ Novità in v3.3.3: Aggiornamento sincronizzato di server e machine learning; migliorate prestazioni della pagina Esplora e date dei ricordi.
 
 
   An open-source and high-performance self-hosted backup solution for the videos and photos on your mobile device
@@ -49,12 +49,13 @@ description: >-
 
   - User-defined storage structure
 releaseNotes: >-
-  Novità v3.0.3:
-    - Editing mobile non distruttivo, workflow sperimentali, pagina "Aggiunti di recente" e controlli d'integrità della libreria.
-    - Backup in background più affidabile, slideshow mobile, OCR mobile, upload diretto negli album e scelta della dimensione durante la condivisione.
-    - Anteprima di transcoding video HLS in tempo reale e nuovo lettore video web.
-    - Corrette ulteriori anomalie di upload delle Live Photo, visibilità e stabilità.
-    - ⚠️ È una major release: verifica la compatibilità delle app mobili e degli strumenti di terze parti che usano l'API.
+  Novità v3.3.3:
+    - Aggiornati insieme server e machine learning alla versione v3.3.3.
+    - Migliorate le prestazioni delle query sulle persone e della pagina Esplora.
+    - Corrette le date dei ricordi nell’app mobile nelle diverse lingue.
+    - Le release intermedie aggiungono condivisione delle persone, nuovi modelli OCR e ricerca rinnovata.
+    - Eseguire un backup di database e libreria prima dell’aggiornamento e verificare la compatibilità dell’app mobile e delle integrazioni API.
+    - Note upstream: https://github.com/immich-app/immich/releases/tag/v3.3.3
 developer: Alex Tran
 website: https://www.immich.app
 dependencies: []

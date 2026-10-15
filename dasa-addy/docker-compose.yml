@@ -26,7 +26,7 @@ services:
     restart: on-failure
 
   web:
-    image: anonaddy/anonaddy:1.6.4@sha256:7d68543d4d50fd4f0133f039a861d793923716750a31248bc23f9cb540683fe3
+    image: anonaddy/anonaddy:1.7.2@sha256:fa07c3696a0e0e99dac554e80de799dd14094c4b4eebac5bed3c546318ebedef
     depends_on:
       - db
       - redis

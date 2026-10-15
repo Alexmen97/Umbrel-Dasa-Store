@@ -4,10 +4,10 @@ name: Cloudreve
 tagline: A self-hosted file management system with multi-cloud support
 icon: https://i.imgur.com/2PTDRPQ.png
 category: files & productivity
-version: "4.18.0"
+version: "4.19.1"
 port: 5212
 description: >-
-  ✨ Novità in v4.18.0: svuotamento del cestino in un clic, caricamenti paralleli locali più affidabili, anteprime nelle condivisioni e correzioni di sicurezza.
+  ✨ Novità in 4.19.1: Correzioni per l’invio email e l’integrazione con applicazioni WOPI.
 
 
   ☁️ Cloudreve is an open-source cloud storage solution designed to provide users with a self-hosted alternative to traditional cloud services. It enables users to create a personalized storage system with extensive file management capabilities, allowing for secure file storage, sharing, and collaboration. The platform includes a modern web interface that supports file previews for images, videos, PDFs, and office documents, making it easy to access content without downloading it.
@@ -34,11 +34,11 @@ gallery:
   - https://i.imgur.com/ygi88kd.png
   - https://i.imgur.com/XDdSjXJ.png
 releaseNotes: >-
-  Novità v4.18.0:
-    - Svuotamento del cestino in un clic.
-    - Le condivisioni possono essere fissate nella barra laterale tramite le impostazioni di gruppo (edizione Pro).
-    - Corrette le anteprime nelle condivisioni e gli upload con chunk paralleli sullo storage locale.
-    - Corrette vulnerabilità di sicurezza; i dettagli completi saranno pubblicati dal progetto dopo il periodo di divulgazione responsabile.
+  Novità 4.19.1:
+    - Corretto l’invio delle email in alcuni casi.
+    - Ripristinato il funzionamento delle applicazioni WOPI.
+    - Eseguire un backup del database e dei dati prima di aggiornare.
+    - Note upstream: https://github.com/cloudreve/cloudreve/releases/tag/4.19.1
 dependencies:
 path: ""
 defaultUsername: ""
