@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-openbot_web_1
+      APP_PORT: 8080
+
+  server:
+    image: ghcr.io/nightly-labs/openbot:0.43.0@sha256:dade1e1c69fb44457a3a774c78546a83d166138bfbbe1e9466e1722b9ff25f7b
+    restart: on-failure
+    user: "1000:1000"
+    security_opt:
+      - seccomp=${APP_DATA_DIR}/seccomp.json
+      - no-new-privileges:true
+    shm_size: 1gb
+    mem_limit: 4g
+    stop_grace_period: 60s
+    volumes:
+      - ${APP_DATA_DIR}/data/openbot:/data
+
+  web:
+    image: busybox:1.37.0@sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e
+    restart: on-failure
+    user: "1000:1000"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    command: ["httpd", "-f", "-p", "8080", "-h", "/www"]
+    volumes:
+      - ${APP_DATA_DIR}/www:/www:ro

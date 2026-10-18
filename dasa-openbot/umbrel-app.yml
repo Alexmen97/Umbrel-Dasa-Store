@@ -1,0 +1,53 @@
+manifestVersion: 1
+id: dasa-openbot
+name: OpenBot Server
+tagline: Agenti AI persistenti sul tuo server
+icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
+category: ai
+version: "0.43.0"
+port: 8787
+description: >-
+  OpenBot Server esegue agenti AI persistenti con workspace, conversazioni,
+  strumenti e automazioni sul tuo Umbrel. Supporta diversi provider e servizi
+  compatibili OpenAI.
+
+
+  IMPORTANTE: questa app installa il server ufficiale, non una UI web locale
+  di OpenBot. L'icona apre una pagina di istruzioni. Per utilizzare il server
+  serve un account OpenBot: dopo il primo login, accedi dall'app desktop,
+  dall'app iPhone o da https://openbot.run/app con lo stesso account.
+  Il servizio dipende dall'infrastruttura account e connessione remota OpenBot.
+
+
+  Primo avvio: apri Impostazioni > Impostazioni avanzate > Terminale > App >
+  OpenBot Server, seleziona il servizio server ed esegui openbot login.
+  Completa personalmente il login con email e codice. Poi collega un provider
+  dal client OpenBot. Le eventuali tariffe dei provider sono separate.
+
+
+  DEVELOPMENT PREVIEW: gli agenti eseguono comandi, modificano i dati e
+  accedono alla rete senza conferme per ogni azione. Non montare il socket
+  Docker o cartelle sensibili. Il container non isola automaticamente la LAN.
+  Limite RAM predefinito del server: 4 GB; memoria condivisa: 1 GB.
+
+
+  Tutti i dati, credenziali e keyring sono persistenti. Esegui backup a server
+  fermo dell'intera cartella data/openbot. Aggiornamenti gestiti dallo store.
+  Licenza PolyForm Noncommercial 1.0.0: non destinato a usi commerciali senza
+  autorizzazione. Consulta README e licenza prima dell'uso.
+developer: Nightly Labs / Synthetify Labs
+website: https://openbot.run
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
+repo: https://github.com/nightly-labs/openbot
+support: https://github.com/nightly-labs/openbot/issues
+gallery: []
+releaseNotes: >-
+  Prima versione Dasa: OpenBot Server 0.43.0 per amd64 e arm64, immagini
+  bloccate per digest, sandbox Electron attiva con seccomp ufficiale,
+  dati persistenti e pagina locale di configurazione. Il primo login
+  richiede il terminale; il client OpenBot rimane esterno.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
