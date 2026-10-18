@@ -4,7 +4,7 @@ name: OpenBot Server
 tagline: Agenti AI persistenti sul tuo server
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
 category: ai
-version: "0.43.0"
+version: "0.43.0-1"
 port: 8787
 description: >-
   OpenBot Server esegue agenti AI persistenti con workspace, conversazioni,
@@ -43,10 +43,7 @@ repo: https://github.com/nightly-labs/openbot
 support: https://github.com/nightly-labs/openbot/issues
 gallery: []
 releaseNotes: >-
-  Prima versione Dasa: OpenBot Server 0.43.0 per amd64 e arm64, immagini
-  bloccate per digest, sandbox Electron attiva con seccomp ufficiale,
-  dati persistenti e pagina locale di configurazione. Il primo login
-  richiede il terminale; il client OpenBot rimane esterno.
+  Fix AppArmor per Electron sandbox (userns_create).
 dependencies: []
 path: ""
 defaultUsername: ""
