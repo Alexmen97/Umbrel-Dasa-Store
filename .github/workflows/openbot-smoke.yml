@@ -1,0 +1,60 @@
+name: OpenBot package smoke test
+on:
+  push:
+    paths:
+      - 'dasa-openbot/**'
+      - '.github/workflows/openbot-smoke.yml'
+  pull_request:
+    paths:
+      - 'dasa-openbot/**'
+      - '.github/workflows/openbot-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and exercise real containers
+        shell: bash
+        run: |
+          set -euo pipefail
+          export APP_DATA_DIR="$GITHUB_WORKSPACE/dasa-openbot"
+          # Umbrel injects the proxy image; standalone Compose needs a stub.
+          printf 'services:\n  app_proxy:\n    image: busybox:1.37.0\n' > "$RUNNER_TEMP/proxy.yml"
+          compose=(docker compose -p dasa-openbot -f dasa-openbot/docker-compose.yml -f "$RUNNER_TEMP/proxy.yml")
+          "${compose[@]}" config --quiet
+          bash -n dasa-openbot/hooks/pre-start
+          sudo bash dasa-openbot/hooks/pre-start
+          test "$(stat -c '%u:%g:%a' dasa-openbot/data/openbot)" = '1000:1000:700'
+          "${compose[@]}" up -d server web
+          for attempt in $(seq 1 90); do
+            if "${compose[@]}" exec -T server openbot status > "$RUNNER_TEMP/openbot-status.txt" 2>&1; then
+              break
+            fi
+            sleep 2
+          done
+          "${compose[@]}" exec -T server openbot status
+          "${compose[@]}" exec -T server openbot version | tee "$RUNNER_TEMP/openbot-version.txt"
+          python3 -c "import pathlib; assert '0.43.0' in pathlib.Path('$RUNNER_TEMP/openbot-version.txt').read_text()"
+          "${compose[@]}" exec -T web wget -qO- http://127.0.0.1:8080/ > "$RUNNER_TEMP/setup.html"
+          python3 -c "import pathlib; s=pathlib.Path('$RUNNER_TEMP/setup.html').read_text(); assert 'openbot login' in s and 'https://openbot.run/app' in s"
+          "${compose[@]}" restart server
+          for attempt in $(seq 1 60); do
+            if "${compose[@]}" exec -T server openbot status > "$RUNNER_TEMP/openbot-restart-status.txt" 2>&1; then
+              break
+            fi
+            sleep 2
+          done
+          "${compose[@]}" exec -T server openbot status
+          "${compose[@]}" stop server
+          id=$("${compose[@]}" ps -a -q server)
+          test "$(docker inspect -f '{{.State.ExitCode}}' "$id")" = '0'
+      - name: Collect logs
+        if: always()
+        run: docker ps -a; docker logs dasa-openbot-server-1 || true
+      - name: Clean up
+        if: always()
+        run: docker rm -f dasa-openbot-server-1 dasa-openbot-web-1 || true
