@@ -4,7 +4,7 @@ name: OpenBot Server
 tagline: Agenti AI persistenti sul tuo server
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
 category: ai
-version: "0.43.0-1"
+version: "0.43.0-2"
 port: 8787
 description: >-
   OpenBot Server esegue agenti AI persistenti con workspace, conversazioni,
@@ -28,7 +28,7 @@ description: >-
   DEVELOPMENT PREVIEW: gli agenti eseguono comandi, modificano i dati e
   accedono alla rete senza conferme per ogni azione. Non montare il socket
   Docker o cartelle sensibili. Il container non isola automaticamente la LAN.
-  Limite RAM predefinito del server: 4 GB; memoria condivisa: 1 GB.
+  Limite RAM del server: 8 GB; memoria condivisa: 2 GB.
 
 
   Tutti i dati, credenziali e keyring sono persistenti. Esegui backup a server
@@ -47,7 +47,7 @@ gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/3.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/4.png
 releaseNotes: >-
-  Fix AppArmor per Electron sandbox (userns_create).
+  Aumentato limite RAM a 8 GB e memoria condivisa a 2 GB.
 dependencies: []
 path: ""
 defaultUsername: ""
