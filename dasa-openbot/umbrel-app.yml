@@ -41,7 +41,11 @@ submitter: dasa
 submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
 repo: https://github.com/nightly-labs/openbot
 support: https://github.com/nightly-labs/openbot/issues
-gallery: []
+gallery:
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/1.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/2.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/3.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/4.png
 releaseNotes: >-
   Fix AppArmor per Electron sandbox (userns_create).
 dependencies: []
