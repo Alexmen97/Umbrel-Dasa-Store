@@ -14,8 +14,8 @@ services:
       - seccomp=${APP_DATA_DIR}/seccomp.json
       - apparmor:unconfined
       - no-new-privileges:true
-    shm_size: 1gb
-    mem_limit: 4g
+    shm_size: 2gb
+    mem_limit: 8g
     stop_grace_period: 60s
     volumes:
       - ${APP_DATA_DIR}/data/openbot:/data
