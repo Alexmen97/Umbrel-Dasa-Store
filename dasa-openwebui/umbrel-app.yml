@@ -4,10 +4,10 @@ name: Open WebUI
 tagline: Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key
 icon: https://i.imgur.com/rNa00fP.png
 category: ai
-version: "0.12.2"
+version: "0.12.3"
 port: 2876
 description: >-
-  ✨ Novità in 0.12.2: Supporto MinerU 4.x, miglioramenti agli strumenti e correzioni di sicurezza e accessibilità.
+  ✨ Novità in 0.12.3: Chat crittografate end-to-end, anteprime Markdown avanzate, streaming alleggerito con Redis e ricerca unificata del workspace.
 
 
   Open WebUI lets you chat with advanced AI models running locally on your own device or connect to online models using an API key.
@@ -39,10 +39,11 @@ gallery:
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Novità 0.12.2:
-    - Aggiunto il supporto ai server MinerU 4.x e migliorata la gestione delle revisioni e delle raccolte knowledge.
-    - Migliorati Tool Search e instradamento con MODEL_ID; corrette le chiamate vocali su Android Chrome.
-    - Corrette autorizzazioni delle raccolte, metadati dei messaggi di canale e cancellazione degli amministratori tramite SCIM.
-    - Eseguire un backup di database e dati prima di aggiornare: sono presenti migrazioni di schema. In configurazioni multi-istanza aggiornare tutte le istanze insieme, senza rolling update.
-    - Note upstream: https://github.com/open-webui/open-webui/releases/tag/v0.12.2
+  Novità 0.12.3:
+    - Chat crittografate end-to-end (MLS) nei messaggi diretti e canali privati.
+    - Streaming delle risposte alleggerito e scalabile con Redis.
+    - Anteprime avanzate per file Markdown, formule matematiche, diagrammi Mermaid e commenti su documenti Word/Excel/PDF.
+    - Ricerca globale del workspace tra chat, note e canali con filtri avanzati.
+    - Collaboratori live visibili nelle chat condivise con gestione rami e modifiche migliorata.
+    - Note upstream: https://github.com/open-webui/open-webui/releases/tag/v0.12.3
 path: ""

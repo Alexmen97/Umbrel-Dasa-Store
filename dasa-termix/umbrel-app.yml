@@ -4,10 +4,10 @@ name: Termix
 tagline: A server management platform with SSH terminal
 icon: https://i.imgur.com/JbXeJrb.png
 category: networking
-version: "2.5.0"
+version: "26.10.2"
 port: 6444
 description: >-
-  ✨ Novità in v2.5.0: connessioni seriali, integrazione Tailscale/WireGuard, autenticazione Vault/Bitwarden/WebAuthn, supporto Podman e nuova dashboard con cronologia metriche e avvisi.
+  ✨ Novità in v26.10.2: Ordinamento stato host, nascondi sidebar automatica, menu laterale in overlay e fix stabilità.
 
 
   💻 Termix is designed to simplify server administration by bringing powerful management tools into a single, unified interface. At its core, it provides direct access to SSH terminals inside the browser, eliminating the need for external clients. Sessions can be opened in tabs or arranged in split screens, allowing administrators to multitask and manage different systems simultaneously with ease. The terminal experience is responsive and reliable, ensuring that routine tasks such as configuration, updates, and troubleshooting can be performed quickly.
@@ -39,11 +39,12 @@ gallery:
   - https://i.imgur.com/kFRVg2m.png
   - https://i.imgur.com/VRAQ5Ad.png
 releaseNotes: >-
-  Novità v2.5.0:
-    - Connessioni seriali, integrazione Tailscale/WireGuard e supporto Podman.
-    - Autenticazione SSH con HashiCorp Vault, agente Bitwarden e passkey WebAuthn.
-    - Nuova dashboard a griglia, cronologia delle metriche host, avvisi ntfy/webhook e scheda temperatura.
-    - Miglioramenti a terminale, file manager, tunnel, condivisione host e compatibilità Guacamole.
+  Novità v26.10.2:
+    - Nuova opzione per nascondere automaticamente la barra laterale all'apertura di un host.
+    - Ordinamento delle schede di stato degli host per nome, IP o stato.
+    - Menu laterale espandibile in overlay per evitare il ridimensionamento delle sessioni attive.
+    - Corretti crash ssh2 su Node 24, gestione chiavi jump host e sincronizzazione multi-istanza.
+    - Note upstream: https://github.com/Termix-SSH/Termix/releases/tag/v26.10.2
 dependencies: []
 path: ""
 defaultUsername: ""

@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   web:
-    image: ghcr.io/lukegus/termix:release-2.5.0@sha256:4d3371311087d6757aa9d1c94117e854d749b1c5e8fd07bd36e7a99e0686d26c
+    image: ghcr.io/termix-ssh/termix:26.10.2@sha256:9a30ecec2f4fe471c496472cd91e6cd8bb99845eb2489e645991bbe165dd5d9b
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/app/data
