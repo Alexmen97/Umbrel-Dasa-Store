@@ -12,6 +12,7 @@ services:
     user: "1000:1000"
     security_opt:
       - seccomp=${APP_DATA_DIR}/seccomp.json
+      - apparmor:unconfined
       - no-new-privileges:true
     shm_size: 1gb
     mem_limit: 4g
