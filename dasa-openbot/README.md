@@ -1,6 +1,6 @@
 # OpenBot Server for Umbrel (Dasa)
 
-Official upstream image: `ghcr.io/nightly-labs/openbot:0.43.0`, pinned to its multi-architecture digest. Supports amd64 and arm64.
+Official upstream image: `ghcr.io/nightly-labs/openbot:0.44.3`, pinned to its multi-architecture digest. Supports amd64 and arm64.
 
 ## What this package is
 
@@ -23,7 +23,7 @@ No real API keys or personal endpoints are included. Optional provider environme
 
 ## Runtime and security
 
-- Official seccomp profile from **v0.43.0**, kept alongside the manifest. Allows user namespaces for Electron. Never replace with privileged, seccomp=unconfined or --no-sandbox.
+- Official seccomp profile from **v0.44.3**, kept alongside the manifest. Allows user namespaces for Electron. Never replace with privileged, seccomp=unconfined or --no-sandbox.
 - UID/GID 1000:1000; no-new-privileges; 1 GiB shared memory; 4 GiB server memory limit; 60-second graceful shutdown.
 - No server ports published. Only the static setup page is behind Umbrel app_proxy; normal proxy authentication is retained.
 - `hooks/pre-start` creates the private data mount owned by UID/GID 1000. It never recursively chowns agent files.
@@ -44,7 +44,7 @@ The repository workflow validates the compose configuration (using an app_proxy 
 
 ## License and required notices
 
-OpenBot uses [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/). See [upstream license](https://github.com/nightly-labs/openbot/blob/v0.43.0/LICENSE) and [NOTICE](https://github.com/nightly-labs/openbot/blob/v0.43.0/NOTICE). Commercial use requires review/permission from upstream. The package references upstream images; it does not relicense the application.
+OpenBot uses [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/). See [upstream license](https://github.com/nightly-labs/openbot/blob/v0.44.3/LICENSE) and [NOTICE](https://github.com/nightly-labs/openbot/blob/v0.44.3/NOTICE). Commercial use requires review/permission from upstream. The package references upstream images; it does not relicense the application.
 
 Required Notice: Copyright 2026 Synthetify Labs spółka z ograniczoną odpowiedzialnością.
 
