@@ -4,7 +4,7 @@ name: OpenBot Server
 tagline: Agenti AI persistenti sul tuo server
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
 category: ai
-version: "0.44.3"
+version: "0.46.0"
 port: 8787
 description: >-
   OpenBot Server esegue agenti AI persistenti con workspace, conversazioni,
@@ -47,12 +47,12 @@ gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/3.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/4.png
 releaseNotes: >-
-  Aggiornato OpenBot alla 0.44.3: avvio corretto dopo un file di impostazioni
-  svuotato da un'interruzione di corrente, connessione del server stabile
-  al cambio di ruolo di un membro, limite di memoria degli agenti sui server
-  condivisi, aggiornamenti dei CLI provider in coda durante un turno e
-  installazione dei modelli di agente con skill OpenBot. Mantenuti limite RAM
-  di 8 GB e memoria condivisa di 2 GB.
+  Aggiornato OpenBot alla 0.46.0: pannello vocale per parlare con gli
+  agenti e ascoltare le risposte, gestione delle attività (Tasks) e layout
+  mobile rinnovato, conservazione automatica delle sessioni di accesso,
+  sostituzione delle sessioni OpenCode non leggibili e limite di memoria
+  degli agenti nelle impostazioni server. Mantenuti limite RAM di 8 GB
+  e memoria condivisa di 2 GB.
 dependencies: []
 path: ""
 defaultUsername: ""
