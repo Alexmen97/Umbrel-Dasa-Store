@@ -17,6 +17,11 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: Allow user namespaces on the runner
+        # Ubuntu 24.04 restricts unprivileged user namespaces through AppArmor,
+        # which stops the Electron sandbox before the shipped seccomp profile
+        # can take effect. UmbrelOS does not apply this restriction.
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
       - name: Validate and exercise real containers
         shell: bash
         run: |
