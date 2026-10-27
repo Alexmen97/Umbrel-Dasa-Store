@@ -4,7 +4,7 @@ name: OpenBot Server
 tagline: Agenti AI persistenti sul tuo server
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
 category: ai
-version: "0.50.0"
+version: "0.51.1"
 port: 8787
 description: >-
   OpenBot Server esegue agenti AI persistenti con workspace, conversazioni,
@@ -47,13 +47,13 @@ gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/3.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/4.png
 releaseNotes: >-
-  Aggiornato OpenBot alla 0.50.0. Nuova schermata Canvas per workflow
-  visivi multi-agente e gestore OpenBot Vault per salvare login, carte
-  e contatti condivisibili in sicurezza. Messaggi interni tra agenti
-  visibili in chat e ottimizzazione cache prompt fino a 1 ora su Claude.
-  Supporto ad account multipli Gemini, interjection nei turni Grok e
-  finestre di chat indipendenti. Traccia di esecuzione dettagliata (Trace view)
-  e impostazioni globali agenti dal menu di sistema. Mantenuti limite RAM
+  Aggiornato OpenBot alla 0.51.1 (incluse novità 0.51.0). Supporto nativo
+  ai provider OpenRouter e DeepSeek con scelta del reasoning level alla
+  creazione agente. Ripresa automatica post-limite d'uso e monitoraggio costi
+  OpenCode. Skill globali esposte da ~/.agents/skills per tutti i provider.
+  Nuove app Apple e Supabase a catalogo, page rail laterale e apertura link
+  nel browser preferito. Fix crash handler AppImage, stabilità Gemini su LXCFS,
+  limite CPU per Claude e download automatico Pi CLI. Mantenuti limite RAM
   di 8 GB, memoria condivisa di 2 GB e dati persistenti.
 dependencies: []
 path: ""
