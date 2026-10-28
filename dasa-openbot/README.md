@@ -1,6 +1,6 @@
 # OpenBot Server for Umbrel (Dasa)
 
-Official upstream image: `ghcr.io/nightly-labs/openbot:0.52.0`, pinned to its multi-architecture digest. Supports amd64 and arm64.
+Official upstream image: `ghcr.io/nightly-labs/openbot:0.53.0`, pinned to its multi-architecture digest. Supports amd64 and arm64.
 
 ## What this package is
 
