@@ -43,7 +43,7 @@ jobs:
           done
           "${compose[@]}" exec -T server openbot status
           "${compose[@]}" exec -T server openbot version | tee "$RUNNER_TEMP/openbot-version.txt"
-          python3 -c "import pathlib; assert '0.53.0' in pathlib.Path('$RUNNER_TEMP/openbot-version.txt').read_text()"
+          python3 -c "import pathlib; assert '0.54.0' in pathlib.Path('$RUNNER_TEMP/openbot-version.txt').read_text()"
           "${compose[@]}" exec -T web wget -qO- http://127.0.0.1:8080/ > "$RUNNER_TEMP/setup.html"
           python3 -c "import pathlib; s=pathlib.Path('$RUNNER_TEMP/setup.html').read_text(); assert 'openbot login' in s and 'https://openbot.run/app' in s"
           "${compose[@]}" restart server
