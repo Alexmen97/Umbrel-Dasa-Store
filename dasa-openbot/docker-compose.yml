@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   server:
-    image: ghcr.io/nightly-labs/openbot:0.65.0@sha256:805aa13d29ca2fe299e5fcd7f815d5f851bc5ea1efa7a6e9cb4e4b6db2029c21
+    image: ghcr.io/nightly-labs/openbot:0.68.0@sha256:5835c2b45c6b2186788ad9688198147a12b336729c1ce38500a73a73777fa1d3
     restart: on-failure
     user: "1000:1000"
     security_opt:
