@@ -4,10 +4,10 @@ name: Glances
 tagline: An eye on your system
 icon: https://i.imgur.com/4T0Ff9S.png
 category: networking
-version: "4.5.8"
+version: "4.5.9"
 port: 61208
 description: >-
-  ✨ Novità in 4.5.8: Correzioni per monitoraggio container, esportazioni e stabilità della WebUI.
+  ✨ Novità in 4.5.9: Sostituzione di python-jose con PyJWT (risoluzione CVE) e aggiornamento dipendenze.
 
 
   Glances is a versatile, open-source system monitoring tool designed to provide real-time insights into various aspects of your system's performance. Written in Python, it works across multiple platforms, including Linux, macOS, and Windows. The main purpose of Glances is to offer a quick, comprehensive overview of critical system metrics such as CPU, memory, disk, network, and process usage.
@@ -37,11 +37,11 @@ gallery:
   - https://i.imgur.com/M6tjOio.png
   - https://i.imgur.com/i45yzoe.png
 releaseNotes: >-
-  Novità 4.5.8:
-    - Corrette le statistiche dei container in riavvio e la cache della WebUI; tabella container ordinabile per stato.
-    - Corrette esportazioni CSV, JSON, InfluxDB, Elasticsearch, MQTT e DuckDB.
-    - Corrette una perdita di memoria nel monitoraggio processi e anomalie all’avvio senza smartctl.
-    - Note upstream: https://github.com/nicolargo/glances/releases/tag/v4.5.8
+  Novità 4.5.9:
+    - Release di sicurezza: sostituito python-jose vulnerabile con PyJWT.
+    - Aggiornate tutte le dipendenze upstream alla versione più recente.
+    - Ultima release della serie stabile 4.x.
+    - Note upstream: https://github.com/nicolargo/glances/releases/tag/v4.5.9
 dependencies:
 path: ""
 defaultUsername: ""

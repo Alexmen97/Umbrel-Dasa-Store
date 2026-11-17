@@ -2,11 +2,11 @@ manifestVersion: 1.1
 id: dasa-immich
 category: files & productivity
 name: Immich
-version: "v3.3.3"
+version: "v3.4.1"
 tagline: High-performance photo and video backup solution
 icon: https://i.imgur.com/wqT5bDn.png
 description: >-
-  ✨ Novità in v3.3.3: Aggiornamento sincronizzato di server e machine learning; migliorate prestazioni della pagina Esplora e date dei ricordi.
+  ✨ Novità in v3.4.1: Correzioni di stabilità e prestazioni, risolto rallentamento con link condivisi e supporto HEIF esteso.
 
 
   An open-source and high-performance self-hosted backup solution for the videos and photos on your mobile device
@@ -49,13 +49,12 @@ description: >-
 
   - User-defined storage structure
 releaseNotes: >-
-  Novità v3.3.3:
-    - Aggiornati insieme server e machine learning alla versione v3.3.3.
-    - Migliorate le prestazioni delle query sulle persone e della pagina Esplora.
-    - Corrette le date dei ricordi nell’app mobile nelle diverse lingue.
-    - Le release intermedie aggiungono condivisione delle persone, nuovi modelli OCR e ricerca rinnovata.
-    - Eseguire un backup di database e libreria prima dell’aggiornamento e verificare la compatibilità dell’app mobile e delle integrazioni API.
-    - Note upstream: https://github.com/immich-app/immich/releases/tag/v3.3.3
+  Novità v3.4.1:
+    - Aggiornati server e machine learning alla versione v3.4.1.
+    - Risolti problemi di prestazioni con i link condivisi.
+    - Corretto il mapping MIME dei file .hif come image/heif e aggiornamento backup FUTO 1.16.0.
+    - Eseguire sempre un backup del database e della libreria prima dell'aggiornamento.
+    - Note upstream: https://github.com/immich-app/immich/releases/tag/v3.4.1
 developer: Alex Tran
 website: https://www.immich.app
 dependencies: []

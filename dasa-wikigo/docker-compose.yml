@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   web:
-    image: leomoonstudios/wiki-go:1.9.2@sha256:621c2f6fc8f860af5c550ea0061b805977462e415972999ea1409253d1c7f41b
+    image: leomoonstudios/wiki-go:1.9.6@sha256:642fe29fcedbaede3bacc58aba7e3070bf554990ff57143ed0b77edaf5d26d9e
     security_opt:
       - no-new-privileges:true
     user: 1000:1000
