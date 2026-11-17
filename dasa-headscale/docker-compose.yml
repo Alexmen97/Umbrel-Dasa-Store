@@ -12,7 +12,7 @@ services:
   headscale:
     # https://github.com/juanfont/headscale/pkgs/container/headscale/versions
     image: >-
-      ghcr.io/juanfont/headscale:0.29.5@sha256:780ed2f9e85719a2211277433f2c8afb45105d0d25031949a6848a485f9e216d
+      ghcr.io/juanfont/headscale:0.29.7@sha256:11f81665e842809db9fe3006a38c56a66e968baa5abd4bac498e86445572b970
     volumes:
       - '${APP_DATA_DIR}/config:/etc/headscale'
       - '${APP_DATA_DIR}/lib:/var/lib/headscale'

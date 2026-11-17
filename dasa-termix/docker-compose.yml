@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   web:
-    image: ghcr.io/termix-ssh/termix:26.10.2@sha256:9a30ecec2f4fe471c496472cd91e6cd8bb99845eb2489e645991bbe165dd5d9b
+    image: ghcr.io/termix-ssh/termix:26.11.1@sha256:cac04fdc9cd38c98566e6e903ad77a3a85b62869e6b78ada35e1570cbc32c6cb
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/app/data

@@ -7,7 +7,7 @@ services:
       APP_PORT: 80
 
   web:
-    image: akaunting/akaunting:3.1.21@sha256:50940112be48a229a2f567dc50ace9886fe5b14e1fe33f0232e704d0fb96f29f
+    image: akaunting/akaunting:3.3.1@sha256:468ea4f89ad25bc85890909726577ab6bf3515d3bb2d7bb3aded42cbf93263c4
     restart: on-failure
     env_file:
       - ${APP_DATA_DIR}/data/env/run.env

@@ -4,10 +4,10 @@ name: Duplicati
 tagline: Store securely encrypted backups in the cloud
 icon: https://i.imgur.com/p4yY0FC.png
 category: files & productivity
-version: "v2.4.0.1_stable_2026-10-07"
+version: "v2.4.1.0_stable_2026-10-29"
 port: 38476
 description: >-
-  ✨ Novità in v2.4.0.1_stable_2026-10-07: Release stabile 2.4.0.1: ripristini più affidabili, correzioni alla sincronizzazione e sicurezza rafforzata.
+  ✨ Novità in v2.4.1.0_stable_2026-10-29: Release stabile 2.4.1.0 con delta walk per M365/Google Workspace e numerose correzioni.
 
 
   Pick your own backend and store encrypted backups of your umbrel files anywhere!
@@ -42,12 +42,11 @@ gallery:
   - https://i.imgur.com/6f9zyRD.png
   - https://i.imgur.com/5usxk3K.png
 releaseNotes: >-
-  Novità v2.4.0.1_stable_2026-10-07:
-    - Corrette le operazioni di ripristino, la gestione degli annullamenti e la modalità di sincronizzazione.
-    - Rafforzati autenticazione, controllo remoto e protezione dei dati nei log e nei report.
-    - Correzioni per Google Drive, S3 e altri backend; migliorato l’utilizzo della memoria.
-    - Eseguire un backup della configurazione e del database locale prima di aggiornare.
-    - Note upstream: https://github.com/duplicati/duplicati/releases/tag/v2.4.0.1_stable_2026-10-07
+  Novità v2.4.1.0_stable_2026-10-29:
+    - Delta walk incrementale per Microsoft 365 e Google Workspace (backup più veloci senza enumerare tutti gli elementi).
+    - Numerose correzioni di stabilità, ripristino e backend di archiviazione.
+    - ATTENZIONE: il formato del database locale viene aggiornato. Eseguire un backup della cartella dati prima di aggiornare.
+    - Note upstream: https://github.com/duplicati/duplicati/releases/tag/v2.4.1.0_stable_2026-10-29
 dependencies: []
 permissions:
   - STORAGE_DOWNLOADS
