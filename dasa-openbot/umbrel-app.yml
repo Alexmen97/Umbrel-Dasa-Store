@@ -1,35 +1,34 @@
 manifestVersion: 1
 id: dasa-openbot
 name: OpenBot Server
-tagline: Agenti AI persistenti sul tuo server
+tagline: A server for your AI agents
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
 category: ai
 version: "0.72.0"
 port: 8787
 description: >-
-  OpenBot Server esegue agenti AI persistenti con workspace, conversazioni,
-  strumenti e automazioni sul tuo Umbrel. Supporta diversi provider e servizi
-  compatibili OpenAI.
+  OpenBot runs your AI agents on your Umbrel. Each agent has its own workspace, conversation and
+  memory, and keeps working when your computer is off.
 
 
-  Dalla versione 0.72.0 l'app include la schermata di configurazione guidata:
-  al primo avvio, aprendo l'icona da Umbrel potrai inserire la tua email e il
-  codice monouso direttamente dal browser per collegare il server al tuo account.
-  Successivamente potrai accedere e gestire gli agenti dall'app desktop, dall'app
-  iPhone o da https://openbot.run/app con lo stesso account.
+  After the install, open the app and sign in with your OpenBot account. Then use the server from the
+  OpenBot desktop app, the OpenBot phone app or openbot.run/app with the same account, and connect a
+  provider such as Claude Code or Codex.
 
 
-  DEVELOPMENT PREVIEW: gli agenti eseguono comandi, modificano i dati e
-  accedono alla rete senza conferme per ogni azione. Non montare il socket
-  Docker o cartelle sensibili. Il container non isola automaticamente la LAN.
-  Limite RAM del server: 8 GB; memoria condivisa: 2 GB.
+  Your conversations, files and agent workspaces stay on your Umbrel. OpenBot connects out to the
+  account service, to the providers that you connect, and to the relay that lets your devices
+  reach the server.
 
 
-  Tutti i dati, credenziali e keyring sono persistenti. Esegui backup a server
-  fermo dell'intera cartella data/openbot. Aggiornamenti gestiti dallo store.
-  Licenza PolyForm Noncommercial 1.0.0: non destinato a usi commerciali senza
-  autorizzazione. Consulta README e licenza prima dell'uso.
-developer: Nightly Labs / Synthetify Labs
+  - **Persistent agents** - Agents keep their workspace, conversation and identity across restarts.
+
+  - **Many providers** - Claude Code, Codex, Gemini, OpenCode, Hermes Agent and more.
+
+  - **Browser and computer use** - Agents use a browser and a virtual display in the app sandbox.
+
+  - **Teams** - Invite members to the server and work with the same agents.
+developer: Synthetify Labs
 website: https://openbot.run
 submitter: dasa
 submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
