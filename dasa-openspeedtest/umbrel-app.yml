@@ -1,0 +1,45 @@
+manifestVersion: 1
+id: dasa-openspeedtest
+name: OpenSpeedTest
+tagline: Free and open-source HTML5 network speed test
+icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openspeedtest/icon.png
+category: networking
+version: "2.0.8"
+port: 3008
+description: >-
+  OpenSpeedTest™ è uno speed test di rete HTML5 open source e privo di plugin, che non richiede Flash o Java.
+
+
+  Permette di testare le prestazioni reali della tua rete locale (LAN / Wi-Fi) o della connessione Internet direttamente dal browser di qualsiasi dispositivo (computer, smartphone, tablet, smart TV, console) senza installare alcuna applicazione client.
+
+
+  ### Funzionalità principali:
+
+  - **100% HTML5 & JavaScript**: funziona su qualsiasi browser moderno senza estensioni o plugin.
+
+  - **Test LAN ad altissima velocità**: supporta velocità da 1 Kbps fino a oltre 10 Gbps per diagnosticare colli di bottiglia locali.
+
+  - **Diagnostica completa**: misura velocità di download, upload, ping e jitter in tempo reale.
+
+  - **Leggero ed efficiente**: servito tramite web server NGINX ottimizzato, con consumo minimo di risorse su qualsiasi hardware.
+
+  - **Nessuna telemetria né tracciamento**: i test e i relativi dati restano interamente privati all'interno del tuo server Umbrel.
+developer: OpenSpeedTest™
+website: https://openspeedtest.com
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
+repo: https://github.com/twofatmonkeys/Open-Speed-Test
+support: https://github.com/twofatmonkeys/Open-Speed-Test/issues
+gallery:
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openspeedtest/1.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openspeedtest/2.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openspeedtest/3.png
+releaseNotes: >-
+  Novità v2.0.8:
+    - Versione stabile ufficiale containerizzata OpenSpeedTest basata su NGINX.
+    - Supporto multi-architettura nativo (linux/amd64 e linux/arm64).
+    - Prestazioni ottimizzate per misurazioni multi-gigabit su reti LAN e Wi-Fi domestiche.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
