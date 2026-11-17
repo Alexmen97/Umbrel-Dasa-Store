@@ -1,0 +1,53 @@
+manifestVersion: 1
+id: dasa-oniondrop
+name: OnionDrop
+tagline: Private and anonymous file drop powered by OnionShare
+icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-oniondrop/icon.png
+category: files & productivity
+version: "0.2.0"
+port: 8397
+description: >-
+  OnionDrop è un servizio self-hosted sicuro per la ricezione anonima e cifrata di file e messaggi, basato sul motore ufficiale di OnionShare e sulla rete Tor.
+
+
+  Permette di creare inbox `.onion` persistenti e raggiungibili tramite Tor Browser. Chiunque possieda l'indirizzo (o la chiave di autorizzazione privata opzionale) può inviarti documenti, immagini, archivi o messaggi di testo senza creare account, senza rivelare il proprio indirizzo IP e senza passare da server cloud di terze parti.
+
+
+  ### Funzionalità principali:
+
+  - **Inbox Tor persistenti**: mantengono lo stesso indirizzo `.onion` anche dopo il riavvio del container o di Umbrel.
+
+  - **Massima privacy**: ricezione anonima diretta sul tuo disco locale, senza intermediari né telemetria.
+
+  - **Controllo degli accessi**: supporto per inbox pubbliche o protette da chiavi di autorizzazione Tor Client.
+
+  - **Anteprima file integrata**: visualizzazione sicura e in sola lettura per documenti (PDF, DOCX, ODT), fogli di calcolo, immagini, audio, video e archivi compressi.
+
+  - **Download cumulativo**: selezione multipla dei file ricevuti con download immediato in un singolo archivio ZIP.
+
+  - **Integrità garantita**: calcolo automatico dei checksum SHA-256 su tutti i file caricati.
+
+  - **Codici QR**: visualizzazione e download di QR code per condividere rapidamente il link di invio.
+
+  - **Multilingua**: interfaccia localizzata in 8 lingue, compreso l'italiano.
+developer: Denny Subke
+website: https://github.com/dennysubke/oniondrop
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
+repo: https://github.com/dennysubke/oniondrop
+support: https://github.com/dennysubke/oniondrop/issues
+gallery:
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-oniondrop/1.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-oniondrop/2.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-oniondrop/3.png
+releaseNotes: >-
+  Novità v0.2.0:
+    - Applicazione containerizzata indipendente basata su OnionShare CLI 2.6.4.
+    - Supporto per 8 lingue con rilevamento e selezione automatica.
+    - Stato animato della connessione e bootstrap Tor in tempo reale.
+    - Checksum SHA-256 e download multiplo di file in archivio ZIP.
+    - Supporto multi-architettura nativo (linux/amd64 e linux/arm64).
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
