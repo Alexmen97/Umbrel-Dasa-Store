@@ -4,7 +4,7 @@ name: OpenBot Server
 tagline: Agenti AI persistenti sul tuo server
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
 category: ai
-version: "0.71.0"
+version: "0.72.0"
 port: 8787
 description: >-
   OpenBot Server esegue agenti AI persistenti con workspace, conversazioni,
@@ -12,17 +12,11 @@ description: >-
   compatibili OpenAI.
 
 
-  IMPORTANTE: questa app installa il server ufficiale, non una UI web locale
-  di OpenBot. L'icona apre una pagina di istruzioni. Per utilizzare il server
-  serve un account OpenBot: dopo il primo login, accedi dall'app desktop,
-  dall'app iPhone o da https://openbot.run/app con lo stesso account.
-  Il servizio dipende dall'infrastruttura account e connessione remota OpenBot.
-
-
-  Primo avvio: apri Impostazioni > Impostazioni avanzate > Terminale > App >
-  OpenBot Server, seleziona il servizio server ed esegui openbot login.
-  Completa personalmente il login con email e codice. Poi collega un provider
-  dal client OpenBot. Le eventuali tariffe dei provider sono separate.
+  Dalla versione 0.72.0 l'app include la schermata di configurazione guidata:
+  al primo avvio, aprendo l'icona da Umbrel potrai inserire la tua email e il
+  codice monouso direttamente dal browser per collegare il server al tuo account.
+  Successivamente potrai accedere e gestire gli agenti dall'app desktop, dall'app
+  iPhone o da https://openbot.run/app con lo stesso account.
 
 
   DEVELOPMENT PREVIEW: gli agenti eseguono comandi, modificano i dati e
@@ -47,13 +41,12 @@ gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/3.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/4.png
 releaseNotes: >-
-  Aggiornato OpenBot Server alla versione 0.71.0. Novità principali: sterzata
-  in tempo reale degli agenti con un secondo prompt, invio di allegati senza
-  testo obbligatorio, salvataggio memorie nella lingua dell'utente, sospensione
-  (throttling) delle schede browser inattive per risparmiare risorse, stop delle
-  routine direttamente dal canvas, microfono sempre attivo a fine risposta vocale,
-  immunità ai rumori di fondo e recupero automatico delle chat su errori di contesto.
-  Limiti RAM e persistenza invariati.
+  Aggiornato OpenBot Server alla versione 0.72.0. Novità principali: introdotta
+  la schermata di configurazione iniziale guidata direttamente da browser (senza
+  più necessità del terminale per il login con codice email), rimozione del
+  container web di appoggio, irrobustito il cambio automatico e fallback dei
+  modelli, migliorata la stabilità delle sessioni lunghe e ottimizzata la gestione
+  della memoria per gli agenti persistenti.
 dependencies: []
 path: ""
 defaultUsername: ""
