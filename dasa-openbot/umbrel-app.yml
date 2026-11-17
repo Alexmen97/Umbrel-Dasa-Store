@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: dasa-openbot
-name: OpenBot Server
+name: OpenBot
 tagline: A server for your AI agents
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
 category: ai
@@ -39,7 +39,6 @@ gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/2.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/3.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/4.png
-  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/5.png
 releaseNotes: >-
   Aggiornato OpenBot Server alla versione 0.72.0. Novità principali: introdotta
   la schermata di configurazione iniziale guidata direttamente da browser (senza
