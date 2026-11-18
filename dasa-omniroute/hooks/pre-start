@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+APP_DIR="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")/..")"
+DATA_ROOT="${APP_DATA_DIR:-${APP_DIR}}"
+TARGET_DIR="${DATA_ROOT}/data"
+
+mkdir -p "${TARGET_DIR}"
+chmod 755 "${TARGET_DIR}"

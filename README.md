@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://umbrel.com"><img src="https://img.shields.io/badge/umbrelOS-Community%20App%20Store-5B3FD8?style=for-the-badge&logo=umbrel&logoColor=white" alt="umbrelOS Community App Store"></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/Apps%20Available-23-success?style=for-the-badge" alt="Apps Available">
+  <img src="https://img.shields.io/badge/Apps%20Available-24-success?style=for-the-badge" alt="Apps Available">
   &nbsp;
   <a href="https://github.com/Alexmen97/Umbrel-Dasa-Store/issues"><img src="https://img.shields.io/badge/Support-GitHub%20Issues-blue?style=for-the-badge&logo=github" alt="Support Issues"></a>
 </p>
@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/10330103/197889452-e5cd7e96-3233-4a09-
 
 ---
 
-### 📦 Currently available apps (23)
+### 📦 Currently available apps (24)
 
 | Nr. | Logo | App-Name | Description | Port |
 | :---: | :---: | :-- | :-- | :---: |
@@ -51,15 +51,16 @@ https://user-images.githubusercontent.com/10330103/197889452-e5cd7e96-3233-4a09-
 | 12 | <img height="30" src="https://i.imgur.com/OVtGI7Y.png" alt="Headscale" /> | [Headscale](https://github.com/juanfont/headscale) | An open-source, self-hosted VPN solution built with WireGuard | 37070 |
 | 13 | <img height="30" src="https://i.imgur.com/wqT5bDn.png" alt="Immich" /> | [Immich](https://github.com/immich-app/immich) | High-performance photo and video backup solution | 2283 |
 | 14 | <img height="30" src="https://i.imgur.com/UDAf82g.png" alt="Lobe Chat" /> | [Lobe Chat](https://github.com/lobehub/lobe-chat) | An open-source, modern-design AI chat framework | 7455 |
-| 15 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-oniondrop/icon.png" alt="OnionDrop" /> | [OnionDrop](https://github.com/dennysubke/oniondrop) | Private and anonymous file drop powered by OnionShare | 8397 |
-| 16 | <img height="30" src="https://i.imgur.com/rNa00fP.png" alt="Open WebUI" /> | [Open WebUI](https://github.com/open-webui/open-webui) | Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key | 2876 |
-| 17 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png" alt="OpenBot" /> | [OpenBot](https://github.com/nightly-labs/openbot) | A server for your AI agents | 8787 |
-| 18 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openspeedtest/icon.png" alt="OpenSpeedTest" /> | [OpenSpeedTest](https://github.com/twofatmonkeys/Open-Speed-Test) | Free and open-source HTML5 network speed test | 3008 |
-| 19 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-pages/icon.png" alt="Pages" /> | [Pages](https://github.com/dennysubke/pages) | A beautiful home for static websites | 8377 |
-| 20 | <img height="30" src="https://i.imgur.com/dpOBOQJ.png" alt="Palmr" /> | [Palmr](https://github.com/kyantech/Palmr) | A private alternative to WeTransfer | 5487 |
-| 21 | <img height="30" src="https://i.imgur.com/ZpMFFgn.png" alt="Peppermint" /> | [Peppermint](https://github.com/Peppermint-Lab/peppermint) | An issue management & help desk solution | 3588 |
-| 22 | <img height="30" src="https://i.imgur.com/JbXeJrb.png" alt="Termix" /> | [Termix](https://github.com/LukeGus/Termix) | A server management platform with SSH terminal | 6444 |
-| 23 | <img height="30" src="https://i.imgur.com/Bkl5Kv5.png" alt="Wiki-Go" /> | [Wiki-Go](https://github.com/leomoon-studios/wiki-go) | A modern flat-file wiki built with Go | 8833 |
+| 15 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-omniroute/icon.png" alt="OmniRoute" /> | [OmniRoute](https://github.com/ChrisCompton/omniroute) | Smart AI gateway for multi-provider LLMs with routing, fallback, and load balancing | 20128 |
+| 16 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-oniondrop/icon.png" alt="OnionDrop" /> | [OnionDrop](https://github.com/dennysubke/oniondrop) | Private and anonymous file drop powered by OnionShare | 8397 |
+| 17 | <img height="30" src="https://i.imgur.com/rNa00fP.png" alt="Open WebUI" /> | [Open WebUI](https://github.com/open-webui/open-webui) | Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key | 2876 |
+| 18 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png" alt="OpenBot" /> | [OpenBot](https://github.com/nightly-labs/openbot) | A server for your AI agents | 8787 |
+| 19 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openspeedtest/icon.png" alt="OpenSpeedTest" /> | [OpenSpeedTest](https://github.com/twofatmonkeys/Open-Speed-Test) | Free and open-source HTML5 network speed test | 3008 |
+| 20 | <img height="30" src="https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-pages/icon.png" alt="Pages" /> | [Pages](https://github.com/dennysubke/pages) | A beautiful home for static websites | 8377 |
+| 21 | <img height="30" src="https://i.imgur.com/dpOBOQJ.png" alt="Palmr" /> | [Palmr](https://github.com/kyantech/Palmr) | A private alternative to WeTransfer | 5487 |
+| 22 | <img height="30" src="https://i.imgur.com/ZpMFFgn.png" alt="Peppermint" /> | [Peppermint](https://github.com/Peppermint-Lab/peppermint) | An issue management & help desk solution | 3588 |
+| 23 | <img height="30" src="https://i.imgur.com/JbXeJrb.png" alt="Termix" /> | [Termix](https://github.com/LukeGus/Termix) | A server management platform with SSH terminal | 6444 |
+| 24 | <img height="30" src="https://i.imgur.com/Bkl5Kv5.png" alt="Wiki-Go" /> | [Wiki-Go](https://github.com/leomoon-studios/wiki-go) | A modern flat-file wiki built with Go | 8833 |
 
 🔄 All apps are continuously updated, pinned by image digest, and tested for multi-architecture compatibility (x86_64 / arm64).
 

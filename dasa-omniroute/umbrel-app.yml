@@ -1,0 +1,49 @@
+manifestVersion: 1.1
+id: dasa-omniroute
+category: ai
+name: OmniRoute
+version: "3.6.1"
+tagline: Smart AI gateway for multi-provider LLMs with routing, fallback, and load balancing
+icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-omniroute/icon.png
+description: >-
+  🌐 OmniRoute è un AI Gateway unificato che permette di instradare qualsiasi modello LLM attraverso un unico endpoint compatibile OpenAI e Anthropic Claude.
+
+
+  Combina più provider contemporaneamente (OpenAI, Anthropic Claude, Google Gemini, Ollama, OpenRouter, Groq, Mistral, DeepSeek, Cerebras, Cohere e molti altri), offrendo failover automatico a costo zero, bilanciamento del carico, retry intelligenti e routing prioritario per minimizzare costi e latenze.
+
+
+  Caratteristiche principali:
+
+  - 🌐 Endpoint Unificato: compatibile con OpenAI (/v1/chat/completions), Anthropic (/v1/messages) e Google Gemini. Funziona immediatamente con Cursor, Cline, Claude Desktop, LibreChat, Open WebUI e qualsiasi client compatibile.
+
+  - 🔀 Smart Routing & Model Combos: raggruppa più modelli sotto un singolo ID virtuale (es. fallback su modelli gratuiti o low-cost quando le quote sono esaurite).
+
+  - 📊 Dashboard Next.js Moderna: monitoraggio in tempo reale di latenze (TTFT), tracking token, costi stimati e salute dei provider.
+
+  - 🔑 Gestione Chiavi e Quote: crea chiavi API virtuali con budget e limitazioni d'uso per proteggere i tuoi account.
+
+  - 🛡️ Zero-Config & Resiliente: generazione automatica di chiavi e crittografia SQLite su storage persistente.
+
+  - ⚡ Multi-Architettura: ottimizzato nativamente per linux/amd64 e linux/arm64.
+releaseNotes: >-
+  Novità v3.6.1:
+    - Rilascio v3.6.1 dell'AI Gateway OmniRoute su umbrelOS.
+    - Riparazione dell'ambiente OAuth e fix delle traduzioni i18n.
+    - Supporto multi-provider avanzato per OpenAI, Anthropic, Gemini, Groq, Ollama e molti altri.
+    - Dashboard di monitoraggio completa con latenza TTFT e token usage.
+    - Immagine container multi-architettura ottimizzata per linux/amd64 e linux/arm64.
+developer: ChrisCompton & Diego Souza
+website: https://omniroute.online
+dependencies: []
+repo: https://github.com/ChrisCompton/omniroute
+support: https://github.com/ChrisCompton/omniroute/issues
+port: 20128
+gallery:
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-omniroute/1.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-omniroute/2.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-omniroute/3.png
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store

@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dasa-omniroute_server_1
+      APP_PORT: 20128
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: diegosouzapw/omniroute:3.6.1@sha256:a6b6c7c6c87a72a08e0a94f50909b9016ff93b548a397acaf62c6255f2ef266d
+    environment:
+      - NODE_ENV=production
+      - PORT=20128
+      - DASHBOARD_PORT=20128
+      - API_PORT=20128
+      - API_HOST=0.0.0.0
+      - HOSTNAME=0.0.0.0
+      - DATA_DIR=/app/data
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+    restart: on-failure
