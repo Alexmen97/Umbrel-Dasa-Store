@@ -1,0 +1,51 @@
+manifestVersion: 1.1
+id: dasa-cliproxyapi
+category: ai
+name: CLIProxyAPI
+version: "v8.0.77"
+tagline: AI API proxy & gateway for Antigravity, Claude Code, Codex, Gemini, Grok, and Devin
+icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-cliproxyapi/icon.png
+description: >-
+  🤖 CLIProxyAPI incapsula Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code e Devin in un servizio API compatibile con OpenAI, Anthropic Claude, Google Gemini e Codex.
+
+
+  Ti consente di utilizzare modelli AI leader (Gemini, Claude, GPT, Grok) tramite una singola interfaccia API unificata, senza configurazioni complesse.
+
+
+  Caratteristiche principali:
+
+  - Interfaccia Web di Gestione (Management Center) inclusa su /management.html
+
+  - API compatibili con OpenAI (/v1/chat/completions), Anthropic (/v1/messages) e Google Gemini (/v1beta/models)
+
+  - Gestione credenziali e autenticazione OAuth multi-provider
+
+  - Supporto per streaming (SSE), input multimodale (testo, immagini, file) e chiamate di funzione (tool calling)
+
+  - Monitoraggio live delle richieste, latenza, TTFT e token usage
+
+  - Architettura resiliente in Go con retry automatici e failover
+
+
+  🔑 Password predefinita per il Management Center: umbrel
+releaseNotes: >-
+  Novità v8.0.77:
+    - Rilascio v8.0.77 del gateway CLIProxyAPI per umbrelOS.
+    - Architettura unificata con supporto ad Antigravity, Claude Code, Codex, Grok e Gemini.
+    - Pannello di controllo Web Management Center integrato per la gestione di chiavi, OAuth e modelli.
+    - Immagine container multi-architettura ottimizzata per linux/amd64 e linux/arm64.
+developer: router-for-me
+website: https://github.com/router-for-me/CLIProxyAPI
+dependencies: []
+repo: https://github.com/router-for-me/CLIProxyAPI
+support: https://github.com/router-for-me/CLIProxyAPI/issues
+port: 8317
+gallery:
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-cliproxyapi/1.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-cliproxyapi/2.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-cliproxyapi/3.png
+path: "/management.html"
+defaultUsername: ""
+defaultPassword: "umbrel"
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
