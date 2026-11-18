@@ -1,29 +1,35 @@
 manifestVersion: 1.1
 id: dasa-lobe-chat
-name: Lobe Chat
+name: Lobe Hub
 tagline: Your self-hosted AI workspace for chat, agents, and knowledge
 icon: https://i.imgur.com/UDAf82g.png
 category: ai
 version: "2.3.3"
 port: 7455
 description: >-
-  🌐 Open Lobe Chat over HTTP. If your Umbrel dashboard uses HTTPS, change https:// to http:// in Lobe Chat's address bar. HTTPS access is not supported by this Umbrel package yet.
+  🌐 Open Lobe Hub over HTTP. If your Umbrel dashboard uses HTTPS, change https:// to http:// in Lobe Hub's address bar. HTTPS access is not supported by this Umbrel package yet.
 
 
-  💬 Lobe Chat (Lobe Hub) is a self-hosted AI workspace for conversations, agent teams, knowledge bases, and multimodal workflows.
+  💬 Lobe Hub is a self-hosted AI workspace for conversations, agent teams,
+  knowledge bases, and multimodal workflows.
 
 
-  🗣️ It supports speech, multimodal chat, files, knowledge retrieval, and a rich provider ecosystem including OpenAI-compatible APIs, Anthropic, Google, Groq, Ollama, and more.
+  🗣️ It supports speech, multimodal chat, files, knowledge retrieval, and a rich
+  provider ecosystem including OpenAI-compatible APIs, Anthropic, Google, Groq,
+  Ollama, and more.
 
 
-  🤖 This Umbrel package now follows the current upstream self-hosted deployment model and includes PostgreSQL, Redis, and S3-compatible object storage for uploads and knowledge base features.
+  🤖 This Umbrel package now follows the current upstream self-hosted deployment
+  model and includes PostgreSQL, Redis, and S3-compatible object storage for
+  uploads and knowledge base features.
 
 
-  🔑 To get started, create an account on first launch and then add one or more AI provider API keys in the Lobe Chat settings.
+  🔑 To get started, create an account on first launch and then add one or more
+  AI provider API keys in the Lobe Hub settings.
 developer: LobeHub
 website: https://lobehub.com/
 submitter: dasa
-submission: https://github.com/getumbrel/umbrel-apps/pull/1901
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
 repo: https://github.com/lobehub/lobehub
 support: https://github.com/lobehub/lobehub/issues
 gallery:
@@ -34,12 +40,28 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies: []
 releaseNotes: >-
-  Novità v2.3.3:
-    - Passaggio all'architettura v2 multi-container con PostgreSQL (ParadeDB pg17), Redis 7, S3 RustFS e motore di ricerca SearXNG.
-    - Canali diretti e regole di risposta per singolo agente.
-    - Profili d'identità per agenti.
-    - Creazione di progetti da repository GitHub e collegamento task-to-project.
-    - Migliorato ordinamento e gestione della knowledge base.
-    - Corretti callback per workflow non autenticati e aumentata l'affidabilità della chat.
-    - Note upstream: https://github.com/lobehub/lobehub/releases/tag/v2.3.3
+  Open Lobe Hub over HTTP. If it opens with https://, change that to http:// in the address bar. HTTPS access is not supported by this Umbrel package yet.
+
+
+  Back up your Lobe Hub data before updating. This update runs automatic database migrations on startup. Leave Lobe Hub running until they finish. Upstream has not verified downgrading after these migrations.
+
+
+  Large memory databases may take longer to upgrade while new indexes are created. Review goal and subscription-account visibility after upgrading: upstream adds workspace visibility with public defaults for existing records.
+
+
+  Bots now participate proactively by default. Turn off Proactive participation in each bot's channel settings if you prefer keyword-only wake-ups.
+
+
+  - Added direct channels and per-agent reply rules
+
+  - Added agent identity profiles
+
+  - Added project creation from GitHub repositories and task-to-project linking
+
+  - Improved knowledge base sorting and ordering
+
+  - Fixed unauthenticated workflow callbacks and improved chat reliability
+
+
+  Full release notes are available at https://github.com/lobehub/lobehub/releases/tag/v2.3.3
 path: ""
