@@ -1,11 +1,14 @@
-manifestVersion: 1
+manifestVersion: 2.0
 id: dasa-actualbudget
+storage:
+  dataRoot: data
 name: Actual Budget
 tagline: A super fast privacy-focused app for managing your finances
 icon: https://i.imgur.com/19fnndW.png
 category: finance
 version: "26.11.0"
 port: 5006
+requiresHttps: true
 description: >-
   ✨ Novità in 26.11.0: Nuove funzionalità, miglioramenti alle prestazioni e sincronizzazione tra dispositivi più stabile.
 
@@ -49,7 +52,7 @@ description: >-
   🔌 API: Use the fully-featured API to write custom importers or build your own features. This API simply runs on your local data.
 
 
-  🛡️ End-to-end encryption: Actaul Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
+  🛡️ End-to-end encryption: Actual Budget offers a syncing service which uses sophisticated distributed systems technology to sync changes across any number of devices.
 
    
   🔑 Initial Setup of Actual Budget:
@@ -70,8 +73,9 @@ gallery:
 releaseNotes: >-
   Novità 26.11.0:
     - Miglioramenti alle prestazioni, correzioni di bug e sincronizzazione tra dispositivi più stabile.
+    - Allineato manifest a umbrelOS v2 (storage dataRoot e requiresHttps).
     - Note upstream: https://actualbudget.org/blog/release-26.11.0
-dependencies:
+dependencies: []
 path: ""
 defaultUsername: "none"
 defaultPassword: "password"

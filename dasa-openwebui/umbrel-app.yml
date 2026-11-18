@@ -1,13 +1,15 @@
 manifestVersion: 1
 id: dasa-openwebui
+storage:
+  dataRoot: data
 name: Open WebUI
 tagline: Chat with Ollama models like DeepSeek-R1 and LLama, or use an OpenAI API key
 icon: https://i.imgur.com/rNa00fP.png
 category: ai
-version: "0.13.3"
+version: "0.13.4"
 port: 2876
 description: >-
-  ✨ Novità in 0.13.3: Agenti nelle automazioni, selezione cartella/terminale durante la chat e correzioni all'interfaccia.
+  ✨ Novità in 0.13.4: Schede affiancate per note, canali e workspace, visualizzazioni interattive e generazione video, supporto a Tether e code messaggi persistenti sul server.
 
 
   Open WebUI lets you chat with advanced AI models running locally on your own device or connect to online models using an API key.
@@ -38,11 +40,15 @@ gallery:
   - https://i.imgur.com/tnoQkzK.png
 defaultUsername: ""
 defaultPassword: ""
+dependencies:
+  - ollama
 releaseNotes: >-
-  Novità 0.13.3:
-    - Agenti integrati nell'editor delle automazioni con scelta di terminale e cartella di lavoro.
-    - Possibilità di cambiare terminale e cartella durante una conversazione già avviata.
-    - Sincronizzazione automatica delle schede file con il terminale attivo.
-    - Aggiunte traduzioni portoghese brasiliano e correzioni di stabilità.
-    - Note upstream: https://github.com/open-webui/open-webui/releases/tag/v0.13.3
+  Novità 0.13.4:
+    - Apre note, canali e pagine workspace come schede affiancate alle chat.
+    - Aggiunge bacheche cartelle, stati chat, tag colorati e automazioni cartelle.
+    - Mantiene i messaggi in coda sul server per permettere di lasciare la pagina durante le risposte.
+    - Aggiunge visualizzazioni interattive opzionali e generazione video.
+    - Migliora risposte lunghe, anteprime PDF grandi e caricamento cartelle.
+    - Integrazione nativa con Ollama tramite variabile $APP_OLLAMA_URL e storage umbrelOS dataRoot.
+    - Note upstream: https://github.com/open-webui/open-webui/releases/tag/v0.13.4
 path: ""

@@ -1,5 +1,7 @@
 manifestVersion: 1
 id: dasa-termix
+storage:
+  dataRoot: data
 name: Termix
 tagline: A server management platform with SSH terminal
 icon: https://i.imgur.com/JbXeJrb.png

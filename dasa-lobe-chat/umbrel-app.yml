@@ -1,31 +1,31 @@
-manifestVersion: 1
+manifestVersion: 1.1
 id: dasa-lobe-chat
 name: Lobe Chat
-tagline: An open-source, modern-design AI chat framework
+tagline: Your self-hosted AI workspace for chat, agents, and knowledge
 icon: https://i.imgur.com/UDAf82g.png
 category: ai
-version: "1.143.3"
+version: "2.3.3"
 port: 7455
 description: >-
-  ✨ Novità in v1.143.3: corretta la gestione degli argomenti Claude per evitare errori di parsing delle virgolette lato shell.
+  🌐 Open Lobe Chat over HTTP. If your Umbrel dashboard uses HTTPS, change https:// to http:// in Lobe Chat's address bar. HTTPS access is not supported by this Umbrel package yet.
 
 
-  💬 An open-source, modern-design ChatGPT/LLMs UI/Framework.
+  💬 Lobe Chat (Lobe Hub) is a self-hosted AI workspace for conversations, agent teams, knowledge bases, and multimodal workflows.
 
 
-  🗣️ Supports speech-synthesis, multi-modal, and extensible (function call) plugin system.
+  🗣️ It supports speech, multimodal chat, files, knowledge retrieval, and a rich provider ecosystem including OpenAI-compatible APIs, Anthropic, Google, Groq, Ollama, and more.
 
 
-  🤖 One-click deployment of your private OpenAI ChatGPT/Claude/Gemini/Groq/Ollama chat application.
+  🤖 This Umbrel package now follows the current upstream self-hosted deployment model and includes PostgreSQL, Redis, and S3-compatible object storage for uploads and knowledge base features.
 
 
-  🔑 To get started, add your OpenAI API key in the settings or configure one of the many other providers.
+  🔑 To get started, create an account on first launch and then add one or more AI provider API keys in the Lobe Chat settings.
 developer: LobeHub
 website: https://lobehub.com/
 submitter: dasa
 submission: https://github.com/getumbrel/umbrel-apps/pull/1901
-repo: https://github.com/lobehub/lobe-chat
-support: https://github.com/lobehub/lobe-chat/issues
+repo: https://github.com/lobehub/lobehub
+support: https://github.com/lobehub/lobehub/issues
 gallery:
   - https://i.imgur.com/fVsOvB1.png
   - https://i.imgur.com/zkUyM4q.png
@@ -34,6 +34,12 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies: []
 releaseNotes: >-
-  Novità v1.143.3:
-    - Corretta la quotatura di claude_args, evitando errori di parsing delle virgolette nella shell quando si usano modelli Claude.
+  Novità v2.3.3:
+    - Passaggio all'architettura v2 multi-container con PostgreSQL (ParadeDB pg17), Redis 7, S3 RustFS e motore di ricerca SearXNG.
+    - Canali diretti e regole di risposta per singolo agente.
+    - Profili d'identità per agenti.
+    - Creazione di progetti da repository GitHub e collegamento task-to-project.
+    - Migliorato ordinamento e gestione della knowledge base.
+    - Corretti callback per workflow non autenticati e aumentata l'affidabilità della chat.
+    - Note upstream: https://github.com/lobehub/lobehub/releases/tag/v2.3.3
 path: ""

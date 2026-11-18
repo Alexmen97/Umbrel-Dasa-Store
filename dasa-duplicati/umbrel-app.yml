@@ -1,5 +1,7 @@
 manifestVersion: 1
 id: dasa-duplicati
+storage:
+  dataRoot: data
 name: Duplicati
 tagline: Store securely encrypted backups in the cloud
 icon: https://i.imgur.com/p4yY0FC.png
