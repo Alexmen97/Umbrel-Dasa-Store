@@ -1,0 +1,52 @@
+manifestVersion: 1
+id: dasa-pages
+name: Pages
+tagline: A beautiful home for static websites
+icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-pages/icon.png
+category: developer tools
+version: "0.1.2"
+port: 8377
+description: >-
+  Pages trasforma il tuo Umbrel in una piattaforma privata, intuitiva ed elegante per creare, ospitare e pubblicare siti web statici.
+
+
+  Permette di avviare un nuovo sito scegliendo tra 9 template responsive professionali, importare progetti già esistenti come archivi ZIP o creare pagine da zero modificando file HTML, CSS, JavaScript, JSON e Markdown direttamente dal browser con anteprima live integrata.
+
+
+  ### Funzionalità principali:
+
+  - **Dashboard centralizzata**: organizza siti multipli con gestione separata per bozze e siti pubblicati.
+
+  - **Editor & File Manager**: editor di codice integrato nel browser con anteprima istantanea, caricamento drag & drop di file, cartelle e archivi ZIP.
+
+  - **Libreria template inclusa**: 9 template responsive di partenza (portfolio, blog, landing page, documentazione, profili Nostr), leggeri e privi di dipendenze esterne.
+
+  - **Opzioni di condivisione avanzate**: pubblicazione su rete locale (LAN), dominio personalizzato, servizio Tor Onion condiviso di Umbrel oppure indirizzo Onion v3 dedicato e indipendente per ciascun singolo sito.
+
+  - **Backup & Esportazione**: export rapido in archivio ZIP e backup locali completi e ripristinabili.
+
+  - **Privacy e controllo totale**: contatore visite integrato senza tracciamento o cookie di terze parti, controlli CORS, SPA fallback e cache personalizzabile. Nessun dato inviato al cloud.
+
+
+  ⚙️ L'accesso Tor remoto deve essere abilitato nelle impostazioni di Umbrel se desideri utilizzare anche l'indirizzo Onion condiviso di sistema.
+developer: Denny Subke
+website: https://github.com/dennysubke/pages
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
+repo: https://github.com/dennysubke/pages
+support: https://github.com/dennysubke/pages/issues
+gallery:
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-pages/1.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-pages/2.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-pages/3.png
+releaseNotes: >-
+  Novità v0.1.2:
+    - Nuova area impostazioni globali per preferenze di pubblicazione predefinite, servizi Onion, backup, statistiche e opzioni dell'editor.
+    - Backup automatici programmabili con limiti di retention e controlli sullo spazio di archiviazione.
+    - Layout dell'Overview rifinito con migliore spaziatura, allineamento pulito e reattività ottimizzata.
+    - Supporto multi-architettura nativo (linux/amd64 e linux/arm64) con sidecar Tor dedicato per indirizzi Onion indipendenti.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+deterministicPassword: true
