@@ -1,0 +1,51 @@
+manifestVersion: 1
+id: dasa-coolify
+name: Coolify
+tagline: An open-source and self-hostable Heroku / Netlify / Vercel alternative
+icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-coolify/icon.png
+category: developer tools
+version: "4.1.2"
+port: 8527
+description: >-
+  Coolify è una moderna piattaforma open source per il deployment e la gestione semplificata di applicazioni, database e servizi su container. Rappresenta l'alternativa self-hosted ideale a soluzioni cloud come Heroku, Netlify, Render e Vercel.
+
+
+  Attraverso un'interfaccia web intuitiva e potente, Coolify permette di rilasciare e mantenere qualsiasi progetto con una configurazione minima, automatizzando i processi DevOps ed eliminando la complessità della configurazione manuale dei server.
+
+
+  ### Funzionalità principali:
+
+  - **Isolamento completo (Docker-in-Docker)**: include un daemon Docker dedicato e separato; Coolify non tocca né accede mai al socket Docker principale di Umbrel.
+
+  - **Supporto multi-framework e linguaggi**: supporto nativo per Node.js, Python, PHP, Rust, Go, Ruby, Dockerfile e template predefiniti.
+
+  - **Database gestiti con un click**: avvia istanze di PostgreSQL, MySQL, MariaDB, MongoDB, Redis, ClickHouse e DragonFly.
+
+  - **Integrazione Git continua**: deployment automatico su push tramite webhook GitHub, GitLab, Bitbucket, Gitea o repository privati con SSH keys.
+
+  - **Monitoraggio in tempo reale**: visualizzazione delle risorse utilizzate (CPU, RAM), stream di log live e diagnostica delle build.
+
+  - **Zero lock-in**: tutti i dati, container e configurazioni rimangono memorizzati localmente sul tuo server Umbrel.
+
+
+  ⚠️ Le applicazioni deployate all'interno di Coolify sono accessibili tramite le porte dedicate 8531 (HTTP) e 8532 (HTTPS).
+developer: coolLabs
+website: https://coolify.io/
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
+repo: https://github.com/coollabsio/coolify
+support: https://github.com/coollabsio/coolify/issues
+gallery:
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-coolify/1.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-coolify/2.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-coolify/3.png
+releaseNotes: >-
+  Novità v4.1.2:
+    - Versione stabile di Coolify con isolamento completo tramite container Docker-in-Docker dedicato.
+    - Supporto multi-architettura nativo (linux/amd64 e linux/arm64).
+    - Miglioramenti alla sicurezza del deployment, validazione dei permessi e controlli di configurazione.
+    - Risolti problemi con sottomoduli Git privati, chiavi di deploy SSH e preview deployment.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
