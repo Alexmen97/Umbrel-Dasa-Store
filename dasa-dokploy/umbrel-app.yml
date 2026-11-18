@@ -1,0 +1,51 @@
+manifestVersion: 1
+id: dasa-dokploy
+name: Dokploy
+tagline: A seamless platform for effortless deployments
+icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-dokploy/icon.png
+category: developer tools
+version: "0.29.12"
+port: 8528
+description: >-
+  Dokploy è una piattaforma open source avanzata per il deployment, il routing e la gestione del ciclo di vita di applicazioni web, microservizi e database su architettura Docker e Docker Swarm.
+
+
+  Fornisce una dashboard completa e intuitiva per rilasciare progetti in pochi click, configurare domini con certificati SSL automatici gestiti da Traefik, impostare variabili d'ambiente cifrate a riposo (AES-256-GCM) e monitorare CPU, memoria e log in tempo reale.
+
+
+  ### Funzionalità principali:
+
+  - **Routing con Traefik v3 integrato**: reverse proxy ad alte prestazioni con porte dedicate 8529 (HTTP) e 8530 (HTTPS/HTTP3).
+
+  - **Deploy da Git & Docker**: integrazione con repository GitHub, GitLab, Bitbucket, Gitea e Docker Registry privati con webhook continui.
+
+  - **Database pronti all'uso**: provisioning istantaneo di PostgreSQL, MySQL, MariaDB, MongoDB e Redis con backup e ripristino pianificabili.
+
+  - **Docker Swarm & Overlay Network**: sfrutta la rete overlay isolata `dokploy-network` per garantire comunicazione sicura tra i container.
+
+  - **Monitoraggio e diagnostica live**: grafici di utilizzo risorse, stream di log e terminale web interattivo per ciascun container.
+
+  - **Sicurezza avanzata**: cifratura AES-256-GCM per tutte le variabili d'ambiente e autenticazione a due fattori (2FA).
+
+
+  ⚠️ Dokploy gestisce il routing delle applicazioni distribuite tramite le porte 8529 (HTTP) e 8530 (HTTPS).
+developer: Dokploy
+website: https://dokploy.com/
+submitter: dasa
+submission: https://github.com/Alexmen97/Umbrel-Dasa-Store
+repo: https://github.com/Dokploy/dokploy
+support: https://github.com/Dokploy/dokploy/issues
+gallery:
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-dokploy/1.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-dokploy/2.png
+  - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-dokploy/3.png
+releaseNotes: >-
+  Novità v0.29.12:
+    - Versione stabile ufficiale Dokploy con stack Traefik v3.5, PostgreSQL 16 e Redis 7.
+    - Cifratura a riposo delle variabili d'ambiente con AES-256-GCM ed esportazione del portachiavi completo per i backup.
+    - Supporto multi-architettura nativo (linux/amd64 e linux/arm64).
+    - Risolti problemi di layout e overflow dei pulsanti nella schermata di autenticazione 2FA.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
