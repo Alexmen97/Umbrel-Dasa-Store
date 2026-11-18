@@ -1,5 +1,15 @@
 manifestVersion: 1.1
 id: dasa-immich
+storage:
+  dataRoot: data
+folderAccess:
+  - id: external-library
+    name: External Library
+    note: Select a folder containing photos or videos, then configure /mnt/external-library as an import path for an External Library in Immich. Access is read-only to protect the original files.
+    mounts:
+      - service: server
+        targetPath: /mnt/external-library
+        readOnly: true
 category: files & productivity
 name: Immich
 version: "v3.4.1"
@@ -49,11 +59,12 @@ description: >-
 
   - User-defined storage structure
 releaseNotes: >-
-  Novità v3.4.1:
-    - Aggiornati server e machine learning alla versione v3.4.1.
-    - Risolti problemi di prestazioni con i link condivisi.
-    - Corretto il mapping MIME dei file .hif come image/heif e aggiornamento backup FUTO 1.16.0.
-    - Eseguire sempre un backup del database e della libreria prima dell'aggiornamento.
+  Novità v3.4.1 (allineamento umbrelOS):
+    - Introdotto supporto folderAccess per External Library: monta foto/video in sola lettura da /mnt/external-library.
+    - Abilitato supporto hardware GPU per trascodifica e machine learning (permissions: GPU).
+    - Abilitata gestione avanzata dello storage umbrelOS (storage: dataRoot: data).
+    - Aggiornata revisione modello machine learning (MACHINE_LEARNING_MODEL_REVISION: v2).
+    - Aggiornato hook pre-start per compatibilità APP_DATA_ROOT e app ID dasa-immich.
     - Note upstream: https://github.com/immich-app/immich/releases/tag/v3.4.1
 developer: Alex Tran
 website: https://www.immich.app
@@ -68,5 +79,7 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
+permissions:
+  - GPU
 submitter: dasa
 submission: https://github.com/getumbrel/umbrel-apps/pull/239

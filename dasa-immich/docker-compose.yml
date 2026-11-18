@@ -38,6 +38,7 @@ services:
       - ${APP_DATA_DIR}/data/model-cache:/cache
     environment:
       <<: *env
+      MACHINE_LEARNING_MODEL_REVISION: v2
     restart: on-failure
 
   redis:
