@@ -7,3 +7,4 @@ TARGET_DIR="${DATA_ROOT}/data"
 
 mkdir -p "${TARGET_DIR}"
 chmod 755 "${TARGET_DIR}"
+chown -R 1000:1000 "${TARGET_DIR}" 2>/dev/null || true

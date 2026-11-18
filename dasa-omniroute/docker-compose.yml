@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: diegosouzapw/omniroute:3.6.1@sha256:a6b6c7c6c87a72a08e0a94f50909b9016ff93b548a397acaf62c6255f2ef266d
+    image: diegosouzapw/omniroute:3.8.53@sha256:b52a17661a1aff42ffb78f349f423e986dfc55b57274f28559f8387622ef8ee4
     environment:
       - NODE_ENV=production
       - PORT=20128

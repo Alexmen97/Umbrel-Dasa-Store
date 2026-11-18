@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: dasa-omniroute
 category: ai
 name: OmniRoute
-version: "3.6.1"
+version: "3.8.53"
 tagline: Smart AI gateway for multi-provider LLMs with routing, fallback, and load balancing
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-omniroute/icon.png
 description: >-
@@ -18,20 +18,27 @@ description: >-
 
   - 🔀 Smart Routing & Model Combos: raggruppa più modelli sotto un singolo ID virtuale (es. fallback su modelli gratuiti o low-cost quando le quote sono esaurite).
 
-  - 📊 Dashboard Next.js Moderna: monitoraggio in tempo reale di latenze (TTFT), tracking token, costi stimati e salute dei provider.
+  - 📊 Dashboard Keak CI UI Kit: nuova interfaccia moderna con monitoraggio in tempo reale di latenze (TTFT), tracking token, costi stimati e salute dei provider.
+
+  - 👥 Teams & Budget: gestione quote, centri di costo e budget condivisi per chiavi API.
 
   - 🔑 Gestione Chiavi e Quote: crea chiavi API virtuali con budget e limitazioni d'uso per proteggere i tuoi account.
+
+  - ⚡ Fast-Path Bifrost & Prompt Cache: routing ultra-rapido con supporto per prompt caching nativo Gemini e Anthropic.
 
   - 🛡️ Zero-Config & Resiliente: generazione automatica di chiavi e crittografia SQLite su storage persistente.
 
   - ⚡ Multi-Architettura: ottimizzato nativamente per linux/amd64 e linux/arm64.
+storage:
+  dataRoot: data
 releaseNotes: >-
-  Novità v3.6.1:
-    - Rilascio v3.6.1 dell'AI Gateway OmniRoute su umbrelOS.
-    - Riparazione dell'ambiente OAuth e fix delle traduzioni i18n.
-    - Supporto multi-provider avanzato per OpenAI, Anthropic, Gemini, Groq, Ollama e molti altri.
-    - Dashboard di monitoraggio completa con latenza TTFT e token usage.
-    - Immagine container multi-architettura ottimizzata per linux/amd64 e linux/arm64.
+  Novità v3.8.53:
+    - Nuova dashboard e interfaccia utente basata su Keak CI UI Kit.
+    - Supporto per Teams, centri di costo e soft budget per chiavi API.
+    - Fast-path sidecar Bifrost per /v1/chat/completions e /v1/messages con fallback nativo.
+    - Modalità Gemini prompt cache avanzata e routing ottimizzato.
+    - Integrazione embedded service sing-box per proxying TPROXY.
+    - Oltre 1.180 modifiche e fix di stabilità per tutti i principali provider LLM.
 developer: ChrisCompton & Diego Souza
 website: https://omniroute.online
 dependencies: []
