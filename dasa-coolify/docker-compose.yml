@@ -109,7 +109,9 @@ services:
         exec > /data/coolify/testing-host.log 2>&1
         set -x
         if ! command -v sshd >/dev/null 2>&1; then
-          apk update && apk add --no-cache openssh bash curl git jq
+          apk update
+          apk del openssh-client-default openssh-client-common 2>/dev/null || true
+          apk add --no-cache openssh-server openssh-client bash curl git jq || apk add --no-cache -u openssh-server bash curl git jq
           ssh-keygen -A
         fi
         passwd -u root 2>/dev/null || passwd -d root
