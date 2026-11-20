@@ -73,7 +73,7 @@ services:
       - --host=unix:///data/docker.sock
       - --data-root=/data/engine
       - --exec-root=/data/exec
-      - --pidfile=/data/docker.pid
+      - --pidfile=/var/run/docker.pid
       - --storage-driver=overlay2
     ports:
       - "8531:80/tcp"

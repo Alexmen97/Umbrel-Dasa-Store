@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+APP_DIR="${APP_DATA_DIR:-$(readlink -f "$(dirname "${BASH_SOURCE[0]}")/..")}"
+rm -f "${APP_DIR}/data/docker/docker.pid" "${APP_DIR}/data/docker/docker.sock" 2>/dev/null || true
