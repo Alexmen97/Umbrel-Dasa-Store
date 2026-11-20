@@ -4,7 +4,7 @@ name: Dokploy
 tagline: A seamless platform for effortless deployments
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-dokploy/icon.png
 category: developer tools
-version: "0.29.12"
+version: "0.31.4"
 port: 8528
 description: >-
   Dokploy è una piattaforma open source avanzata per il deployment, il routing e la gestione del ciclo di vita di applicazioni web, microservizi e database su architettura Docker e Docker Swarm.
@@ -40,11 +40,11 @@ gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-dokploy/2.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-dokploy/3.png
 releaseNotes: >-
-  Novità v0.29.12:
-    - Versione stabile ufficiale Dokploy con stack Traefik v3.5, PostgreSQL 16 e Redis 7.
-    - Cifratura a riposo delle variabili d'ambiente con AES-256-GCM ed esportazione del portachiavi completo per i backup.
-    - Supporto multi-architettura nativo (linux/amd64 e linux/arm64).
-    - Risolti problemi di layout e overflow dei pulsanti nella schermata di autenticazione 2FA.
+  Novità v0.31.4:
+    - Aggiornamento dello stack a Dokploy v0.31.4.
+    - Miglioramenti alle configurazioni dinamiche di Traefik v3 e gestione certificati.
+    - Supporto per nuovi template applicativi e deployment Docker Swarm.
+    - Note upstream: https://github.com/Dokploy/dokploy/releases/tag/v0.31.4
 dependencies: []
 path: ""
 defaultUsername: ""

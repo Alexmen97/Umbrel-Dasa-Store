@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: dasa-omniroute
 category: ai
 name: OmniRoute
-version: "3.8.53"
+version: "3.8.54"
 tagline: Smart AI gateway for multi-provider LLMs with routing, fallback, and load balancing
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-omniroute/icon.png
 description: >-
@@ -32,18 +32,15 @@ description: >-
 storage:
   dataRoot: data
 releaseNotes: >-
-  Novità v3.8.53:
-    - Nuova dashboard e interfaccia utente basata su Keak CI UI Kit.
-    - Supporto per Teams, centri di costo e soft budget per chiavi API.
-    - Fast-path sidecar Bifrost per /v1/chat/completions e /v1/messages con fallback nativo.
-    - Modalità Gemini prompt cache avanzata e routing ottimizzato.
-    - Integrazione embedded service sing-box per proxying TPROXY.
-    - Oltre 1.180 modifiche e fix di stabilità per tutti i principali provider LLM.
+  Novità v3.8.54:
+    - Ottimizzazioni per prompt cache e proxy sidecar Bifrost.
+    - Miglioramenti alla gestione dei timeout per i provider AI cloud.
+    - Note upstream: https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.54
 developer: ChrisCompton & Diego Souza
 website: https://omniroute.online
 dependencies: []
-repo: https://github.com/ChrisCompton/omniroute
-support: https://github.com/ChrisCompton/omniroute/issues
+repo: https://github.com/cheaper-inference/OmniRoute
+support: https://github.com/cheaper-inference/OmniRoute/issues
 port: 20128
 gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-omniroute/1.png

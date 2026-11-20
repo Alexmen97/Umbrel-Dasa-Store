@@ -4,7 +4,7 @@ name: Lobe Hub
 tagline: Your self-hosted AI workspace for chat, agents, and knowledge
 icon: https://i.imgur.com/UDAf82g.png
 category: ai
-version: "2.3.3"
+version: "2.3.4"
 port: 7455
 description: >-
   🌐 Open Lobe Hub over HTTP. If your Umbrel dashboard uses HTTPS, change https:// to http:// in Lobe Hub's address bar. HTTPS access is not supported by this Umbrel package yet.
@@ -40,28 +40,9 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies: []
 releaseNotes: >-
-  Open Lobe Hub over HTTP. If it opens with https://, change that to http:// in the address bar. HTTPS access is not supported by this Umbrel package yet.
-
-
-  Back up your Lobe Hub data before updating. This update runs automatic database migrations on startup. Leave Lobe Hub running until they finish. Upstream has not verified downgrading after these migrations.
-
-
-  Large memory databases may take longer to upgrade while new indexes are created. Review goal and subscription-account visibility after upgrading: upstream adds workspace visibility with public defaults for existing records.
-
-
-  Bots now participate proactively by default. Turn off Proactive participation in each bot's channel settings if you prefer keyword-only wake-ups.
-
-
-  - Added direct channels and per-agent reply rules
-
-  - Added agent identity profiles
-
-  - Added project creation from GitHub repositories and task-to-project linking
-
-  - Improved knowledge base sorting and ordering
-
-  - Fixed unauthenticated workflow callbacks and improved chat reliability
-
-
-  Full release notes are available at https://github.com/lobehub/lobehub/releases/tag/v2.3.3
+  Novità v2.3.4:
+    - Risolti problemi di sincronizzazione delle sessioni multi-agente e stabilità del database Postgres ParadeDB.
+    - Ottimizzazioni per il gateway e routing delle richieste AI.
+    - Allineamento con il rilascio ufficiale dello store Umbrel.
+    - Note upstream: https://github.com/lobehub/lobehub/releases/tag/v2.3.4
 path: ""

@@ -11,7 +11,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: dokploy/dokploy:v0.29.12@sha256:a90e16e34eb3373c472e3303956155f4436202473efeaeb8aea6dfa703a87dbb
+    image: dokploy/dokploy:v0.31.4@sha256:f1deb424f9f0ece12059e117939f414ab34e6257944366b34c9c9c9dac3be855
     restart: on-failure
     depends_on:
       postgres-password-migration:
@@ -25,7 +25,7 @@ services:
       PORT: 3000
       DATABASE_URL: postgresql://dokploy:amukds4wi9001583845717ad2@dokploy-postgres:5432/dokploy
       REDIS_HOST: dokploy-redis
-      RELEASE_TAG: v0.29.12
+      RELEASE_TAG: v0.31.4
       BETTER_AUTH_SECRET: ${APP_SEED}
       TRAEFIK_PORT: "8529"
       TRAEFIK_SSL_PORT: "8530"

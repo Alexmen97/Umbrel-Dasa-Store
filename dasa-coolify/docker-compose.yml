@@ -12,7 +12,7 @@ services:
   # UID/GID 1000, so this one-shot service prepares the directories before the
   # application and realtime services start.
   coolify-permissions:
-    image: ghcr.io/coollabsio/coolify:4.1.2@sha256:3a27ba5f7f98ff7763a0a4d6715ec36e564f9622eea8f492c46f90716ea2525f
+    image: ghcr.io/coollabsio/coolify:4.7.6@sha256:95d25ed900d0f0cb6e621c3bade63efdf1df85ba5c63e76ae3c92beba1debb90
     user: "0:0"
     entrypoint: ["/bin/sh", "-c"]
     command:
@@ -185,7 +185,7 @@ services:
       start_period: 10s
 
   web:
-    image: ghcr.io/coollabsio/coolify:4.1.2@sha256:3a27ba5f7f98ff7763a0a4d6715ec36e564f9622eea8f492c46f90716ea2525f
+    image: ghcr.io/coollabsio/coolify:4.7.6@sha256:95d25ed900d0f0cb6e621c3bade63efdf1df85ba5c63e76ae3c92beba1debb90
     restart: on-failure
     working_dir: /var/www/html
     env_file:

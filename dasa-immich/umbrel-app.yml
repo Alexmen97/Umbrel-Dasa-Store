@@ -12,11 +12,11 @@ folderAccess:
         readOnly: true
 category: files & productivity
 name: Immich
-version: "v3.4.1"
+version: "v3.4.2"
 tagline: High-performance photo and video backup solution
 icon: https://i.imgur.com/wqT5bDn.png
 description: >-
-  ✨ Novità in v3.4.1: Correzioni di stabilità e prestazioni, risolto rallentamento con link condivisi e supporto HEIF esteso.
+  ✨ Novità in v3.4.2: Correzioni per link condivisi, stabilità della trascodifica HEIF e miglioramenti delle prestazioni di riconoscimento volti.
 
 
   An open-source and high-performance self-hosted backup solution for the videos and photos on your mobile device
@@ -59,13 +59,11 @@ description: >-
 
   - User-defined storage structure
 releaseNotes: >-
-  Novità v3.4.1 (allineamento umbrelOS):
-    - Introdotto supporto folderAccess per External Library: monta foto/video in sola lettura da /mnt/external-library.
-    - Abilitato supporto hardware GPU per trascodifica e machine learning (permissions: GPU).
-    - Abilitata gestione avanzata dello storage umbrelOS (storage: dataRoot: data).
-    - Aggiornata revisione modello machine learning (MACHINE_LEARNING_MODEL_REVISION: v2).
-    - Aggiornato hook pre-start per compatibilità APP_DATA_ROOT e app ID dasa-immich.
-    - Note upstream: https://github.com/immich-app/immich/releases/tag/v3.4.1
+  Novità v3.4.2:
+    - Risolti problemi di caricamento con album condivisi e link pubblici.
+    - Ottimizzazioni per la trascodifica HEIF e stabilità dei worker machine learning.
+    - Allineamento con il rilascio ufficiale dello store Umbrel.
+    - Note upstream: https://github.com/immich-app/immich/releases/tag/v3.4.2
 developer: Alex Tran
 website: https://www.immich.app
 dependencies: []

@@ -43,7 +43,7 @@ jobs:
           done
           "${compose[@]}" exec -T server openbot status
           "${compose[@]}" exec -T server openbot version | tee "$RUNNER_TEMP/openbot-version.txt"
-          python3 -c "import pathlib; assert '0.72.0' in pathlib.Path('$RUNNER_TEMP/openbot-version.txt').read_text()"
+          python3 -c "import pathlib; assert '0.74.0' in pathlib.Path('$RUNNER_TEMP/openbot-version.txt').read_text()"
           for attempt in $(seq 1 30); do
             if "${compose[@]}" exec -T server curl -sS http://127.0.0.1:8080/ > "$RUNNER_TEMP/setup.html" 2>/dev/null; then
               break

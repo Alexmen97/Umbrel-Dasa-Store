@@ -4,7 +4,7 @@ name: Coolify
 tagline: An open-source and self-hostable Heroku / Netlify / Vercel alternative
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-coolify/icon.png
 category: developer tools
-version: "4.1.2"
+version: "4.7.6"
 port: 8527
 description: >-
   Coolify è una moderna piattaforma open source per il deployment e la gestione semplificata di applicazioni, database e servizi su container. Rappresenta l'alternativa self-hosted ideale a soluzioni cloud come Heroku, Netlify, Render e Vercel.
@@ -40,11 +40,11 @@ gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-coolify/2.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-coolify/3.png
 releaseNotes: >-
-  Novità v4.1.2:
-    - Versione stabile di Coolify con isolamento completo tramite container Docker-in-Docker dedicato.
-    - Supporto multi-architettura nativo (linux/amd64 e linux/arm64).
-    - Miglioramenti alla sicurezza del deployment, validazione dei permessi e controlli di configurazione.
-    - Risolti problemi con sottomoduli Git privati, chiavi di deploy SSH e preview deployment.
+  Novità v4.7.6:
+    - Aggiornamento a Coolify v4.7.6.
+    - Miglioramenti alla stabilità dell'engine Docker-in-Docker e deployment via Git.
+    - Risolti bug nella gestione delle notifiche e certificati SSL.
+    - Note upstream: https://github.com/coollabsio/coolify/releases/tag/v4.7.6
 dependencies: []
 path: ""
 defaultUsername: ""

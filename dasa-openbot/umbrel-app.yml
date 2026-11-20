@@ -4,7 +4,7 @@ name: OpenBot
 tagline: A server for your AI agents
 icon: https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/icon.png
 category: ai
-version: "0.72.0"
+version: "0.74.0"
 port: 8787
 description: >-
   OpenBot runs your AI agents on your Umbrel. Each agent has its own workspace, conversation and
@@ -40,12 +40,13 @@ gallery:
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/3.png
   - https://raw.githubusercontent.com/Alexmen97/Umbrel-Dasa-Store/master/dasa-openbot/4.png
 releaseNotes: >-
-  Aggiornato OpenBot Server alla versione 0.72.0. Novità principali: introdotta
-  la schermata di configurazione iniziale guidata direttamente da browser (senza
-  più necessità del terminale per il login con codice email), rimozione del
-  container web di appoggio, irrobustito il cambio automatico e fallback dei
-  modelli, migliorata la stabilità delle sessioni lunghe e ottimizzata la gestione
-  della memoria per gli agenti persistenti.
+  Aggiornato OpenBot Server alla versione 0.74.0 (include v0.73 e v0.74):
+    - Nuova interfaccia utente su SolidJS 2.0 reattiva con rendering accelerato.
+    - Nuova modalità vocale push-to-talk nella Voice Pill e audio/video player integrato in chat.
+    - Failover automatico potenziato su provider di backup per prevenire interruzioni.
+    - Riavvio sicuro con attesa dei task attivi degli agenti.
+    - Supporto esteso a Gemini, Claude e Vault con compilazione automatica su HTTP locale.
+    - Note upstream: https://github.com/nightly-labs/openbot/releases/tag/v0.74.0
 dependencies: []
 path: ""
 defaultUsername: ""
