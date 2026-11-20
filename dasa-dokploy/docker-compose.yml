@@ -195,5 +195,5 @@ networks:
     internal: true
 
   dokploy-network:
-    external: true
     name: dokploy-network
+    attachable: true
