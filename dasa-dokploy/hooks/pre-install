@@ -2,5 +2,11 @@
 
 set -euo pipefail
 
+containers="$(docker ps -a --filter "name=dasa-dokploy" -q 2>/dev/null || true)"
+if [[ -n "${containers}" ]]; then
+  docker rm -f ${containers} >/dev/null 2>&1 || true
+fi
+docker rm -f dokploy-traefik dokploy-postgres dokploy-redis >/dev/null 2>&1 || true
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 exec bash "${SCRIPT_DIR}/pre-start" "$@"

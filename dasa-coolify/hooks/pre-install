@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+containers="$(docker ps -a --filter "name=dasa-coolify" -q 2>/dev/null || true)"
+if [[ -n "${containers}" ]]; then
+  docker rm -f ${containers} >/dev/null 2>&1 || true
+fi

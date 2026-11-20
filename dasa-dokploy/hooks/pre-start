@@ -78,6 +78,7 @@ fi
 if [[ -d "${TRAEFIK_CONFIG}" ]]; then
   rm -rf "${TRAEFIK_CONFIG}"
 fi
+docker rm -f dokploy-traefik >/dev/null 2>&1 || true
 
 if [[ ! -f "${TRAEFIK_CONFIG}" ]]; then
   cat > "${TRAEFIK_CONFIG}" <<'TRAEFIK_YAML'
