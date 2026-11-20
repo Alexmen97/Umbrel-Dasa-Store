@@ -106,9 +106,10 @@ services:
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
+        exec > /data/coolify/testing-host.log 2>&1
         set -x
         if ! command -v sshd >/dev/null 2>&1; then
-          apk update && apk add --no-cache openssh-server bash curl git jq
+          apk update && apk add --no-cache openssh bash curl git jq
           ssh-keygen -A
         fi
         passwd -u root 2>/dev/null || passwd -d root
@@ -117,8 +118,8 @@ services:
         chmod 700 /root/.ssh
         chmod 600 /root/.ssh/authorized_keys
         chmod 755 /var/empty
-        sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config 2>/dev/null || true
-        sed -i 's/#PubkeyAuthentication.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config 2>/dev/null || true
+        chown root:root /var/empty 2>/dev/null || true
+        sed -i -e 's/.*PermitRootLogin.*/PermitRootLogin yes/' -e 's/.*PubkeyAuthentication.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config 2>/dev/null || true
         while [ ! -S /docker-socket/docker.sock ]; do sleep 1; done
         ln -sf /docker-socket/docker.sock /var/run/docker.sock
         exec /usr/sbin/sshd -D -e -o ListenAddress=0.0.0.0 -o Port=22
@@ -130,11 +131,11 @@ services:
         aliases:
           - host.docker.internal
     healthcheck:
-      test: ["CMD-SHELL", "docker -H unix:///var/run/docker.sock info >/dev/null 2>&1 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 22 && docker -H unix:///var/run/docker.sock info >/dev/null 2>&1 || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 30
-      start_period: 20s
+      start_period: 60s
 
   coolify-db:
     image: postgres:15@sha256:c189d272e4fcdd1ac419adee675d30be3d389c22ee770d593f15819d22a68a0d
