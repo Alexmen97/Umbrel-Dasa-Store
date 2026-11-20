@@ -63,10 +63,8 @@ if docker network inspect dokploy-network >/dev/null 2>&1; then
     docker network inspect --format '{{.Attachable}}' dokploy-network
   )"
 
-  if [[ "${NETWORK_DRIVER}" != "overlay" ||
-        "${NETWORK_SCOPE}" != "swarm" ||
-        "${NETWORK_ATTACHABLE}" != "true" ]]; then
-    echo "Dokploy: the existing dokploy-network is not an attachable Swarm overlay network." >&2
+  if [[ "${NETWORK_DRIVER}" != "overlay" && "${NETWORK_DRIVER}" != "bridge" ]]; then
+    echo "Dokploy: unexpected dokploy-network driver: ${NETWORK_DRIVER}" >&2
     exit 1
   fi
 else
@@ -74,7 +72,11 @@ else
   docker network create \
     --driver overlay \
     --attachable \
-    dokploy-network
+    dokploy-network || true
+fi
+
+if [[ -d "${TRAEFIK_CONFIG}" ]]; then
+  rm -rf "${TRAEFIK_CONFIG}"
 fi
 
 if [[ ! -f "${TRAEFIK_CONFIG}" ]]; then
